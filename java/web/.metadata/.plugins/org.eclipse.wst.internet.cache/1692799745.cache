@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="/lib/md5.js"></script>
+<script type="text/javascript" src="./css/bulletin.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	bulletin_data = bulletin_data.replace(/\\\"/ig, "");
+	document.getElementById("bulletin_list").innerHTML = bulletin_data;
+}
+
+
+function postData(theAction,theMethod,theData)
+{
+  var thePost = (window.XMLHttpRequest)? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+  switch(theMethod)
+  	{
+  		case "post":
+  			thePost.open("POST",theAction,false);
+  			thePost.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  			thePost.send(theData);
+  			break;
+  		case "get":
+  			thePost.open("GET",theAction+"?"+theData,false);
+  			thePost.send("");
+  			break;
+  		default:
+  			return "";
+  	}
+ 	return thePost.responseText;
+ }
+ 
+function jump_to(url1)
+{
+ 	if(url1 != "")
+ 	{
+ 		window.location.href=url1;
+ 	}
+ 	else
+ 	{
+ 		var u = location.search+"";
+ 		if(u.length>5)
+ 		{
+ 			u = u.substring(5)+"#"+Math.round(Math.random()*10000);			
+ 			window.location.href=u;	
+ 		}
+ 	}
+}
+ 
+ function do_login()
+ { 	
+ 	var uname=document.form1.uname.value;
+ 	var pass=document.form1.pass.value;
+ 	if(uname == '请输入用户名'){
+ 		uname = '';
+ 	}
+ 	if(pass == '请输入密码'){
+ 		pass = '';
+ 	}
+ 	if(uname=="")
+ 	{
+ 		alert("请填写用户名");
+ 		document.form1.uname.focus();
+ 		return;
+ 	}
+ 	
+ 	if(pass=="")
+ 	{
+ 		alert("请填写密码");
+ 		document.form1.pass.focus();
+ 		return;
+ 	}
+ 	//密码md5加密传送
+ 	var pass1=hex_md5(pass);
+ 	var pass2=pass1.substr(8,16);
+ 	
+ 	var drop=(document.form1.drop.checked==true)?1:0;
+ 	var data="username="+uname+"&password="+pass2+"&drop="+drop+"&type=1&n=100";
+ 	
+ 	var con=postData("/cgi-bin/do_login", "post", data);
+ 	//alert(con); 
+ 	var p=/^[\d]+$/;
+ 	if(p.test(con))
+ 	{
+ 		document.form1.uid.value=con;
+ 		if(document.form1.save_me.checked) //写COOKIE
+ 		{
+ 			setCookie("srun_login",uname+"|"+pass);
+ 		}
+ 		else
+ 		{
+ 			delCookie("srun_login");
+ 		}
+ 		if(location.search != "")
+ 		{
+ 			window.open("login.html"+location.search+","+con+","+uname,"user_login","width=428,height=296"); 	
+ 		}
+ 		else
+ 		{
+ 			window.open("login.html?"+location.search+","+con+","+uname,"user_login","width=428,height=296");
+ 		}
+ 		setTimeout("jump_to('')", 1000);	
+ 		return;
+ 	}	
+ 	switch(con)
+ 	{
+ 		case "user_tab_error":
+ 			alert("认证程序未启动");
+ 			break;
+ 			
+ 		case "username_error":
+ 			alert("用户名错误");
+ 			document.form1.uname.focus();
+ 			break;
+ 			
+ 		case "non_auth_error":
+ 			alert("您无须认证，可直接上网");
+ 			break;
+ 			
+ 		case "password_error":
+ 			alert("密码错误");
+ 			document.form1.pass.focus();
+ 			break;
+ 			
+ 		case "status_error":
+ 			alert("用户已欠费，请尽快充值。");
+ 			break;
+ 			
+ 		case "available_error":
+ 			alert("用户已禁用");
+ 			break;
+ 			
+ 		case "ip_exist_error":
+ 			alert("您的IP尚未下线，请等待2分钟再试。");
+ 			break;
+ 			
+ 		case "usernum_error":
+ 			alert("用户数已达上限");
+ 			break; 
+ 			
+ 		case "online_num_error":
+ 			alert("该帐号的登录人数已超过限额\n如果怀疑帐号被盗用，请联系管理员。");
+ 			break;	
+ 			
+ 		case "mode_error":
+ 			alert("系统已禁止WEB方式登录，请使用客户端");
+ 			break;
+ 			
+ 		case "time_policy_error":
+ 			alert("当前时段不允许连接");
+ 			break;
+ 			
+ 		case "flux_error":
+ 			alert("您的流量已超支");
+ 			break;
+ 			
+ 		case "minutes_error":
+ 			alert("您的时长已超支");
+ 			break;
+ 			
+ 		case "ip_error":
+ 			alert("您的IP地址不合法");
+ 			break;
+ 			
+ 		case "mac_error":
+ 			alert("您的MAC地址不合法");
+ 			break;
+ 			
+ 		case "sync_error":
+ 			alert("您的资料已修改，正在等待同步，请2分钟后再试。");
+ 			break;
+ 			
+ 		default:
+ 			alert("找不到认证服务器");
+ 			break;		
+ 	} 	
+ }
+ 
+function force_logout()
+{
+ 	
+ 	var uname=document.form1.uname.value;
+ 	var pass=document.form1.pass.value;
+ 	if(uname == '请输入用户名'){
+ 		uname = '';
+ 	}
+ 	if(pass == '请输入密码'){
+ 		pass = '';
+ 	}
+ 	if(uname && pass && !confirm("如果您的用户名有多个用户在线上，这些用户都将被强制下线，是否继续？"))
+ 		return; 	
+ 	
+ 	var con="";
+ 	if(uname == "")
+ 	{
+ 		con=postData("/cgi-bin/do_logout", "get", "");
+ 	}
+ 	else
+ 	{
+ 		var drop=(document.form1.drop.checked==true)?1:0;
+ 		var data="username="+uname+"&password="+pass+"&drop="+drop+"&type=1&n=1";
+ 		con=postData("/cgi-bin/force_logout", "post", data);
+ 	}
+ 	//alert(con);
+ 	switch(con)
+ 	{
+ 		case "user_tab_error":
+ 			alert("认证程序未启动");
+ 			break;
+ 			
+ 		case "username_error":
+ 			alert("用户名错误");
+ 			document.form1.uname.focus();
+ 			break;
+ 			
+ 		case "password_error":
+ 			alert("密码错误");
+ 			document.form1.pass.focus();
+ 			break;
+ 			
+ 		case "logout_ok":
+ 			alert("注销成功，请等1分钟后登录。");
+ 			break;
+ 			
+ 		case "logout_error":
+ 			alert("您不在线上");
+ 			break;
+ 			
+ 		default:
+ 			alert(con);
+ 			break;		
+ 	} 	
+}
+ 
+function get_uid()
+{
+ 	return document.form1.uid.value;
+}
+
+function get_uname()
+{
+	return document.form1.uname.value;
+}
+
+function setCookie(name,value)
+{
+    var Days = 360; 
+    var exp  = new Date(); 
+    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+
+function getCookie(name)      
+{
+    var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+    if(arr != null) 
+     	return unescape(arr[2]); 
+     return null;
+}
+
+function delCookie(name)//删除cookie
+{
+    var exp = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var cval=getCookie(name);
+    if(cval!=null) 
+    	document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+}
+
+function goto_services()
+{
+	document.form1.action="services.php";
+	document.form1.target="_blank";
+	document.form1.submit();
+	//document.location.reload();
+}
+</script>
+<title>中央民族大学</title>
+</head>
+
+<body>
+<form name="form1" onSubmit="do_login();return false;" method="post" action="/cgi-bin/do_login">
+<input type="hidden" name="uid" value="">
+<div class="wrap">
+	<div class="head">
+    	<div class="logo"><img src="images/log_zi.png"  />
+</div>
+    </div>
+    <div class="concent">
+    	<div class="box_l line_r line_bt"><img src="images/images/biaoti_06.jpg"  /></div>
+        <div class="box_r line_bt"><img src="images/images/biaoti_03.jpg"  /></div>
+        <div class="line_bt">
+        <div class="box_l line_r height260">
+      		<ul class="ul list" id="bulletin_list">
+			
+            </ul>
+         <!--<p><span class="text_l text"></span><span class="text_r text"><a href="#" ><b>·more·</b></a></span></p>-->
+
+        </div>
+        <div class="box_r height260">
+        	<ul class="ul2">
+            	<li><img src="images/images/biaoti_11.jpg" /></li>
+                <li><input type="text"  class="in" id="username" name="uname"  /></li>
+                <li><img src="images/images/biaoti_14.jpg" /></li>
+                <li><input type="password"  class="in"  name="pass" id="password"  /><span style="display:none;"><input type="checkbox" name="save_me" value="1" /></span></li>
+                <li style="text-align:center; margin-top:10px;"><img src="images/images/biaoti_18.jpg" width="138" height="41" onclick="goto_services();return false;" style="cursor: pointer;" /></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="box_l line_r line_bt "><br /><br /><img src="images/images/biaoti_22.jpg"  /></div>
+        <div class="box_r l line_bt"><br /><br /><img src="images/images/biaoti_24.jpg"  /></div>
+        <div class="line_bt">
+        <div class="box_l line_r height100">
+      		<ul class="ul3">
+            	<li><a href="/files/srun3000.exe"><span class="ico_bg bga"></span>Windows</a></li>
+            	<li><a href="/files/srun3_client_macos_x86.zip"><span class="ico_bg bgb"></span>Mac</a></li>
+            	<li><a href="/files/srun3_linux_client_i386.tar.gz"><span class="ico_bg bgc"></span>Linux</a></li>
+            	<li><a href="/download_client.html"><span class="ico_bg bgd"></span>Ipad</a></li>
+            	<li><a href="/files/auth.apk"><span class="ico_bg bge"></span>Android</a></li>
+            </ul>
+        </div>
+        <div class="box_r height100">
+        	<ul class="ul2 text list">
+            	<li  class="line_bt"><a href="teacher.doc">教师上网使用说明。</a></li>
+                <li  class="line_bt"><a href="student.doc">学生上网使用说明。</a></li>
+            </ul>
+        </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+	<p  class="footer">技术支持：中央民族大学网络部<br />TEL:68932559 /68933381</p>
+</div>
+</form>
+<script language="javascript">
+	var cook=getCookie("srun_login");
+	if(cook!=null)
+	{
+		var arr=cook.split("|");
+		document.form1.uname.value=arr[0];
+		document.form1.pass.value=arr[1];
+		document.form1.save_me.checked=true;
+	}
+	
+</script>
+</body>
+</html>

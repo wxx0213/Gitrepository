@@ -1,0 +1,115 @@
+package Model;
+
+import java.sql.Timestamp;
+
+/**
+ * TbActivity entity. @author MyEclipse Persistence Tools
+ */
+
+public class TbActivity implements java.io.Serializable {
+
+	// Fields
+
+	private Integer actId;
+	private TbBuilding tbBuilding;
+	private String actName;
+	private String content;
+	private String imagePath;
+	private String createDate;
+	private Integer buildId;
+	public Integer getBuildId() {
+		return buildId;
+	}
+
+	public void setBuildId(Integer buildId) {
+		this.buildId = buildId;
+	}
+
+	private Timestamp attr1;
+	private String attr2;
+
+	// Constructors
+
+	/** default constructor */
+	public TbActivity() {
+	}
+
+	/** full constructor */
+	public TbActivity(TbBuilding tbBuilding, String actName, String content,
+			String imagePath, String createDate, Timestamp attr1, String attr2) {
+		this.tbBuilding = tbBuilding;
+		this.actName = actName;
+		this.content = content;
+		this.imagePath = imagePath;
+		this.createDate = createDate;
+		this.attr1 = attr1;
+		this.attr2 = attr2;
+	}
+
+	// Property accessors
+
+	public Integer getActId() {
+		return this.actId;
+	}
+
+	public void setActId(Integer actId) {
+		this.actId = actId;
+	}
+
+	public TbBuilding getTbBuilding() {
+		return this.tbBuilding;
+	}
+
+	public void setTbBuilding(TbBuilding tbBuilding) {
+		this.tbBuilding = tbBuilding;
+	}
+
+	public String getActName() {
+		return this.actName;
+	}
+
+	public void setActName(String actName) {
+		this.actName = actName;
+	}
+
+	public String getContent() {
+		return this.content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getImagePath() {
+		return this.imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
+
+	public String getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(String createDate) {
+		this.createDate = createDate;
+	}
+
+	public Timestamp getAttr1() {
+		return this.attr1;
+	}
+
+	public void setAttr1(Timestamp attr1) {
+		this.attr1 = attr1;
+	}
+
+	public String getAttr2() {
+		return this.attr2;
+	}
+
+	public void setAttr2(String attr2) {
+		this.attr2 = attr2;
+	}
+
+}

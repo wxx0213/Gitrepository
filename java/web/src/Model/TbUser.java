@@ -1,0 +1,104 @@
+package Model;
+
+/**
+ * TbUser entity. @author MyEclipse Persistence Tools
+ */
+
+public class TbUser implements java.io.Serializable {
+
+	// Fields
+
+	private Integer id;
+	private String userName;
+	private String password;
+	private String type;
+	private String realName;
+	private String email;
+	private String mobile;
+	private String sex;
+
+	// Constructors
+
+	/** default constructor */
+	public TbUser() {
+	}
+
+	/** full constructor */
+	public TbUser(String userName, String password, String type,
+			String realName, String email, String mobile, String sex) {
+		this.userName = userName;
+		this.password = password;
+		this.type = type;
+		this.realName = realName;
+		this.email = email;
+		this.mobile = mobile;
+		this.sex = sex;
+	}
+
+	// Property accessors
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getUserName() {
+		return this.userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getRealName() {
+		return this.realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
+	public String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getMobile() {
+		return this.mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public String getSex() {
+		return this.sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+}

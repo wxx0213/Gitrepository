@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="admin" namespace="/csdn" extends="struts-default">
+
+		<!-- 管理员登陆action处理 -->
+		<action name="adminLogin" class="www.csdn.project.action.AdminAction"
+			method="login">
+			<result name="success">/manager/index.jsp</result>
+			<result name="login">/index.jsp</result>
+		</action>
+
+		<!-- 查询所有用户action处理 -->
+		<action name="adminlist" class="www.csdn.project.action.AdminAction"
+			method="getAllObjects">
+			<result name="success">/manager/admin/admin_list.jsp</result>
+		</action>
+		
+		
+		<!-- 查询单个实体action处理 -->
+		<action name="getAdminById" class="www.csdn.project.action.AdminAction" method="getObjectById">
+		   <result name="success">/manager/admin/admin_sing.jsp</result>
+		</action>
+
+		<!-- 插入实体action处理 -->
+		<action name="adminInsert" class="www.csdn.project.action.AdminAction" method="saveObject">
+			<result type="redirectAction">
+				<param name="actionName">adminlist.action</param>
+			</result>
+		</action>
+		<!-- 删除实体操作的方法 -->
+		<action name="deleteAdminById" class="www.csdn.project.action.AdminAction" method="deleteObjectById">
+		   <result name="success" type="redirectAction">
+		     <param name="actionName">adminlist.action</param>
+		   </result>
+		</action>
+		<!-- 实现更新需要两步：第一步：先查询用户的信息 -->
+		
+		<action name="findAdminById" class="www.csdn.project.action.AdminAction" method="findAdminById">
+		   <result name="success">/manager/admin/admin_update.jsp</result>
+		</action>
+		
+		<!-- 更新的第二步 -->
+		
+		<action name="updateAdmin" class="www.csdn.project.action.AdminAction" method="updateObject">
+		   <result name="success" type="redirectAction">
+		     <param name="actionName">adminlist.action</param>
+		   </result>
+		</action>
+	</package>
+</struts>

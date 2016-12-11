@@ -1,0 +1,8 @@
+#Mon Nov 07 17:05:35 CST 2016
+LIBRARY_PATH="D\:\\myeclipse\\bin;D\:\\myeclipse\\myeclipse\\eclipse\\plugins\\com.genuitec.eclipse.easie.tomcat.myeclipse_6.5.0.zmyeclipse650200806\\tomcat\\bin"
+tomcat.configuration.version.current=2
+eclipse.preferences.version=1
+JDK_HOME=D\:\\myeclipse
+ENDORSED_DIRS="D\:\\myeclipse\\myeclipse\\eclipse\\plugins\\com.genuitec.eclipse.easie.tomcat.myeclipse_6.5.0.zmyeclipse650200806\\tomcat/common/endorsed"
+JDK_INSTALLATION_NAME=myeclipse
+embedded.server.port=8081

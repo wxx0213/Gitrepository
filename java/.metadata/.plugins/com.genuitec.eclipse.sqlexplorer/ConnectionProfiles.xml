@@ -1,0 +1,34 @@
+<Beans>
+    <Bean Class="com.genuitec.eclipse.sqlexplorer.utils.ConnectionProfile">
+        <activate>false</activate>
+        <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>cf39554:158a8ce031f:-7f94</string>
+        </driverIdentifier>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>cf39554:158a8ce031f:-7fd9</string>
+        </identifier>
+        <name>muc</name>
+        <password encryption="true">amX3Lt8bIGU=</password>
+        <promptForPassword>false</promptForPassword>
+        <schema Indexed="true"/>
+        <schemaDisplayPolicy>0</schemaDisplayPolicy>
+        <url>jdbc:mysql://localhost:3306/muc</url>
+        <userName>root</userName>
+    </Bean>
+    <Bean Class="com.genuitec.eclipse.sqlexplorer.utils.ConnectionProfile">
+        <activate>false</activate>
+        <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-69d14b:158a8cd8157:-7fde</string>
+        </driverIdentifier>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-69d14b:158a8cd8157:-7fdd</string>
+        </identifier>
+        <name>MyEclipse Derby</name>
+        <password encryption="true">gFOjO/OmrJ8m4/rtM2cMIw==</password>
+        <promptForPassword>false</promptForPassword>
+        <schema Indexed="true"/>
+        <schemaDisplayPolicy>0</schemaDisplayPolicy>
+        <url>jdbc:derby://localhost:1527/myeclipse</url>
+        <userName>classiccars</userName>
+    </Bean>
+</Beans>

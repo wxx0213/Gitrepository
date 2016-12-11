@@ -1,0 +1,46 @@
+package Action;
+import java.util.Date;
+
+import Dao.TbActivityDAO;
+import Model.*;
+import Tool.Dateformat;
+
+
+public class AddActivityAction 
+{
+  private String title;
+  private String content;
+  private String createDate;
+public String getTitle() {
+	return title;
+}
+public void setTitle(String title) {
+	this.title = title;
+}
+public String getContent() {
+	return content;
+}
+public void setContent(String content) {
+	this.content = content;
+}
+  public void addActivity()
+  {
+	    Dateformat format=new Dateformat();
+	    createDate=format.printDateFormat();
+		try
+		{
+			TbActivityDAO activityDAO=new TbActivityDAO();
+			TbActivity tbActivity=new TbActivity();
+			
+			tbActivity.setActName(getTitle());
+			tbActivity.setContent(getContent());
+			tbActivity.setCreateDate(createDate);
+			
+			activityDAO.addTbActivity(tbActivity);
+		}
+		catch(Exception e)
+		{}
+		finally
+		{}
+  }
+}

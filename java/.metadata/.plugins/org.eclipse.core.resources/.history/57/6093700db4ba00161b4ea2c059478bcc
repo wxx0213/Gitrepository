@@ -1,0 +1,12 @@
+package Action;
+
+public class TurnPageAction {
+    //翻页
+    public String showNext(int page) {    
+        userList = uerDao.findPlantByPage(page, rowsPerPage);  
+        totalPage = uerDao.getPlanTotalPage(rowsPerPage);  
+        userNum = uerDao.getPlanNum();  
+  
+        return "success";  
+    }  
+}

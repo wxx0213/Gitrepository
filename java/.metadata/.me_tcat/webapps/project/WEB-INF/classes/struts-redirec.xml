@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+
+	<package name="test" namespace="/csdn" extends="struts-default">
+
+		<action name="adminLogin" class="www.csdn.project.action.AdminAction"
+			method="login">
+			<!-- 
+			  <result type="dispatcher" name="success">/manager/index.jsp</result>
+			 -->
+			 
+			 <result name="success" type="dispatcher">
+			    <param name="location">/manager/index.jsp</param>
+			 </result>
+			
+			<result name="login">/index.jsp</result>
+
+		</action>
+
+	</package>
+
+
+</struts>

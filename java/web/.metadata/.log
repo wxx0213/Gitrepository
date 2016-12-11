@@ -1,0 +1,192 @@
+!SESSION 2016-11-07 16:51:57.257 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86 -clean
+
+!ENTRY org.eclipse.update.configurator 2016-11-07 16:52:01.189
+!MESSAGE Could not install bundle ../myeclipse/eclipse/plugins/com.ibm.icu_3.6.1.v20070906.jar   Bundle "com.ibm.icu" version "3.6.1.v20070906" has already been installed from: update@plugins/com.ibm.icu_3.6.1.v20070906.jar
+
+!ENTRY org.eclipse.update.configurator 2016-11-07 16:52:01.204
+!MESSAGE Could not install bundle ../myeclipse/eclipse/plugins/javax.servlet.jsp_2.0.0.v200706191603.jar   Bundle "javax.servlet.jsp" version "2.0.0.v200706191603" has already been installed from: update@plugins/javax.servlet.jsp_2.0.0.v200706191603.jar
+
+!ENTRY org.eclipse.update.configurator 2016-11-07 16:52:01.204
+!MESSAGE Could not install bundle ../myeclipse/eclipse/plugins/javax.servlet_2.4.0.v200706111738.jar   Bundle "javax.servlet" version "2.4.0.v200706111738" has already been installed from: update@plugins/javax.servlet_2.4.0.v200706111738.jar
+
+!ENTRY org.eclipse.update.configurator 2016-11-07 16:52:01.220
+!MESSAGE Could not install bundle ../myeclipse/eclipse/plugins/org.apache.commons.el_1.0.0.v200706111724.jar   Bundle "org.apache.commons.el" version "1.0.0.v200706111724" has already been installed from: update@plugins/org.apache.commons.el_1.0.0.v200706111724.jar
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.370
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\html\css_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.430
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\html\forms_lists_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.460
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\html\htmlform_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.490
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\html\html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.520
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\html\javascript_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.560
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\jsp\jsf_f_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.600
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\jsp\jsf_h_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.630
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\jsp\struts_bean_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.660
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\jsp\struts_html_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.707
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\jsp\struts_logic_snippets.xml
+
+!ENTRY com.genuitec.eclipse.wizards 1 0 2016-11-07 16:53:02.738
+!MESSAGE Installed snippet library: D:\myeclipse\myeclipse\eclipse\plugins\com.genuitec.eclipse.wizards_6.5.0.zmyeclipse650200806\snippets\jsp\struts_tiles_snippets.xml
+
+!ENTRY com.tikal.eclipse.updatemanager.quicksetup 4 4 2016-11-07 16:53:09.290
+!MESSAGE Network connection problems encountered during search.
+
+!ENTRY org.eclipse.wst.internet.cache 1 0 2016-11-07 17:00:23.363
+!MESSAGE wtp.autotest.noninteractive is set. Licenses dialogs will not be displayed.
+
+!ENTRY com.genuitec.eclipse.webdesigner3 1 0 2016-11-07 17:18:29.477
+!MESSAGE Unable to synchronize source selection.
+
+!ENTRY org.eclipse.jdt.core 4 1009 2016-11-07 17:33:18.263
+!MESSAGE Unknown javadoc format for Boolean {key=Ljava/lang/Boolean;} [in Boolean.class [in java.lang [in D:\myeclipse\jre\lib\rt.jar]]]
+
+!ENTRY org.eclipse.jdt.core 4 1009 2016-11-07 17:33:32.369
+!MESSAGE Unknown javadoc format for Boolean {key=Ljava/lang/Boolean;} [in Boolean.class [in java.lang [in D:\myeclipse\jre\lib\rt.jar]]]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2016-11-07 17:35:38.933
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for out [in System [in System.class [in java.lang [in D:\myeclipse\jre\lib\rt.jar]]]]]
+	at org.eclipse.jdt.internal.core.BinaryField.getAttachedJavadoc(BinaryField.java:115)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getHTMLContentReader(ProposalInfo.java:112)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:99)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:521)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:102)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2016-11-07 17:35:38.934
+!MESSAGE Unknown javadoc format for out [in System [in System.class [in java.lang [in D:\myeclipse\jre\lib\rt.jar]]]]
+
+!ENTRY org.eclipse.jdt.debug 4 120 2016-11-07 17:45:44.536
+!MESSAGE Internal error logged from JDI Debug: 
+!STACK 1
+org.eclipse.debug.core.DebugException: Invalid stack frame
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getUnderlyingStackFrame(JDIStackFrame.java:1018)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getUnderlyingThisObject(JDIStackFrame.java:708)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getThis(JDIStackFrame.java:1066)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugHover.getHoverInfo(JavaDebugHover.java:204)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:102)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo(JavaEditorTextHoverProxy.java:69)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+!SUBENTRY 1 org.eclipse.jdt.debug 4 100 2016-11-07 17:45:44.536
+!MESSAGE Invalid stack frame
+
+!ENTRY org.eclipse.ui.workbench 4 2 2016-11-07 17:50:37.253
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.ClassCastException: org.eclipse.ui.internal.browser.SystemBrowserInstance
+	at org.eclipse.ui.internal.browser.DefaultBrowserSupport.removeBrowser(DefaultBrowserSupport.java:175)
+	at org.eclipse.ui.internal.browser.InternalBrowserInstance$1.partClosed(InternalBrowserInstance.java:66)
+	at org.eclipse.ui.internal.PartListenerList$3.run(PartListenerList.java:102)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:857)
+	at org.eclipse.ui.internal.PartListenerList.fireEvent(PartListenerList.java:57)
+	at org.eclipse.ui.internal.PartListenerList.firePartClosed(PartListenerList.java:100)
+	at org.eclipse.ui.internal.PartService.firePartClosed(PartService.java:100)
+	at org.eclipse.ui.internal.WorkbenchPagePartList.firePartClosed(WorkbenchPagePartList.java:38)
+	at org.eclipse.ui.internal.PartList.partClosed(PartList.java:255)
+	at org.eclipse.ui.internal.PartList.removePart(PartList.java:176)
+	at org.eclipse.ui.internal.WorkbenchPage.disposePart(WorkbenchPage.java:1603)
+	at org.eclipse.ui.internal.WorkbenchPage.handleDeferredEvents(WorkbenchPage.java:1354)
+	at org.eclipse.ui.internal.WorkbenchPage.deferUpdates(WorkbenchPage.java:1338)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditors(WorkbenchPage.java:1312)
+	at org.eclipse.ui.internal.WorkbenchPage.closeAllEditors(WorkbenchPage.java:1131)
+	at org.eclipse.ui.internal.WorkbenchPage.dispose(WorkbenchPage.java:1653)
+	at org.eclipse.ui.internal.WorkbenchWindow.closeAllPages(WorkbenchWindow.java:825)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:1559)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:699)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$0(WorkbenchWindow.java:675)
+	at org.eclipse.ui.internal.WorkbenchWindow$2.run(WorkbenchWindow.java:790)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:788)
+	at org.eclipse.jface.window.WindowManager.close(WindowManager.java:109)
+	at org.eclipse.ui.internal.Workbench$15.run(Workbench.java:908)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:905)
+	at org.eclipse.ui.internal.Workbench.access$15(Workbench.java:834)
+	at org.eclipse.ui.internal.Workbench$22.run(Workbench.java:1078)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1076)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1048)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:696)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$0(WorkbenchWindow.java:675)
+	at org.eclipse.ui.internal.WorkbenchWindow$2.run(WorkbenchWindow.java:790)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:788)
+	at org.eclipse.jface.window.Window.handleShellCloseEvent(Window.java:736)
+	at org.eclipse.jface.window.Window$3.shellClosed(Window.java:682)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:91)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:938)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:962)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:947)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:301)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1621)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3674)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:291)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1554)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:1753)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4351)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2260)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:456)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3760)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:291)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1554)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:1753)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4351)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2260)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:456)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3760)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:291)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1554)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:1753)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4351)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2265)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3291)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1148)

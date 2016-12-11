@@ -1,0 +1,29 @@
+package Action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Dao.UserByPageDao;
+import Model.TbUser;
+
+public class TurnPageAction {
+	UserByPageDao uerDao = new UserByPageDao();  
+	  
+    List<TbUser> userList = new ArrayList();  
+  
+    private int rowsPerPage = 10;// 每页显示几条  
+  
+    private int page = 1; // 默认当前页  
+  
+    private int totalPage;// 总共多少页  
+  
+    private int userNum;// 总过多少条  
+    //翻页
+    public String showNext(int page) {    
+        userList = uerDao.findPlantByPage(page, rowsPerPage);  
+        totalPage = uerDao.getPlanTotalPage(rowsPerPage);  
+        userNum = uerDao.getPlanNum();  
+  
+        return "success";  
+    }  
+}

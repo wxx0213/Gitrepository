@@ -1,0 +1,22 @@
+package Action;
+import Dao.*;
+
+public class DelUserByNameAction 
+{
+    private String userName;
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+    
+	public void DelUserByNameAction()
+	{
+		Boolean bool;
+		TbUserDao userDao=new TbUserDao();
+		bool=userDao.DeleteByUserName(userName);
+	}
+}

@@ -1,0 +1,101 @@
+package Action;
+import Model.*;
+import Dao.*;
+import Tool.*;
+public class RegisterAction 
+{
+	private String userName;
+	private String password;
+	private String repassword;
+	private String realName;
+	private int sex;
+	private String email;
+	private String mobile;
+	private int type;
+	/*
+	 * get and set·½·¨
+	 */
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName.trim();
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getRepassword() {
+		return repassword;
+	}
+	public void setRepassword(String repassword) {
+		this.repassword = repassword;
+	}
+	public String getRealName() {
+		return realName;
+	}
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+	public int getSex() {
+		return sex;
+	}
+	public void setSex(int sex) {
+		this.sex = sex;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+	
+	public int getType() {
+		return type;
+	}
+	public void setType(int type) {
+		this.type = type;
+	}
+	public String register()
+	{
+		String result;
+		TbUserDao userDao=new TbUserDao();
+		TbUser existUser;
+		existUser=userDao.SelectByUserName(getUserName());
+		if(existUser.getUserName()==null)
+		{
+			try
+			{
+				Encode encode=new Encode();				
+				
+				TbUser tbUser=new TbUser();
+				tbUser.setUserName(getUserName());
+				tbUser.setPassword(encode.EncoderByMD5(getPassword()));
+				tbUser.setRealName(getRealName());
+				tbUser.setSex(getSex());
+				tbUser.setEmail(getEmail());
+				tbUser.setMobile(getMobile());
+				tbUser.setType(String.valueOf(getType()));
+				userDao.addTbUser(tbUser);
+			}
+			catch(Exception e)
+			{
+				return "error";
+			}
+			finally
+			{}
+			return "success";
+		}
+		else
+			return "error";
+	}
+
+}

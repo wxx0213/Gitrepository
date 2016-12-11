@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+   <!-- 作业 -->
+	
+	<package name="admin" namespace="/csdn" extends="struts-default">	
+		<action name="admin_*" class="www.csdn.project.action.AdminAction" method="{1}">
+		   
+		   <result name="success">/index.jsp</result>
+		   <result name="login">/manager/index.jsp</result>
+		   <result name="delete" type="redirectAction">admin_getAllObjects.action</result>
+		   
+		   <result name="getAllObjects">/manager/admin/admin_list.jsp</result>
+		   <result name="getObjectById">/manager/admin/admin_sing.jsp</result>
+		   <result name="saveObject" type="redirectAction">admin_getAllObjects.action</result>
+		   <result name="deleteObject" type="redirectAction">admin_getAllObjects.action</result>
+		   <result name="deleteObjectById" type="redirectAction">admin_getAllObjects.action</result>
+		   <result name="findAdminById">/manager/admin/admin_update.jsp</result>
+		   <result name="updateObject" type="redirectAction">admin_getAllObjects.action</result>			   
+
+		 <!--   <result name="findAdminPage" >/manager/admin/admin_list.jsp</result>-->
+		   	  
+		</action>
+	</package>
+</struts>

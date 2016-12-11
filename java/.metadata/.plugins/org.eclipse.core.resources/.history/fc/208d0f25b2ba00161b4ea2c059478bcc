@@ -1,0 +1,71 @@
+package Action;
+import java.util.ArrayList;  
+import java.util.List;  
+
+import Dao.UserByPageDao;
+import Model.*;  
+import javax.servlet.http.HttpServletRequest;  
+   
+public class ShowUserByPageAction {
+	UserByPageDao uerDao = new UserByPageDao();  
+	  
+    List<TbUser> userList = new ArrayList();  
+  
+    private int rowsPerPage = 10;// 每页显示几条  
+  
+    private int page = 1; // 默认当前页  
+  
+    private int totalPage;// 总共多少页  
+  
+    private int userNum;// 总过多少条  
+  
+    public String show() {  
+  
+        System.out.println("Page:" + page);  
+        userList = uerDao.findPlantByPage(page, rowsPerPage);  
+        totalPage = uerDao.getPlanTotalPage(rowsPerPage);  
+        userNum = uerDao.getPlanNum();  
+  
+        return "success";  
+    }  
+  
+    public int getPage() {  
+        return page;  
+    }  
+  
+    public void setPage(int page) {  
+        this.page = page;  
+    }  
+  
+    public int getRowsPerPage() {  
+        return rowsPerPage;  
+    }  
+  
+    public void setRowsPerPage(int rowsPerPage) {  
+        this.rowsPerPage = rowsPerPage;  
+    }  
+  
+    public int getTotalPage() {  
+        return totalPage;  
+    }  
+  
+    public void setTotalPage(int totalPage) {  
+        this.totalPage = totalPage;  
+    }
+  
+    public List<TbUser> getUserList() {
+		return userList;
+	}
+
+	public void setUserList(List<TbUser> userList) {
+		this.userList = userList;
+	}
+
+	public int getUserNum() {  
+        return userNum;  
+    }  
+  
+    public void setUserNum(int planNum) {  
+        this.userNum = planNum;  
+    }  
+}

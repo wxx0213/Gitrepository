@@ -1,0 +1,20 @@
+package Action;
+import Dao.*;
+public class UserManage 
+{int id;
+public int getUserId() {
+	return id;
+}
+public void setUserId(int id) {
+	this.id = id;
+}
+public String deleteUserById()
+{
+	TbUserDao userDao=new TbUserDao();
+	if(id!=0)
+	{
+		userDao.DeleteById(id);
+	}
+	return "success"; 
+}
+}

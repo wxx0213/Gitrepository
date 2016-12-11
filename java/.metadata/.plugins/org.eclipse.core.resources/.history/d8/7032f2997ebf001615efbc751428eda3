@@ -1,0 +1,48 @@
+package Action;
+import Dao.*;
+import Model.*;
+public class UserManageAction 
+{int userId;
+TbUser user=new TbUser();
+
+public int getUserId() {
+	return userId;
+}
+public void setUserId(int userId) {
+	this.userId = userId;
+}
+public TbUser getUser() {
+	return user;
+}
+public void setUser(TbUser user) {
+	this.user = user;
+}
+
+public String deleteUserById()
+{
+	TbUserDao userDao=new TbUserDao();
+	if(userId!=0)
+	{
+		userDao.DeleteById(userId);
+	}
+	return "success"; 
+}
+public String selectforUpdate()
+{
+	TbUserDao userDao=new TbUserDao();
+	if(userId!=0)
+	{
+		user=userDao.SelectById(userId);
+	}
+	return "success";
+}
+public String selectById()
+{
+	TbUserDao userDao=new TbUserDao();
+	if(userId!=0)
+	{
+		user=userDao.SelectById(userId);
+	}
+	return "success";
+}
+}

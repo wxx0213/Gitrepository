@@ -1,0 +1,6 @@
+package Action;
+
+public class DelUserByNameAction 
+{
+    private String userName;
+}

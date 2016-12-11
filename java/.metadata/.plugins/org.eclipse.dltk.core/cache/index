@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<cache:CacheIndex xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cache="http://eclipse.org/dltk/cache_model" environment="org.eclipse.dltk.core.environment.localEnvironment">
+  <entries path="E:/JavaTest/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/tomcat/webapps/web/jsp/js/easing.js" timestamp="1479434925622" lastAccessTime="1480684502264"/>
+  <entries path="E:/JavaTest/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/tomcat/webapps/web/jsp/js/jquery-1.11.0.min.js" timestamp="1479434925622" lastAccessTime="1480684502429"/>
+  <entries path="E:/JavaTest/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/tomcat/webapps/web/jsp/js/jquery.chocolat.js" timestamp="1479434925622" lastAccessTime="1480684502568"/>
+  <entries path="E:/JavaTest/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/tomcat/webapps/web/jsp/js/jquery.hoverdir.js" timestamp="1479434925622" lastAccessTime="1480684502677"/>
+  <entries path="E:/JavaTest/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/tomcat/webapps/web/jsp/js/jquery.js" timestamp="1479434925622" lastAccessTime="1480684502822"/>
+  <entries path="E:/JavaTest/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/tomcat/webapps/web/jsp/js/menu_jquery.js" timestamp="1479434925637" lastAccessTime="1480684502958"/>
+  <entries path="E:/JavaTest/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/tomcat/webapps/web/jsp/js/modernizr.custom.97074.js" timestamp="1479434925637" lastAccessTime="1480684503313"/>
+  <entries path="E:/JavaTest/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/tomcat/webapps/web/jsp/js/move-top.js" timestamp="1479434925637" lastAccessTime="1480684503416"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/addImage.js" timestamp="1479696773206" lastAccessTime="1480684503642"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/easing.js" timestamp="1479473648869" lastAccessTime="1480684503744"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/jquery-1.11.0.min.js" timestamp="1479473648961" lastAccessTime="1480684503883"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/jquery.chocolat.js" timestamp="1479473648904" lastAccessTime="1480684504047"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/jquery.hoverdir.js" timestamp="1479473648928" lastAccessTime="1480684504158"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/jquery.js" timestamp="1479473648940" lastAccessTime="1480684504282"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/menu_jquery.js" timestamp="1479473648961" lastAccessTime="1480684504410"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/modernizr.custom.97074.js" timestamp="1479473648971" lastAccessTime="1480684504512"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/move-top.js" timestamp="1479473648971" lastAccessTime="1480684504615"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/pintuer.js" timestamp="1479473648971" lastAccessTime="1480301334062"/>
+  <entries path="E:/JavaTest/web/WebRoot/js/registerJS.js" timestamp="1480301537685" lastAccessTime="1480684504716"/>
+  <entries path="E:/JavaTest/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/tomcat/webapps/web/jsp/js/pintuer.js" timestamp="1480301659847" lastAccessTime="1480684503532"/>
+  <entries path="E:/JavaTest/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/tomcat/webapps/web/JS/registerJS.js" timestamp="1480301717046" lastAccessTime="1480684502142"/>
+</cache:CacheIndex>

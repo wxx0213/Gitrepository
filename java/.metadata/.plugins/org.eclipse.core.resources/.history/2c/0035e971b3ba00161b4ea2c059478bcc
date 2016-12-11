@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   <package name="default"  extends="struts-default" >
+     <action name="LoginAction" class="Action.LoginAction" method="login">
+     </action>
+     
+     <action name="RegisterAction" class="Action.RegisterAction" method="register">
+     </action>
+     
+     <action name="AddActivityAction" class="Action.AddActivityAction" method="addActivity">
+     </action>
+     
+     <action name="AddImageAction" class="Action.AddImageAction" method="execute">
+     <result name="success">addArchitecture.jsp</result>
+     </action>
+     
+     <action name="AddArchitectureAction" class="Action.AddArchitectureAction" method="AddBuilding">
+     </action>
+     
+     <action name="GetBuildingInformationAction" class="Action.GetBuildingInformationAction" method="getBuid_Info">
+     <result name="success">buildingInformation.jsp</result>
+     </action>
+     
+     
+     <action name="getBuidingDetailAction" class="Action.GetBuildingDetailAction" method="getBuidingDetail">
+     <result name="success">buildingDetail.jsp</result>
+     <result name="error">buildingDetail.jsp</result>
+     </action>
+     
+     
+     <action name="AddSpecialtyAction" class="Action.AddSpecialtyAction" method="addSpecialty">
+     </action>
+     
+     <action name="AddSpecialtyImageAction" class="Action.AddSpecialtyImageAction" method="execute">
+     <result name="success">addSpecialty.jsp</result>
+     </action>
+     
+     <action name="ShowUserByPageAction"  class="Action.ShowUserByPageAction" method="show">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">userManage.jsp</result>        
+     </action>  
+     showNext
+     <action name="TurnPageAction"  class="Action.ShowUserByPageAction" method="showNext">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">userManage.jsp</result>        
+     </action> 
+    </package>
+</struts>

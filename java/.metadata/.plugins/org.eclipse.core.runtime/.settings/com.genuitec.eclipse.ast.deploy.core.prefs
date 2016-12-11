@@ -1,0 +1,24 @@
+#Fri Dec 09 16:25:13 CST 2016
+myeclipseTomcatServer.project.type=WebDeployment
+myeclipseTomcatServer.web.IEARProjectName=
+myeclipseTomcatServer.project.contextRoot=/project
+myeclipseTomcatServer.web.altContextRoot=/web
+myeclipseTomcatServer.project.deployIsOverProject=false
+myeclipseTomcatServer.project.shouldBackup=false
+myeclipseTomcatServer.web.contextRoot=/web
+myeclipseTomcatServer.project.isDeployed=true
+eclipse.preferences.version=1
+myeclipseTomcatServer.project.altContextRoot=/project
+myeclipseTomcatServer.web.isDeployed=true
+myeclipseTomcatServer.project.isUptoDate=true
+myeclipseTomcatServer.project.deploymentPath=E\:\\JavaTest\\.metadata\\.me_tcat\\webapps\\project
+myeclipseTomcatServer.web.isUptoDate=true
+myeclipseTomcatServer.web.shouldOverwrite=false
+myeclipseTomcatServer.web.isExploded=true
+myeclipseTomcatServer.web.deploymentPath=E\:\\java\\.metadata\\.me_tcat\\webapps\\web
+myeclipseTomcatServer.web.shouldBackup=false
+myeclipseTomcatServer.web.type=WebDeployment
+myeclipseTomcatServer.web.deployIsOverProject=false
+myeclipseTomcatServer.project.shouldOverwrite=false
+myeclipseTomcatServer.project.isExploded=true
+myeclipseTomcatServer.project.IEARProjectName=
