@@ -55,7 +55,8 @@ public class TbUserDao
 			tbUser.setUserName(user.getUserName());
 			tbUser.setRealName(user.getRealName());
 			tbUser.setEmail(user.getEmail());
-			tbUser.setMobile(user.getMobile());			
+			tbUser.setMobile(user.getMobile());		
+			tbUser.setPassword(user.getPassword());
 			Session s=HibernateSessionFactory.getSession();
 			
 			Transaction t=s.beginTransaction();

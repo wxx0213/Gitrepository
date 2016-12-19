@@ -4,7 +4,7 @@ Source Host: localhost
 Source Database: muc
 Target Host: localhost
 Target Database: muc
-Date: 2016/12/11 21:45:55
+Date: 2016/12/19 10:39:00
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -78,7 +78,7 @@ CREATE TABLE `tb_user` (
   `mobile` varchar(20) DEFAULT NULL,
   `sex` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records 
@@ -119,3 +119,8 @@ INSERT INTO `tb_user` VALUES ('10', '345678', 'QP8CZd1tW0I00zRacEe8fw==', '0', '
 INSERT INTO `tb_user` VALUES ('11', '111111', 'aEaGBoTwUCmrzMCaU81m8Q==', '0', 'wss', '1234@126.com', '13622222222', '男');
 INSERT INTO `tb_user` VALUES ('12', 'wangxing', '4QrcOUm6Wau+VuBX8g+IPg==', '0', 'wang', 'ffff@126.com', '13566666666', '女');
 INSERT INTO `tb_user` VALUES ('13', '3333333', 'mIC1Svm8SKniHy79yehEcQ==', '0', '迭代的', 'ss@126.com', '13799999999', '女');
+INSERT INTO `tb_user` VALUES ('14', '111222', 'Bm7N7upyYFyzt397f//I0A==', '0', '试试', 'xing@126.com', '15677777777', '女');
+INSERT INTO `tb_user` VALUES ('15', '111333', 'Ib2ikSUJISUvX8e9tsp0zQ==', '1', '方法', 'xingw@126.com', '15900000000', '男');
+INSERT INTO `tb_user` VALUES ('16', '000000', 'gic6a6ISbTryTOLQywr1FQ==', '0', 'dd', 'dd@163.com', '15600000000', '女');
+INSERT INTO `tb_user` VALUES ('17', '999999', 'F9QGOld9tEQ+eN0Wt5xReg==', '0', 'kk', 'xx@163.com', '15988888888', '男');
+INSERT INTO `tb_user` VALUES ('18', '888999', 'M0kw9iN78ZZoYJzzZz/j9Q==', '1', 'ddd', '11@126.com', '13988888888', '男');

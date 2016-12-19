@@ -1,6 +1,5 @@
 package Dao;
 import java.util.List;  
-
 import javax.servlet.http.HttpServletRequest;  
   
 import org.hibernate.Query;  
@@ -14,10 +13,9 @@ public class UserByPageDao
 	 /** 
      * 查找并返回所有用户信息 
      */  
-  
     public List<TbUser> findPlantByPage(int page, int rowsPerPage) {  
     	Session session=HibernateSessionFactory.getSession();
-        Query query = session.createQuery("from TbUser order by id desc");  
+        Query query = session.createQuery("from TbUser order by type desc");  
         query.setMaxResults(rowsPerPage); // 每页最多显示几条  
         query.setFirstResult((page - 1) * rowsPerPage); // 每页从第几条记录开始  
         List<TbUser> list = query.list();  
@@ -37,7 +35,7 @@ public class UserByPageDao
     public int getPlanTotalPage(int rowsPerPage) {  
     	int rows;
     	Session session=HibernateSessionFactory.getSession();
-        Query query = session.createQuery("from TbUser order by id desc");  
+        Query query = session.createQuery("from TbUser order by type desc");  
         List<TbUser> list = query.list();     
         rows =list.size(); 
         // System.out.println("rows:" + rows);  
@@ -61,6 +59,21 @@ public class UserByPageDao
         session.close();  
         return rows;  
     }  
+    
+    public List<TbUser> findPlantByPageCondition(int page, int rowsPerPage,String type, String search) {  
+    	Session session=HibernateSessionFactory.getSession();
+        String hql = "select * from TbUser u where u." + type  
+        + "=?";  
+        Query query = session.createQuery(hql);  
+        query.setString(0,search);   
+        query.setMaxResults(rowsPerPage); // 每页最多显示几条  
+        query.setFirstResult((page - 1) * rowsPerPage); // 每页从第几条记录开始  
+        List<TbUser> list = query.list();  
+ 
+        session.close();  
+  
+        return list;  
+    }  
   
     /** 
      * 条件查询后返回的计划总页数 
@@ -68,10 +81,10 @@ public class UserByPageDao
     public int getPlanTotalPage(int rowsPerPage, String type, String search) {  
         int rows = 0;  
         Session session=HibernateSessionFactory.getSession();  
-        String hql = "select * from TbUser u where u." + type  
-                + " like :type";  
+        String hql="select * from TbUser u where u." + type  
+        + "=?";   
         Query query = session.createQuery(hql);  
-        query.setString("type", "%" + search + "%");  
+        query.setString(0,search);   
   
         rows = query.list().size();  
         // System.out.println("rows:" + rows);  
@@ -89,10 +102,10 @@ public class UserByPageDao
     public int getPlanNum(String type, String search) {  
         int rows = 0;  
         Session session=HibernateSessionFactory.getSession();
-        String hql = "select count(*) from TbUser u where u." + type  
-                + " like :type";  
+        String hql =  "select * from TbUser u where u." + type  
+        + "=?";  
         Query query = session.createQuery(hql);  
-        query.setString("type", "%" + search + "%");  
+        query.setString(0,search);   
   
         rows = ((Integer) query.iterate().next()).intValue();  
         // System.out.println("rows:" + rows);  

@@ -421,6 +421,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_s_005fform_005f2(_jspx_page_context))
         return;
       out.write("\r\n");
+      out.write("      更新<br/>\r\n");
+      out.write("  <a href=Addadmin.jsp>添加管理员</a><br/>\r\n");
+      out.write("  <a href=AdminLogin.jsp>管理员登录</a><br/> \r\n");
+      out.write("  <a href=forgetPassword.jsp>忘记密码</a><br/>\r\n");
       out.write("\t\t\t\t\t</p>\r\n");
       out.write("\t\t\t\t\t<div class=\"clearfix\">\r\n");
       out.write("\t\t\t\t\t</div>\r\n");

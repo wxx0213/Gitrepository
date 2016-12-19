@@ -380,6 +380,10 @@
    <s:form action="ShowUserByPageAction.action"  method="get">
     <input type="submit" value="用户查询"/>
     </s:form>
+      更新<br/>
+  <a href=Addadmin.jsp>添加管理员</a><br/>
+  <a href=AdminLogin.jsp>管理员登录</a><br/> 
+  <a href=forgetPassword.jsp>忘记密码</a><br/>
 					</p>
 					<div class="clearfix">
 					</div>

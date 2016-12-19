@@ -26,8 +26,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
 <body>   
-<form name="form1" id="form1" action="ShowUserByPageAction.action" method="get">  
-    
+<s:form action="ShowByConditionAction.action" method="post">  
+          
+          用户类型：<input type="text" name="userType" list="type"/>
+          <datalist id="type">
+          <option value="1">管理员</option>
+          <option value="0">用户</option>
+          </datalist>
+          用户名：<input type="text" name="userName"/>
+    <button class="button bg-main icon-check-square-o" type="submit" name="save" > 注册</button>
+ </s:form>   
     <table  border="1" cellspacing="0" cellpadding="0" bordercolor="#999999" >  
       
           
@@ -36,6 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          <td width="150" ><div align="center"><strong>用户名</strong></div></td>  
          <td width="150"><div align="center"><strong>姓名</strong></div></td>  
          <td width="200"><div align="center"><strong>性别</strong></div></td>  
+         <td width="200"><div align="center"><strong>用户类型</strong></div></td> 
          <td width="300"><div align="center"><strong>操作</strong></div></td> 
         </tr>  
     <s:iterator value="#request.userList">
@@ -43,7 +52,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          <td width="37" height="30"><div align="center"><input type="radio" name="selectUser" value="<s:property value="id" />" /></div></td> 
          <td width="148"><div align="center"><s:property value="userName" /></div></td>  
          <td width="198"><div align="center"><s:property value="realName" /></div></td>  
-         <td width="300"><div align="center"><s:property value="sex" /></div></td>  
+         <td width="100"><div align="center"><s:property value="sex" /></div></td>  
+         <td width="100">
+         <s:if test='%{type=="1"}'>
+         <div align="center">管理员
+         </s:if><br/><br/>
+         <s:else>
+         <div align="center">用户
+         </s:else>
+         </td>  
          <td width="300"><div align="center">
          <a href="SelectByIdAction.action?userId=<s:property value="id" />">查看</a>|
          <a href="SelectforUpdateAction.action?userId=<s:property value="id" />">修改</a>|
@@ -52,7 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </s:iterator>
     </table> 
     
-    <table width="850" border="0" cellpadding="0" cellspacing="0">  
+    <table width="1100" border="0" cellpadding="0" cellspacing="0">  
     <tr>  
         <td bgcolor="E3E3E3" class="wang" align="center">　  
       
@@ -88,6 +105,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </td>  
         </tr>  
 </table> 
-</form>   
+
 </body>  
 </html>

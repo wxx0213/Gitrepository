@@ -25,7 +25,7 @@ public class AdminLoginAction
 		this.password = password;
 	}
 
-	public String login()
+	public String adminLogin()
 	{
 		String s=new String();
 		try
@@ -37,10 +37,9 @@ public class AdminLoginAction
 		
 		user=userDao.SelectByUserName(username);
 		//字符串比较必须用equals
-		if(username.equals(user.getUserName())&&newstr.equals(user.getPassword())&&user.getType()=="1")
+		if(username.equals(user.getUserName())&&newstr.equals(user.getPassword())&&user.getType().endsWith("1"))
 		{
 			s="success";
-			System.out.println("ssssssssssssss");
 		}
 		else 
 			{s="error";}

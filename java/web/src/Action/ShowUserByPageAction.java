@@ -11,23 +11,17 @@ public class ShowUserByPageAction {
 	  
     List<TbUser> userList = new ArrayList();  
   
-    private int rowsPerPage = 10;// 每页显示几条  
+    private int rowsPerPage = 5;// 每页显示几条  
   
     private int page = 1; // 默认当前页  
   
     private int totalPage;// 总共多少页  
   
     private int userNum;// 总过多少条  
-  
-    public String show() {  
-  
-        System.out.println("Page:" + page);  
-        userList = uerDao.findPlantByPage(page, rowsPerPage);  
-        totalPage = uerDao.getPlanTotalPage(rowsPerPage);  
-        userNum = uerDao.getPlanNum();  
-  
-        return "success";  
-    }  
+    
+	private String userName;
+	
+	private String userType;
 
     public int getPage() {  
         return page;  
@@ -67,5 +61,37 @@ public class ShowUserByPageAction {
   
     public void setUserNum(int planNum) {  
         this.userNum = planNum;  
+    } 
+    public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
+	
+    public String show() {  
+        userList = uerDao.findPlantByPage(page, rowsPerPage);  
+        totalPage = uerDao.getPlanTotalPage(rowsPerPage);   
+        userNum = uerDao.getPlanNum();  
+  
+        return "success";  
     }  
+    
+    public String showByCondition()
+    {
+    	userList = uerDao.findPlantByPageCondition(page, rowsPerPage,"type",userType);  
+        totalPage = uerDao.getPlanTotalPage(rowsPerPage,"type",userType);  
+        userNum = uerDao.getPlanNum("type", userType);  
+    	return "success"; 
+    }
+
 }

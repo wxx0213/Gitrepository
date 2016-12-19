@@ -1,18 +1,32 @@
 package Action;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts2.ServletActionContext;
+
 import Dao.*;
 import Model.*;
+import Tool.Encode;
 public class UserManageAction 
 {
  private int userId;
  private TbUser user=new TbUser();
- /*
+
+/*
   * 用来接收修改界面的信息(以下属性仅在修改信息时用到)
   */
  private String userName;
  private String realName;
  private String email;
  private String mobile;
+ //修改密码
+ private String newPassword;
+ 
 public int getUserId() {
 	return userId;
 }
@@ -29,7 +43,9 @@ public void setUser(int userId,String userName,String realName,String email,Stri
 	this.user.setEmail(email);
 	this.user.setMobile(mobile);
 }
-
+public void setUser(TbUser user) {
+	this.user = user;
+}
 
 
 public String getUserName() {
@@ -56,7 +72,12 @@ public String getMobile() {
 public void setMobile(String mobile) {
 	this.mobile = mobile;
 }
-
+public String getNewPassword() {
+	return newPassword;
+}
+public void setNewPassword(String newPassword) {
+	this.newPassword = newPassword;
+}
 
 public String deleteUserById()
 {
@@ -96,4 +117,40 @@ public String updateById()
      }
 	 return "success";
 }
+public String checkForResetPass()
+{	
+	TbUser existUser=new TbUser();
+	TbUserDao userDao=new TbUserDao();
+	existUser=userDao.SelectByUserName(userName);
+	userId=existUser.getId();
+	if(existUser.getEmail().equals(email))
+		return "success";
+	else
+		return "error";	
+}
+public String updatePassword()
+{
+	Boolean flag;
+	TbUser existUser=new TbUser();
+	TbUserDao userDao=new TbUserDao();
+	Encode encode=new Encode();	
+	try
+	{
+	existUser=userDao.SelectById(userId);
+	existUser.setPassword(encode.EncoderByMD5(newPassword));
+	flag=userDao.updateTbUser(existUser);
+	if(flag)
+		return "success";
+	else
+		return "false";
+	}
+	catch(Exception e)
+	{
+		return "false";
+	}
+	finally
+	{}		
+
+}
+
 }

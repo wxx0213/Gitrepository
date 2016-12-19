@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
-<window height="743" maximized="true" width="1024" x="-85" y="-1">
+<window height="743" maximized="true" minimized="true" width="1024" x="-85" y="-1">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="101" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="148" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.genuitec.eclipse.j2eedt.core.ejb" itemType="typeToolBarContribution" x="55" y="22"/>
 <coolItem id="com.genuitec.eclipse.uml.actions" itemType="typeToolBarContribution" x="61" y="22"/>
@@ -23,24 +23,24 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="115" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.debug.ui.NoSourceFoundEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1480300823048" focus="true" label="Workspace - Debug">
+<page aggregateWorkingSetId="Aggregate for window 1480300823048" focus="true" label="Workspace - Java">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -61,63 +61,82 @@
 <part id="12"/>
 <part id="13"/>
 <part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserManageAction.java" partName="UserManageAction.java" path="E:/java/web/src/Action/UserManageAction.java" title="UserManageAction.java" tooltip="web/src/Action/UserManageAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Action/UserManageAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1827" selectionTopPixel="1360"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminLoginAction.java" partName="AdminLoginAction.java" path="E:/java/web/src/Action/AdminLoginAction.java" title="AdminLoginAction.java" tooltip="web/src/Action/AdminLoginAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Action/AdminLoginAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="174" selectionTopPixel="283"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="updateUserInformation.jsp" partName="updateUserInformation.jsp" path="E:/java/web/WebRoot/updateUserInformation.jsp" title="updateUserInformation.jsp" tooltip="web/WebRoot/updateUserInformation.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/updateUserInformation.jsp"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" partName="index.jsp" path="E:/java/web/WebRoot/index.jsp" title="index.jsp" tooltip="web/WebRoot/index.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/index.jsp"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="buildingDetail.jsp" partName="buildingDetail.jsp" path="E:/java/web/WebRoot/buildingDetail.jsp" title="buildingDetail.jsp" tooltip="web/WebRoot/buildingDetail.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/buildingDetail.jsp"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="Addadmin.jsp" partName="Addadmin.jsp" path="E:/java/web/WebRoot/Addadmin.jsp" title="Addadmin.jsp" tooltip="web/WebRoot/Addadmin.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/Addadmin.jsp"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="userManage.jsp" partName="userManage.jsp" path="E:/java/web/WebRoot/userManage.jsp" title="userManage.jsp" tooltip="web/WebRoot/userManage.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/userManage.jsp"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShowUserByPageAction.java" partName="ShowUserByPageAction.java" path="F:/java/web/src/Action/ShowUserByPageAction.java" title="ShowUserByPageAction.java" tooltip="web/src/Action/ShowUserByPageAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Action/ShowUserByPageAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="223" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserByPageDao.java" partName="UserByPageDao.java" path="E:/java/web/src/Dao/UserByPageDao.java" title="UserByPageDao.java" tooltip="web/src/Dao/UserByPageDao.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Dao/UserByPageDao.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="918" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegisterAction.java" partName="RegisterAction.java" path="E:/java/web/src/Action/RegisterAction.java" title="RegisterAction.java" tooltip="web/src/Action/RegisterAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Action/RegisterAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2687" selectionTopPixel="1422"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="AbstractSessionImpl.class" partName="AbstractSessionImpl.class" title="AbstractSessionImpl.class" tooltip="org.hibernate.impl.AbstractSessionImpl" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=web/WebRoot\/WEB-INF\/lib\/hibernate3.jar&lt;org.hibernate.impl(AbstractSessionImpl.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetBuildingDetailAction.java" partName="GetBuildingDetailAction.java" path="E:/java/web/src/Action/GetBuildingDetailAction.java" title="GetBuildingDetailAction.java" tooltip="web/src/Action/GetBuildingDetailAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Action/GetBuildingDetailAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="343" selectionTopPixel="790"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetBuildingInformationAction.java" partName="GetBuildingInformationAction.java" path="E:/java/web/src/Action/GetBuildingInformationAction.java" title="GetBuildingInformationAction.java" tooltip="web/src/Action/GetBuildingInformationAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Action/GetBuildingInformationAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="1147"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbUser.java" partName="TbUser.java" path="E:/java/web/src/Model/TbUser.java" title="TbUser.java" tooltip="web/src/Model/TbUser.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Model/TbUser.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="777" selectionTopPixel="476"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="userDetail.jsp" partName="userDetail.jsp" path="E:/java/web/WebRoot/userDetail.jsp" title="userDetail.jsp" tooltip="web/WebRoot/userDetail.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/userDetail.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="register.jsp" partName="register.jsp" path="E:/java/web/WebRoot/register.jsp" title="register.jsp" tooltip="web/WebRoot/register.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/register.jsp"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="AdminLogin.jsp" partName="AdminLogin.jsp" path="E:/java/web/WebRoot/AdminLogin.jsp" title="AdminLogin.jsp" tooltip="web/WebRoot/AdminLogin.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/AdminLogin.jsp"/>
 </editor>
 <editor id="com.genuitec.eclipse.struts2.editor" name="struts.xml" partName="struts.xml" path="E:/java/web/src/struts.xml" title="struts.xml" tooltip="web/src/struts.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/struts.xml"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbUserDao.java" partName="TbUserDao.java" path="E:/java/web/src/Dao/TbUserDao.java" title="TbUserDao.java" tooltip="web/src/Dao/TbUserDao.java" workbook="DefaultEditorWorkbook">
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="forgetPassword.jsp" partName="forgetPassword.jsp" path="E:/java/web/WebRoot/forgetPassword.jsp" title="forgetPassword.jsp" tooltip="web/WebRoot/forgetPassword.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/forgetPassword.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="register.jsp" partName="register.jsp" path="E:/java/web/WebRoot/register.jsp" title="register.jsp" tooltip="web/WebRoot/register.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/register.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="userManage.jsp" partName="userManage.jsp" path="E:/java/web/WebRoot/userManage.jsp" title="userManage.jsp" tooltip="web/WebRoot/userManage.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/WebRoot/userManage.jsp"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginAction.java" partName="LoginAction.java" path="E:/java/web/src/Action/LoginAction.java" title="LoginAction.java" tooltip="web/src/Action/LoginAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Action/LoginAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="537" selectionTopPixel="204"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="DefaultActionInvocation.class" partName="DefaultActionInvocation.class" title="DefaultActionInvocation.class" tooltip="com.opensymphony.xwork2.DefaultActionInvocation" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=web/WebRoot\/WEB-INF\/lib\/xwork-2.0.7.jar&lt;com.opensymphony.xwork2(DefaultActionInvocation.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbUserDao.java" partName="TbUserDao.java" path="E:/java/web/src/Dao/TbUserDao.java" title="TbUserDao.java" tooltip="web/src/Dao/TbUserDao.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Dao/TbUserDao.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1103" selectionTopPixel="595"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1103" selectionTopPixel="629"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShowUserByPageAction.java" partName="ShowUserByPageAction.java" path="E:/java/web/src/Action/ShowUserByPageAction.java" title="ShowUserByPageAction.java" tooltip="web/src/Action/ShowUserByPageAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Action/ShowUserByPageAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="278" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserByPageDao.java" partName="UserByPageDao.java" path="E:/java/web/src/Dao/UserByPageDao.java" title="UserByPageDao.java" tooltip="web/src/Dao/UserByPageDao.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Dao/UserByPageDao.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="2744" selectionTopPixel="799"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="QuerySyntaxException.class" partName="QuerySyntaxException.class" title="QuerySyntaxException.class" tooltip="org.hibernate.hql.ast.QuerySyntaxException" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=web/WebRoot\/WEB-INF\/lib\/hibernate3.jar&lt;org.hibernate.hql.ast(QuerySyntaxException.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegisterAction.java" partName="RegisterAction.java" path="E:/java/web/src/Action/RegisterAction.java" title="RegisterAction.java" tooltip="web/src/Action/RegisterAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Action/RegisterAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="510"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="ExceptionMappingInterceptor.class" partName="ExceptionMappingInterceptor.class" title="ExceptionMappingInterceptor.class" tooltip="com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=web/WebRoot\/WEB-INF\/lib\/xwork-2.0.7.jar&lt;com.opensymphony.xwork2.interceptor(ExceptionMappingInterceptor.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbUser.java" partName="TbUser.java" path="E:/java/web/src/Model/TbUser.java" title="TbUser.java" tooltip="web/src/Model/TbUser.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Model/TbUser.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="235" selectionTopPixel="1564"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbBuilding.java" partName="TbBuilding.java" path="E:/java/web/src/Model/TbBuilding.java" title="TbBuilding.java" tooltip="web/src/Model/TbBuilding.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Model/TbBuilding.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbBuildingDao.java" partName="TbBuildingDao.java" path="E:/java/web/src/Dao/TbBuildingDao.java" title="TbBuildingDao.java" tooltip="web/src/Dao/TbBuildingDao.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/web/src/Dao/TbBuildingDao.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="62" selectionOffset="1178" selectionTopPixel="663"/>
 </editor>
 </editors>
 <views>
@@ -172,11 +191,10 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings"/>
+<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -227,7 +245,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.debug.ui.DebugView" activePerspective="org.eclipse.debug.ui.DebugPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -444,6 +462,7 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -503,6 +522,7 @@
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="com.genuitec.eclipse.sqlexplorer.views.DatabaseView"/>
 <view id="com.genuitec.eclipse.ast.deploy.core.serverview"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.springframework.ide.eclipse.ui.navigator.springExplorer"/>
 <fastViewBars/>
@@ -529,7 +549,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.1826452" ratioLeft="261" ratioRight="1168" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7083888" ratioLeft="532" ratioRight="219" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.5493151" ratioLeft="401" ratioRight="329" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -537,6 +557,7 @@
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" label="DB Browser"/>
 <page content="com.genuitec.eclipse.ast.deploy.core.serverview" label="Servers"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
@@ -547,6 +568,7 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
@@ -688,7 +710,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7336884" ratioLeft="551" ratioRight="200" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.44740346" ratioLeft="336" ratioRight="415" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -709,7 +731,7 @@
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.83707863" ratioLeft="149" ratioRight="29" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info part="org.eclipse.ui.editorss" ratio="0.34834835" ratioLeft="116" ratioRight="217" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
 <info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1074" ratioRight="358" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
@@ -741,145 +763,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Action/UserManageAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Tool/Alert.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/web/WebRoot/updateUserInformation.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/web/WebRoot/register.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/web/WebRoot/buildingDetail.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/web/WebRoot/buildingInformation.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/web/WebRoot/building.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/web/WebRoot/newActivity.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Dao/TbUserDao.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=web/C:\/Users\/Administrator\/AppData\/Local\/Genuitec\/Common\/binary\/com.sun.java.jdk.win32.x86_1.6.0.013\/jre\/lib\/rt.jar&lt;sun.reflect(NativeMethodAccessorImpl.class"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=web/C:\/Users\/Administrator\/AppData\/Local\/Genuitec\/Common\/binary\/com.sun.java.jdk.win32.x86_1.6.0.013\/jre\/lib\/rt.jar&lt;sun.reflect(DelegatingMethodAccessorImpl.class"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=web/C:\/Users\/Administrator\/AppData\/Local\/Genuitec\/Common\/binary\/com.sun.java.jdk.win32.x86_1.6.0.013\/jre\/lib\/rt.jar&lt;java.lang.reflect(Method.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Action/ShowUserByPageAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Dao/UserByPageDao.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Action/GetBuildingDetailAction.java"/>
 <editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=web/WebRoot\/WEB-INF\/lib\/xwork-2.0.7.jar&lt;com.opensymphony.xwork2(DefaultActionInvocation.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Dao/TbUserDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/web/WebRoot/register.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Action/RegisterAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/web/WebRoot/updateUserInformation.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/web/src/struts.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Dao/TbUserDao.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=web/WebRoot\/WEB-INF\/lib\/xwork-2.0.7.jar&lt;com.opensymphony.xwork2.interceptor(ExceptionMappingInterceptor.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Model/TbUser.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Model/TbBuilding.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/web/src/Dao/TbBuildingDao.java"/>
 </editors>
-<item historyLabel="Alert.java" index="1">
-<position info="not_deleted" x="494" y="0"/>
+<item historyLabel="ShowUserByPageAction.java" index="0">
+<position info="not_deleted" x="1283" y="0"/>
 </item>
-<item historyLabel="Alert.java" index="1">
-<position info="not_deleted" x="586" y="0"/>
+<item historyLabel="ShowUserByPageAction.java" index="0">
+<position info="not_deleted" x="1948" y="0"/>
 </item>
-<item historyLabel="Alert.java" index="1">
-<position info="not_deleted" x="603" y="0"/>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2073" y="0"/>
 </item>
-<item historyLabel="Alert.java" index="1">
-<position info="not_deleted" x="620" y="0"/>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2138" y="0"/>
 </item>
-<item historyLabel="UserManageAction.java" index="0">
-<position/>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2073" y="0"/>
 </item>
-<item historyLabel="updateUserInformation.jsp" index="2"/>
-<item historyLabel="UserManageAction.java" index="0">
-<position/>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2157" y="0"/>
 </item>
-<item historyLabel="Alert.java" index="1">
-<position info="not_deleted" x="628" y="0"/>
-</item>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="2059" y="0"/>
-</item>
-<item historyLabel="updateUserInformation.jsp" index="2"/>
-<item historyLabel="UserManageAction.java" index="0">
-<position/>
-</item>
-<item historyLabel="updateUserInformation.jsp" index="2"/>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="700" y="0"/>
-</item>
-<item historyLabel="updateUserInformation.jsp" index="2"/>
-<item historyLabel="register.jsp" index="3"/>
-<item historyLabel="updateUserInformation.jsp" index="2"/>
-<item historyLabel="buildingDetail.jsp" index="4"/>
-<item historyLabel="buildingInformation.jsp" index="5"/>
-<item historyLabel="building.jsp" index="6"/>
-<item historyLabel="newActivity.jsp" index="7"/>
-<item historyLabel="updateUserInformation.jsp" index="2"/>
-<item historyLabel="building.jsp" index="6"/>
-<item historyLabel="updateUserInformation.jsp" index="2"/>
-<item historyLabel="TbUserDao.java" index="8">
-<position info="not_deleted" x="1103" y="0"/>
-</item>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="1865" y="0"/>
-</item>
-<item historyLabel="UserManageAction.java" index="0">
-<position/>
-</item>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="1875" y="0"/>
-</item>
-<item historyLabel="NativeMethodAccessorImpl.class" index="9">
+<item historyLabel="DefaultActionInvocation.class" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="DelegatingMethodAccessorImpl.class" index="10">
+<item historyLabel="ExceptionMappingInterceptor.class" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Method.class" index="11">
-<position info="not_deleted" x="23663" y="0"/>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2157" y="0"/>
 </item>
-<item historyLabel="DefaultActionInvocation.class" index="12">
+<item historyLabel="ShowUserByPageAction.java" index="0">
+<position info="not_deleted" x="1948" y="0"/>
+</item>
+<item historyLabel="DefaultActionInvocation.class" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ShowUserByPageAction.java" index="0">
+<position info="not_deleted" x="1988" y="0"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="1929" y="24"/>
+</item>
+<item historyLabel="TbUser.java" index="5">
+<position info="not_deleted" x="618" y="4"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
 <position/>
 </item>
-<item historyLabel="TbUserDao.java" index="13">
-<position info="not_deleted" x="1103" y="0"/>
+<item historyLabel="GetBuildingDetailAction.java" index="2">
+<position info="not_deleted" x="1192" y="0"/>
 </item>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="1865" y="0"/>
-</item>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="1735" y="0"/>
-</item>
-<item historyLabel="UserManageAction.java" index="0">
-<position/>
-</item>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="1875" y="0"/>
-</item>
-<item historyLabel="NativeMethodAccessorImpl.class" index="9">
+<item historyLabel="TbBuilding.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="DelegatingMethodAccessorImpl.class" index="10">
+<item historyLabel="TbBuildingDao.java" index="7">
+<position info="not_deleted" x="1216" y="24"/>
+</item>
+<item historyLabel="TbBuilding.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Method.class" index="11">
-<position info="not_deleted" x="23663" y="0"/>
+<item historyLabel="TbUser.java" index="5">
+<position info="not_deleted" x="618" y="4"/>
 </item>
-<item historyLabel="DefaultActionInvocation.class" index="12">
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2151" y="0"/>
+</item>
+<item historyLabel="GetBuildingDetailAction.java" index="2">
+<position info="not_deleted" x="1192" y="0"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2151" y="0"/>
+</item>
+<item historyLabel="TbBuildingDao.java" index="7">
+<position info="not_deleted" x="1232" y="6"/>
+</item>
+<item historyLabel="TbBuilding.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="1873" y="0"/>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2880" y="0"/>
 </item>
-<item historyLabel="register.jsp" index="14"/>
-<item historyLabel="RegisterAction.java" index="15">
-<position info="not_deleted" x="2687" y="0"/>
+<item historyLabel="ShowUserByPageAction.java" index="0">
+<position info="not_deleted" x="1948" y="0"/>
 </item>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="1188" y="0"/>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2073" y="0"/>
 </item>
-<item historyLabel="updateUserInformation.jsp" index="2">
-<position info="not_deleted" x="972" y="0"/>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2138" y="0"/>
 </item>
-<item historyLabel="updateUserInformation.jsp" index="16">
-<position info="not_deleted" x="1094" y="0"/>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2073" y="0"/>
 </item>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="1188" y="0"/>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2157" y="0"/>
 </item>
-<item historyLabel="struts.xml" index="17"/>
-<item historyLabel="UserManageAction.java" index="0">
-<position info="not_deleted" x="1827" y="0"/>
+<item historyLabel="DefaultActionInvocation.class" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="TbUserDao.java" index="18">
-<position info="not_deleted" x="1103" y="0"/>
+<item historyLabel="ShowUserByPageAction.java" index="0">
+<position info="not_deleted" x="1948" y="0"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2157" y="0"/>
+</item>
+<item historyLabel="DefaultActionInvocation.class" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ShowUserByPageAction.java" index="0">
+<position info="not_deleted" x="1948" y="0"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="3600" y="0"/>
+</item>
+<item historyLabel="TbBuildingDao.java" index="7">
+<position info="not_deleted" x="1178" y="33"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="3529" y="0"/>
+</item>
+<item historyLabel="ShowUserByPageAction.java" index="0">
+<position info="not_deleted" x="1948" y="0"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2073" y="0"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2138" y="0"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2073" y="0"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2157" y="0"/>
+</item>
+<item historyLabel="DefaultActionInvocation.class" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TbBuildingDao.java" index="7">
+<position info="not_deleted" x="1178" y="62"/>
+</item>
+<item historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2744" y="6"/>
+</item>
+<item historyLabel="ShowUserByPageAction.java" index="0">
+<position info="not_deleted" x="278" y="0"/>
+</item>
+<item historyLabel="TbUser.java" index="5">
+<position info="not_deleted" x="235" y="4"/>
+</item>
+<item active="true" historyLabel="UserByPageDao.java" index="1">
+<position info="not_deleted" x="2744" y="6"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -898,50 +939,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbUserDao.java" tooltip="web/src/Dao/TbUserDao.java">
-<persistable path="/web/src/Dao/TbUserDao.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbBuildingDao.java" tooltip="web/src/Dao/TbBuildingDao.java">
+<persistable path="/web/src/Dao/TbBuildingDao.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" name="struts.xml" tooltip="web/src/struts.xml">
-<persistable path="/web/src/struts.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="register.jsp" tooltip="web/WebRoot/register.jsp">
-<persistable path="/web/WebRoot/register.jsp"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="NativeMethodAccessorImpl.class" tooltip="sun.reflect.NativeMethodAccessorImpl">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=web/C:\/Users\/Administrator\/AppData\/Local\/Genuitec\/Common\/binary\/com.sun.java.jdk.win32.x86_1.6.0.013\/jre\/lib\/rt.jar&lt;sun.reflect(NativeMethodAccessorImpl.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="newActivity.jsp" tooltip="web/WebRoot/newActivity.jsp">
-<persistable path="/web/WebRoot/newActivity.jsp"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Boolean.class" tooltip="java.lang.Boolean">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=web/C:\/Users\/Administrator\/AppData\/Local\/Genuitec\/Common\/binary\/com.sun.java.jdk.win32.x86_1.6.0.013\/jre\/lib\/rt.jar&lt;java.lang(Boolean.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="._tomcat-users.xml" tooltip="web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/__MACOSX/tomcat/conf/._tomcat-users.xml">
-<persistable path="/web/.metadata/.plugins/com.genuitec.eclipse.easie.tomcat.myeclipse/__MACOSX/tomcat/conf/._tomcat-users.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Alert.java" tooltip="web/src/Tool/Alert.java">
-<persistable path="/web/src/Tool/Alert.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="building.jsp" tooltip="web/WebRoot/building.jsp">
-<persistable path="/web/WebRoot/building.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="userDetail.jsp" tooltip="web/WebRoot/userDetail.jsp">
-<persistable path="/web/WebRoot/userDetail.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbBuilding.java" tooltip="web/src/Model/TbBuilding.java">
+<persistable path="/web/src/Model/TbBuilding.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbUser.java" tooltip="web/src/Model/TbUser.java">
 <persistable path="/web/src/Model/TbUser.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetBuildingInformationAction.java" tooltip="web/src/Action/GetBuildingInformationAction.java">
-<persistable path="/web/src/Action/GetBuildingInformationAction.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetBuildingDetailAction.java" tooltip="web/src/Action/GetBuildingDetailAction.java">
-<persistable path="/web/src/Action/GetBuildingDetailAction.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ExceptionMappingInterceptor.class" tooltip="com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=web/WebRoot\/WEB-INF\/lib\/xwork-2.0.7.jar&lt;com.opensymphony.xwork2.interceptor(ExceptionMappingInterceptor.class"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegisterAction.java" tooltip="web/src/Action/RegisterAction.java">
 <persistable path="/web/src/Action/RegisterAction.java"/>
 </file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="QuerySyntaxException.class" tooltip="org.hibernate.hql.ast.QuerySyntaxException">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=web/WebRoot\/WEB-INF\/lib\/hibernate3.jar&lt;org.hibernate.hql.ast(QuerySyntaxException.class"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserByPageDao.java" tooltip="web/src/Dao/UserByPageDao.java">
 <persistable path="/web/src/Dao/UserByPageDao.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShowUserByPageAction.java" tooltip="web/src/Action/ShowUserByPageAction.java">
+<persistable path="/web/src/Action/ShowUserByPageAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserManageAction.java" tooltip="web/src/Action/UserManageAction.java">
+<persistable path="/web/src/Action/UserManageAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TbUserDao.java" tooltip="web/src/Dao/TbUserDao.java">
+<persistable path="/web/src/Dao/TbUserDao.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="NativeMethodAccessorImpl.class" tooltip="sun.reflect.NativeMethodAccessorImpl">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=web/C:\/Users\/Administrator\/AppData\/Local\/Genuitec\/Common\/binary\/com.sun.java.jdk.win32.x86_1.6.0.013\/jre\/lib\/rt.jar&lt;sun.reflect(NativeMethodAccessorImpl.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="buildingInformation.jsp" tooltip="web/WebRoot/buildingInformation.jsp">
+<persistable path="/web/WebRoot/buildingInformation.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="updateUserInformation.jsp" tooltip="web/WebRoot/updateUserInformation.jsp">
+<persistable path="/web/WebRoot/updateUserInformation.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="buildings.jsp" tooltip="web/WebRoot/buildings.jsp">
+<persistable path="/web/WebRoot/buildings.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="building.jsp" tooltip="web/WebRoot/building.jsp">
+<persistable path="/web/WebRoot/building.jsp"/>
 </file>
 </mruList>
 </workbench>

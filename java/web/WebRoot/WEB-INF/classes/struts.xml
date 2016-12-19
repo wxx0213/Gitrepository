@@ -9,8 +9,14 @@
      <action name="RegisterAction" class="Action.RegisterAction" method="register">
      </action>
      
+     <action name="AdminLogin" class="Action.AdminLoginAction" method="adminLogin">
+     <result name="success">admin.jsp</result>
+     <result name="error">error.jsp</result>   
+     </action>
+     
      <action name="AddActivityAction" class="Action.AddActivityAction" method="addActivity">
      <result name="success">index.jsp</result>
+
      </action>
      
      <action name="AddImageAction" class="Action.AddImageAction" method="execute">
@@ -58,5 +64,21 @@
      <action name="UpdateByIdAction"  class="Action.UserManageAction" method="updateById"> 
      <result name="success" type="redirect-action">ShowUserByPageAction</result>       
      </action>
+     
+     <action name="CheckForResetPassAction"  class="Action.UserManageAction" method="checkForResetPass"> 
+     <result name="success">resetPassword.jsp</result>  
+     <result name="error">error.jsp</result>   
+     </action>
+            
+     <action name="UpdatePasswordAction"  class="Action.UserManageAction" method="updatePassword"> 
+     <result name="success">resetPassword.jsp</result>  
+     <result name="error">error.jsp</result>   
+     </action> 
+     
+     
+          <action name="ShowByConditionAction"  class="Action.ShowUserByPageAction" method="showByCondition">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">userManage.jsp</result>        
+     </action>   
     </package>
 </struts>

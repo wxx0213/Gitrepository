@@ -18,7 +18,7 @@ public class RegisterAction
 	private String sex;
 	private String email;
 	private String mobile;
-	private int type;
+	private String type="0";
 	/*
 	 * get and set方法
 	 */
@@ -59,11 +59,12 @@ public class RegisterAction
 		this.mobile = mobile;
 	}
 	
-	public int getType() {
+	public String getType() {
 		return type;
 	}
-	public void setType(int type) {
-		this.type = type;
+	public void setType(String type) {
+		    this.type = type;
+
 	}
 	public String getSex() {
 		return sex;
@@ -93,7 +94,7 @@ public class RegisterAction
 				tbUser.setSex(getSex());
 				tbUser.setEmail(getEmail());
 				tbUser.setMobile(getMobile());
-				tbUser.setType(String.valueOf(getType()));
+				tbUser.setType(getType());
 				userDao.addTbUser(tbUser);
 				result="注册成功！";
 				request.getSession().setAttribute("information",result);
