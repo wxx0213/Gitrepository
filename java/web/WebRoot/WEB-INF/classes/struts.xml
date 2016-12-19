@@ -16,9 +16,15 @@
      
      <action name="AddActivityAction" class="Action.AddActivityAction" method="addActivity">
      <result name="success">index.jsp</result>
-
      </action>
      
+     <action name="AddActivityImageAction" class="Action.AddActivityImageAction" method="execute">
+     <result name="success" type="redirect-action">GetAllBulidingAction</result>
+     </action>
+     
+     <action name="GetAllBulidingAction" class="Action.AddActivityAction" method="getAllBuliding">
+     <result name="success">addActivity.jsp</result>
+     </action>
      <action name="AddImageAction" class="Action.AddImageAction" method="execute">
      <result name="success">addArchitecture.jsp</result>
      </action>
@@ -76,7 +82,7 @@
      </action> 
      
      
-          <action name="ShowByConditionAction"  class="Action.ShowUserByPageAction" method="showByCondition">  
+     <action name="ShowByConditionAction"  class="Action.ShowUserByPageAction" method="showByCondition">  
      <!--type="dispatcher"保存了页面原来的数据-->
      <result name="success">userManage.jsp</result>        
      </action>   

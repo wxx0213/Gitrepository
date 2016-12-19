@@ -415,7 +415,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  <a href=buildingDetail.jsp>查看指定建筑</a><br/>\r\n");
       out.write("  <a href=addSpecialty.jsp>添加特色</a><br/>\r\n");
       out.write("  <a href=buildingDetail.jsp>查看指定建筑</a><br/>\r\n");
-      out.write("  <a href=addActivity.jsp>添加活动</a><br/>\r\n");
+      out.write("  <a href=\"GetAllBulidingAction.action\">添加活动</a><br/>\r\n");
       out.write("  <a href=userManage.jsp></a><br/>\r\n");
       out.write("   ");
       if (_jspx_meth_s_005fform_005f2(_jspx_page_context))

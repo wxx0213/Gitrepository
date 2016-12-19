@@ -2,9 +2,11 @@ package Dao;
 import java.util.List;  
 import javax.servlet.http.HttpServletRequest;  
   
+import org.hibernate.Criteria;
 import org.hibernate.Query;  
 import org.hibernate.Session;  
 import org.hibernate.Transaction;  
+import org.hibernate.criterion.Restrictions;
 
 import util.HibernateSessionFactory;
 import Model.*;
@@ -60,15 +62,18 @@ public class UserByPageDao
         return rows;  
     }  
     
-    public List<TbUser> findPlantByPageCondition(int page, int rowsPerPage,String type, String search) {  
+    public List<TbUser> findPlantByPageCondition(int page, int rowsPerPage,String userType, String userName) {  
     	Session session=HibernateSessionFactory.getSession();
-        String hql = "select * from TbUser u where u." + type  
-        + "=?";  
-        Query query = session.createQuery(hql);  
-        query.setString(0,search);   
-        query.setMaxResults(rowsPerPage); // 每页最多显示几条  
-        query.setFirstResult((page - 1) * rowsPerPage); // 每页从第几条记录开始  
-        List<TbUser> list = query.list();  
+        //String hql = "select * from TbUser u where u." + type  
+        //+ "=?";  
+    	Criteria c=session.createCriteria(TbUser.class);
+    	if(!userType.equals("")&&userType!=null)
+    		c.add(Restrictions.eq("type", userType));
+    	if(!userName.equals("")&&userName!=null)
+    		c.add(Restrictions.like("userName", "%"+userName+"%"));
+        c.setMaxResults(rowsPerPage); // 每页最多显示几条  
+        c.setFirstResult((page - 1) * rowsPerPage); // 每页从第几条记录开始  
+        List<TbUser> list = c.list();  
  
         session.close();  
   
@@ -78,15 +83,21 @@ public class UserByPageDao
     /** 
      * 条件查询后返回的计划总页数 
      */  
-    public int getPlanTotalPage(int rowsPerPage, String type, String search) {  
+    public int getPlanTotalPage(int rowsPerPage, String userType, String userName) {  
         int rows = 0;  
         Session session=HibernateSessionFactory.getSession();  
-        String hql="select * from TbUser u where u." + type  
-        + "=?";   
-        Query query = session.createQuery(hql);  
-        query.setString(0,search);   
-  
-        rows = query.list().size();  
+        //String hql="select * from TbUser u where u." + type  
+        //+ "=?";   
+        //Query query = session.createQuery(hql);  
+        //query.setString(0,search);   
+        //rows = query.list().size(); 
+    	Criteria c=session.createCriteria(TbUser.class);
+    	if(!userType.equals("")&&userType!=null)
+    		c.add(Restrictions.eq("type", userType));
+    	if(!userName.equals("")&&userName!=null)
+    		c.add(Restrictions.like("userName", "%"+userName+"%"));
+    	rows=c.list().size(); 
+         
         // System.out.println("rows:" + rows);  
         session.close();  
         if (rows % rowsPerPage == 0) {  
@@ -99,15 +110,20 @@ public class UserByPageDao
     /** 
      * 条件查询后返回总数 
      */  
-    public int getPlanNum(String type, String search) {  
+    public int getPlanNum(String userType, String userName) {  
         int rows = 0;  
         Session session=HibernateSessionFactory.getSession();
-        String hql =  "select * from TbUser u where u." + type  
-        + "=?";  
-        Query query = session.createQuery(hql);  
-        query.setString(0,search);   
+        //String hql =  "select * from TbUser u where u." + type  
+        //+ "=?";  
+        //Query query = session.createQuery(hql);  
+        //query.setString(0,search);   
   
-        rows = ((Integer) query.iterate().next()).intValue();  
+    	Criteria c=session.createCriteria(TbUser.class);
+    	if(!userType.equals("")&&userType!=null)
+    		c.add(Restrictions.eq("type", userType));
+    	if(!userName.equals("")&&userName!=null)
+    		c.add(Restrictions.like("userName", "%"+userName+"%"));
+    	rows=c.list().size(); 
         // System.out.println("rows:" + rows);  
         session.close();  
         return rows;  

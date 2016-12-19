@@ -34,7 +34,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <option value="0">用户</option>
           </datalist>
           用户名：<input type="text" name="userName"/>
-    <button class="button bg-main icon-check-square-o" type="submit" name="save" > 注册</button>
+    <button class="button bg-main icon-check-square-o" type="submit" name="save" >搜索</button>
  </s:form>   
     <table  border="1" cellspacing="0" cellpadding="0" bordercolor="#999999" >  
       

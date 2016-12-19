@@ -12,7 +12,7 @@ public final class userManage_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List _jspx_dependants;
 
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fiterator_005fvalue;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fif_005ftest;
@@ -26,7 +26,7 @@ public final class userManage_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
-    _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fs_005fiterator_005fvalue = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fs_005fif_005ftest = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
@@ -36,7 +36,7 @@ public final class userManage_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspDestroy() {
-    _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction.release();
+    _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction.release();
     _005fjspx_005ftagPool_005fs_005fiterator_005fvalue.release();
     _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.release();
     _005fjspx_005ftagPool_005fs_005fif_005ftest.release();
@@ -193,13 +193,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  s:form
-    org.apache.struts2.views.jsp.ui.FormTag _jspx_th_s_005fform_005f0 = (org.apache.struts2.views.jsp.ui.FormTag) _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction.get(org.apache.struts2.views.jsp.ui.FormTag.class);
+    org.apache.struts2.views.jsp.ui.FormTag _jspx_th_s_005fform_005f0 = (org.apache.struts2.views.jsp.ui.FormTag) _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction.get(org.apache.struts2.views.jsp.ui.FormTag.class);
     _jspx_th_s_005fform_005f0.setPageContext(_jspx_page_context);
     _jspx_th_s_005fform_005f0.setParent(null);
-    // /userManage.jsp(29,0) name = name type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_s_005fform_005f0.setName("form1");
-    // /userManage.jsp(29,0) name = id type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_s_005fform_005f0.setId("form1");
     // /userManage.jsp(29,0) name = action type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fform_005f0.setAction("ShowByConditionAction.action");
     // /userManage.jsp(29,0) name = method type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
@@ -231,10 +227,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       }
     }
     if (_jspx_th_s_005fform_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction.reuse(_jspx_th_s_005fform_005f0);
+      _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction.reuse(_jspx_th_s_005fform_005f0);
       return true;
     }
-    _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction.reuse(_jspx_th_s_005fform_005f0);
+    _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction.reuse(_jspx_th_s_005fform_005f0);
     return false;
   }
 

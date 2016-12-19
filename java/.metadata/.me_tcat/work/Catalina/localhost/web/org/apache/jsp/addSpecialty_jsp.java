@@ -132,9 +132,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         out.write("      特色名称：<input type=\"text\" name=\"name\"/><br>\r\n");
         out.write("      特色描述：<input type=\"text\" name=\"description\"/><br>\r\n");
         out.write("      所属类型：<select id=\"content\" name=\"type\">\r\n");
-        out.write("      <option value=\"食物\">食物</option>\r\n");
-        out.write("      <option value=\"服饰\">服饰</option>\r\n");
-        out.write("      <option value=\"节日\">节日</option>\r\n");
+        out.write("      <option value=\"1\">食物</option>\r\n");
+        out.write("      <option value=\"2\">服饰</option>\r\n");
+        out.write("      <option value=\"3\">节日</option>\r\n");
         out.write("      </select>\r\n");
         out.write("      </br>\r\n");
         out.write("   <input type=\"submit\" name=\"save\" value=\"保存\"/> \r\n");

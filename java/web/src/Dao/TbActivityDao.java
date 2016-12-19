@@ -22,6 +22,7 @@ public class TbActivityDao
 			tbActivity.setCreateDate(activity.getCreateDate());
 			tbActivity.setImagePath(activity.getImagePath());
 			tbActivity.setBuildId(activity.getBuildId());
+			tbActivity.setAttr2(activity.getAttr2());
 			s.save(tbActivity);
 			t.commit();
 		}

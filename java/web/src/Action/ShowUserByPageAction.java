@@ -5,6 +5,12 @@ import java.util.List;
 import Dao.UserByPageDao;
 import Model.*;  
 import javax.servlet.http.HttpServletRequest;  
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+
+import util.HibernateSessionFactory;
    
 public class ShowUserByPageAction {
 	UserByPageDao uerDao = new UserByPageDao();  
@@ -88,9 +94,9 @@ public class ShowUserByPageAction {
     
     public String showByCondition()
     {
-    	userList = uerDao.findPlantByPageCondition(page, rowsPerPage,"type",userType);  
-        totalPage = uerDao.getPlanTotalPage(rowsPerPage,"type",userType);  
-        userNum = uerDao.getPlanNum("type", userType);  
+    	userList = uerDao.findPlantByPageCondition(page, rowsPerPage,userType,userName);  
+        totalPage = uerDao.getPlanTotalPage(rowsPerPage,userType,userName);  
+        userNum = uerDao.getPlanNum(userType, userName);  
     	return "success"; 
     }
 

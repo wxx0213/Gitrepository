@@ -375,7 +375,7 @@
   <a href=buildingDetail.jsp>查看指定建筑</a><br/>
   <a href=addSpecialty.jsp>添加特色</a><br/>
   <a href=buildingDetail.jsp>查看指定建筑</a><br/>
-  <a href=addActivity.jsp>添加活动</a><br/>
+  <a href="GetAllBulidingAction.action">添加活动</a><br/>
   <a href=userManage.jsp></a><br/>
    <s:form action="ShowUserByPageAction.action"  method="get">
     <input type="submit" value="用户查询"/>

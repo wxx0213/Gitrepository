@@ -30,9 +30,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       特色名称：<input type="text" name="name"/><br>
       特色描述：<input type="text" name="description"/><br>
       所属类型：<select id="content" name="type">
-      <option value="食物">食物</option>
-      <option value="服饰">服饰</option>
-      <option value="节日">节日</option>
+      <option value="1">食物</option>
+      <option value="2">服饰</option>
+      <option value="3">节日</option>
       </select>
       </br>
    <input type="submit" name="save" value="保存"/> 

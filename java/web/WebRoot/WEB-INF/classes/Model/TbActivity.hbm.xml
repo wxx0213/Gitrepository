@@ -10,9 +10,10 @@
             <column name="act_id" />
             <generator class="increment"></generator>
         </id>
-        <many-to-one name="tbBuilding" class="Model.TbBuilding" fetch="select">
-            <column name="build_id" />
-        </many-to-one>
+
+        <property name="buildId" type="java.lang.Integer">
+            <column name="build_id" length="30" />
+        </property>
         <property name="actName" type="java.lang.String">
             <column name="act_name" length="50" />
         </property>
@@ -25,8 +26,8 @@
         <property name="createDate" type="java.lang.String">
             <column name="createDate" length="30" />
         </property>
-        <property name="attr1" type="java.sql.Timestamp">
-            <column name="attr1" length="19" />
+        <property name="attr1" type="java.lang.String">
+            <column name="attr1"  />
         </property>
         <property name="attr2" type="java.lang.String">
             <column name="attr2" />

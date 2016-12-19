@@ -12,7 +12,7 @@ import Model.*;
 
 public class TbBuildingDao 
 {
-	//Ìí¼Ó½¨ÖþÐÅÏ¢
+	//ï¿½ï¿½Ó½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	public void addTbBuilding(TbBuilding building)
 	{
 		try
@@ -39,7 +39,7 @@ public class TbBuildingDao
 		}
 		 
 	}
-	//¸ù¾Ý½¨ÖþÃû³Æ²éÑ¯Ïà¹ØÐÅÏ¢
+	//ï¿½ï¿½Ý½ï¿½ï¿½ï¿½ï¿½ï¿½Æ²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	public TbBuilding SelectByName(String name)
 	{
 		TbBuilding tbBuilding=new TbBuilding();
@@ -66,7 +66,7 @@ public class TbBuildingDao
 		}
 		return tbBuilding;
 	}
-	//¸ù¾ÝId²éÑ¯Ïà¹ØÐÅÏ¢
+	//ï¿½ï¿½ï¿½Idï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	public TbBuilding SelectById(int id)
 	{
 		TbBuilding tbBuilding=new TbBuilding();
@@ -92,5 +92,28 @@ public class TbBuildingDao
 			HibernateSessionFactory.closeSession();
 		}
 		return tbBuilding;
+	}
+	
+	public List<TbBuilding> SelectAll()
+	{
+		List<TbBuilding> list=new ArrayList();
+		TbBuilding tbBuilding=new TbBuilding();
+		try
+		{
+
+			Session s=HibernateSessionFactory.getSession();
+			String sql="from TbBuilding";
+			Query query = s.createQuery(sql);
+			list=(List<TbBuilding>)query.list();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		return list;
 	}
 }

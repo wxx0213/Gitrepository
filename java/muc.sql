@@ -4,7 +4,7 @@ Source Host: localhost
 Source Database: muc
 Target Host: localhost
 Target Database: muc
-Date: 2016/12/19 10:39:00
+Date: 2016/12/19 15:04:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,7 +24,7 @@ CREATE TABLE `tb_activity` (
   PRIMARY KEY (`act_id`),
   KEY `build_id` (`build_id`),
   CONSTRAINT `tb_activity_ibfk_1` FOREIGN KEY (`build_id`) REFERENCES `tb_building` (`build_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for tb_building
@@ -99,6 +99,8 @@ INSERT INTO `tb_activity` VALUES ('13', null, null, null, null, '2016-11-17 20:4
 INSERT INTO `tb_activity` VALUES ('14', null, null, null, null, '2016-11-17 21:00:06', null, null);
 INSERT INTO `tb_activity` VALUES ('15', null, null, null, null, '2016-11-17 21:02:26', null, null);
 INSERT INTO `tb_activity` VALUES ('16', null, null, null, null, '2016-11-17 21:18:40', null, null);
+INSERT INTO `tb_activity` VALUES ('17', '方法', '刚刚发广告', 'E:\\Images\\c8c2a88c-1f11-4d15-8f85-1608e4d50010.jpg;', null, '2016-12-19 14:42:28', null, null);
+INSERT INTO `tb_activity` VALUES ('18', '迭代', '反反复复付付付付付付付付付付付', 'E:\\Images\\e4573808-b0aa-4d57-bc00-d24a7c22bf74.jpg;', '3', '2016-12-19 14:59:27', null, '顶顶顶顶');
 INSERT INTO `tb_building` VALUES ('1', '大礼堂', '文西路', '举办各种活动和庆祝典礼', 'E:\\Images\\db74c0cf-3fb5-4af1-b746-3405085e074f.jpg;E:\\Images\\18acb891-133d-4c58-a11b-a5d7be499ec9.jpg;');
 INSERT INTO `tb_building` VALUES ('2', '理工楼', '偏僻的角落里', '信工和生环教学专用', 'E:\\Images\\c5fba2e9-8184-427b-b0c8-fd2bc976b701.jpg;E:\\Images\\2ab6fe18-931e-4fdd-98d0-bb23b545438a.jpg;E:\\Images\\9eea3622-dc77-44fc-8ac7-4b29ccec41fe.jpg;');
 INSERT INTO `tb_building` VALUES ('3', '图书馆', '临近理工楼', '学习和读书的场所', 'E:\\Images\\7bb2b1ce-dad6-4643-9df8-148500414d54.jpg;E:\\Images\\368471f4-9fc1-400d-b1f3-31ecc33184dd.jpg;F:\\Images\\184d5835-bbc1-4d5b-b583-3083e2ec8ff2.jpg;E:\\Images\\070c540e-6863-4063-bb69-fa05749a0dfc.jpg;');
@@ -111,6 +113,7 @@ INSERT INTO `tb_building` VALUES ('9', '顶顶顶顶', '顶顶顶顶顶', '顶�
 INSERT INTO `tb_speciality` VALUES ('1', '帽子', '服饰', '水水水水', 'E:\\Images\\51ce2838-425d-4e1c-a92f-e06147029119.jpg;', null);
 INSERT INTO `tb_speciality` VALUES ('2', '方法', '节日', '方法', 'E:\\Images\\46d9d124-98b1-4197-ad75-ccb093b42faa.jpg;', null);
 INSERT INTO `tb_speciality` VALUES ('3', '是是是', '节日', '是 ', 'E:\\Images\\2416aa51-379e-486d-88dc-ddbf75a83b65.jpg;', null);
+INSERT INTO `tb_speciality` VALUES ('4', '秘密', '3', '试试', 'E:\\Images\\a4563f8a-234c-494e-844a-d0fc7c32c701.jpg;', null);
 INSERT INTO `tb_user` VALUES ('6', '12', 'wgrU12/pd1mqJ6DJm/9nEA==', '0', '', '', '', '男');
 INSERT INTO `tb_user` VALUES ('7', ' 23456', 'xTordRu8Du5sCCdVr9sebg==', '0', '22', '1526714234@qq.com', '13645678999', '女');
 INSERT INTO `tb_user` VALUES ('8', '234567', 'DKP0iaJkj7NkRiG3dU8BvA==', '0', 'eee', 'ddddddd@126.com', '13455555555', '男');
