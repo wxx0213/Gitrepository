@@ -21,38 +21,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
 	
 
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery-1.11.0.min.js"></script>
-<!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-<!-- Custom Theme files -->
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--Google Fonts-->
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-	<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-	</script>
-	<!-- //end-smoth-scrolling -->
-	<script src="js/menu_jquery.js"></script>
-	<!--script-->
-		<script src="js/modernizr.custom.97074.js"></script>
-	<script src="js/jquery.chocolat.js"></script>
-		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
-		<!--light-box-files -->
-		<script type="text/javascript" charset="utf-8">
-		$(function() {
-			$('.gallery a').Chocolat();
-		});
-		</script>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<script src="js/jquery-1.11.0.min.js"></script>
+	
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+		<script src="js/modernizr.custom.97074.js"></script><!-- 注释后鼠标悬浮不出现具体描述 -->
+		<script src="js/jquery.chocolat.js"></script><!-- 注释后鼠标悬浮不出现具体描述 -->
 		<script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!-- 刷新后回到前面 -->
+		<script type="application/x-javascript"> 
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
+		function hideURLbar(){ window.scrollTo(0,1); } 
+	</script>
   </head>
   
   <body>
@@ -60,32 +42,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="header1">
 	<div class="container">
 		 <div class="header-main">
-				<!---->
-					<div class="header-logo">
-						<div class="logo">
-						<a href="index.jsp"><img src="images/lo1.png" alt="" ></a>
-						</div>
-						<div class="top-nav">
-							<span class="icon"><img src="images/menu.png" alt=""> </span>
-							<ul>
-								<li ><a href="index.jsp">首页</a> </li>
-								<li ><a href="guide.jsp" >玩遍校园  </a> </li>
-								<li><a href="Culture.jsp"  >校园文化</a></li>
-								<li><a href="building.jsp" >特色建筑</a></li>
-								<li><a href="service.jsp" >周边服务</a></li>
-								<li><a href="contact.html" >联系我们 </a></li>
-							</ul>
-							<!--script-->
-						<script>
-							$("span.icon").click(function(){
-								$(".top-nav ul").slideToggle(500, function(){
-								});
-							});
-					</script>				
-				</div>
-				<div class="clearfix"> </div>
-					</div>
-			<!---->
 			<div class="top-menu">					
 					<ul>
 						<li ><a href="index.html" >首页</a> </li>
@@ -94,33 +50,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<li><a href="index.html"> <img src="images/lo1.png" alt=""> </a></li>
 						<li><a href="galley.html">特色建筑 </a></li>
 						<li><a href="galley.html">周边服务 </a></li>
-					
-						<li><div class="header-login">
-									 <div class="top-nav-right">
-										<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
-											    <div id="loginBox">                
-											        <form id="loginForm">
-											                <fieldset id="body">
-											                	<fieldset>
-											                          <label for="email">Email Address</label>
-											                          <input type="text" name="email" id="email">
-											                    </fieldset>
-											                    <fieldset>
-											                            <label for="password">Password</label>
-											                            <input type="password" name="password" id="password">
-											                     </fieldset>
-											                    <input type="submit" id="login" value="Sign in">
-											                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
-											            	</fieldset>
-											            <span><a href="#">Forgot your password?</a></span>
-												 </form>
-									        </div>
-									  </div>
-								   </div>
-		                         </div>	</li>
-					</ul>
+						</ul>
 				</div>
-					<!--script-->
 	 </div>
    </div>
 </div>
@@ -132,9 +63,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<h2>特色建筑</h2>
 				<p>清幽的环境，古朴的建筑，遇见民大，发现不一样的你。</p>
 			</div>
-			<section>
+			
 				<ul id="da-thumbs" class="da-thumbs">
-					<li>
+					<!--<li>
 						<a href="images/g1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g1.jpg" alt="" class="img-responsive">
 							<div>
@@ -143,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
 						</a>
 					</li>
-					<li>
+					--><li>
 						<a href="images/g2.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g2.jpg" alt="">
 							<div>
@@ -188,7 +119,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
 						</a>
 					</li>
-					<li>
+					<!--<li>
 						<a href="images/g7.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g7.jpg" alt="">
 							<div>
@@ -197,7 +128,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
 						</a>
 					</li>
-					<li>
+					--><li>
 						<a href="images/g8.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 							<img src="images/g8.jpg" alt="">
 							<div>
@@ -215,9 +146,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
 						</a>
 					</li>
-					<div class="clearfix"> </div>
+					
 				</ul>
-			</section>
+			
 				
 		<script type="text/javascript">
 			$(function() {

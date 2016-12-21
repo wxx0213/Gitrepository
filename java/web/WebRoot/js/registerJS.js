@@ -1,83 +1,83 @@
- //ÑéÖ¤ÓÃ»§Ãû
+ //éªŒè¯ç”¨æˆ·å
    function checkName()
    {
-   //ÔÚÃ¿¸öº¯ÊıÖĞ¶¨Òåcheck±äÁ¿ÊÇÎªÁËÔÚ±íµ¥Ìá½»ºó£¬ÄÜ¹»Öğ¸öÑéÖ¤Ã¿¸öº¯ÊıÊÇ·ñÍ¨¹ı£¬ºÜºÃºÜºÃ¡££¨ÒÔÏÂÍ¬Àí£©
+   //åœ¨æ¯ä¸ªå‡½æ•°ä¸­å®šä¹‰checkå˜é‡æ˜¯ä¸ºäº†åœ¨è¡¨å•æäº¤åï¼Œèƒ½å¤Ÿé€ä¸ªéªŒè¯æ¯ä¸ªå‡½æ•°æ˜¯å¦é€šè¿‡ï¼Œå¾ˆå¥½å¾ˆå¥½ã€‚ï¼ˆä»¥ä¸‹åŒç†ï¼‰
    var check; 
    var username = document.getElementById("userNameID").value; 
    if (username.length > 20 || username.length < 6) { 
-    alert("ÓÃ»§ÃûÊÇ6-20Î»£¬ÇëÖØĞÂÊäÈë£¡");
-    //´Ë´¦ÉõÃî£¬¼ÈÈ»ÄãÔÚ´Ë´¦ÊäÈë´íÎó£¬ÄÇÃ´°´ÀíËµµ±È»ÒªÔÚ´Ë´¦¼ÌĞøÊäÈëÁË¡££¨ÔÚ´Ë´¦¼ÌĞø»ñÈ¡½¹µã£¡£©
+    alert("ç”¨æˆ·åæ˜¯6-20ä½ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
+    //æ­¤å¤„ç”šå¦™ï¼Œæ—¢ç„¶ä½ åœ¨æ­¤å¤„è¾“å…¥é”™è¯¯ï¼Œé‚£ä¹ˆæŒ‰ç†è¯´å½“ç„¶è¦åœ¨æ­¤å¤„ç»§ç»­è¾“å…¥äº†ã€‚ï¼ˆåœ¨æ­¤å¤„ç»§ç»­è·å–ç„¦ç‚¹ï¼ï¼‰
     document.getElementById("userNameID").focus();
     check = false; 
    } else { 
-    document.getElementById("checktext1").innerHTML = "¡Ì"; 
+    document.getElementById("checktext1").innerHTML = "âˆš"; 
     check = true; 
    } 
    return check; 
   } 
-  //ÀûÓÃÕıÔò±í´ïÊ½ÅĞ¶ÏÃÜÂë·ûºÏ·¨
+  //åˆ©ç”¨æ­£åˆ™è¡¨è¾¾å¼åˆ¤æ–­å¯†ç ç¬¦åˆæ³•
   function checkpwd(){ 
   var check; 
   var reg =/^[a-zA-Z0-9]$/;
   var password = document.getElementById("passwordID").value; 
   if (password.length < 6 || password.length > 18) { 
-   alert("ÃÜÂëÓÉ6-18Î»×Ö·û×é³É£¡");
+   alert("å¯†ç ç”±6-18ä½å­—ç¬¦ç»„æˆï¼");
    document.getElementById("passwordID").focus();
    check = false; 
   } else if(reg.test(password)){
-   alert("ÃÜÂë±ØĞë°üº¬×ÖÄ¸¡¢Êı×ÖÇëÖØĞÂÊäÈë£¡");
+   alert("å¯†ç å¿…é¡»åŒ…å«å­—æ¯ã€æ•°å­—è¯·é‡æ–°è¾“å…¥ï¼");
    document.getElementById("passwordID").focus();
    check = false; 
   }
   else { 
-   document.getElementById("checktext2").innerHTML = " ¡Ì"; 
+   document.getElementById("checktext2").innerHTML = " âˆš"; 
    check = true; 
   } 
   return check; 
  }
- //ÑéÖ¤ÃÜÂëÊÇ·ñÒ»ÖÂ
+ //éªŒè¯å¯†ç æ˜¯å¦ä¸€è‡´
  function checkpwdc() { 
   var check; 
   var password = document.getElementById("passwordID").value; 
   var pwdc = document.getElementById("repasswordID").value; 
   if (password != pwdc) { 
-   alert("Á½´ÎÊäÈëÃÜÂë²»Ò»ÖÂ£¬ÇëÖØĞÂÊäÈë£¡");
+   alert("ä¸¤æ¬¡è¾“å…¥å¯†ç ä¸ä¸€è‡´ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
    document.getElementById("passwordID").focus();
    check = false; 
   } else { 
-   document.getElementById("checktext3").innerHTML = " ¡Ì"; 
+   document.getElementById("checktext3").innerHTML = " âˆš"; 
    check = true; 
   } 
   return check; 
  }
- //ÑéÖ¤ÓÊÏä
+ //éªŒè¯é‚®ç®±
  function checkemail() { 
   var check; 
   var reg =/([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+/;
   var email= document.getElementById("emailID").value; 
   if(email==""|| !(reg.test(email))){
-   alert("ÓÊÏä¸ñÊ½²»ÕıÈ·£¡");
+   alert("é‚®ç®±æ ¼å¼ä¸æ­£ç¡®ï¼");
    document.getElementById("emailID").focus();
    check = false; 
   }
   else { 
-   document.getElementById("checktext4").innerHTML = " ¡Ì"; 
+   document.getElementById("checktext4").innerHTML = " âˆš"; 
    check = true; 
   } 
   return check; 
  }
- //ÑéÖ¤ÊÖ»úºÅ
+ //éªŒè¯æ‰‹æœºå·
  function checkmobile() { 
   var check; 
   var reg = /^1(3|4|5|7|8)\d{9}/;
   var mobile= document.getElementById("mobileID").value; 
   if( mobile==""||!(reg.test(mobile))){
-   alert("ÊÖ»úºÅ¸ñÊ½²»ÕıÈ·£¡");
+   alert("æ‰‹æœºå·æ ¼å¼ä¸æ­£ç¡®ï¼");
    document.getElementById("mobileID").focus();
    check = false; 
   }
   else { 
-   document.getElementById("checktext5").innerHTML = " ¡Ì"; 
+   document.getElementById("checktext5").innerHTML = " âˆš"; 
    check = true; 
   } 
   return check; 
