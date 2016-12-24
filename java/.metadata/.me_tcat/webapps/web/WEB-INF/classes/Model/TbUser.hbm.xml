@@ -29,7 +29,7 @@
             <column name="mobile" length="20" />
         </property>
         <property name="sex" type="java.lang.String">
-            <column name="sex" />
+            <column name="sex" length="1" />
         </property>
     </class>
 </hibernate-mapping>

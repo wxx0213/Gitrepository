@@ -78,16 +78,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <div class="tips"><label id="checktext3">请确认您的密码</label><br/></div>
         </div>
       </div>
-      <div class="form-group">
-        <div class="label">
-          <label></label>
-        </div>
         <div class="field">
           <input type="radio" id="sexID" name="type" value="1" checked="checked"/>管理员
           <input id="sexID" type="radio" name="type" value="0" disabled="ture"/>普通用户
         </div>
-      </div>
-        
      	 <div class="form-group">
         <div class="label">
           <label>姓名：</label>

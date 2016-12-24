@@ -21,6 +21,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
+     <script type="text/javascript" src="<%=request.getContextPath()%>/js/laydate/laydate.js">
+	 </script>
   </head>
   
   <body>
@@ -34,6 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      listKey="buildId" listValue="buildName"
       headerKey="0" headerValue="---请选择---"/><br/><br/>
   详细地点：<input type="text" id="titleID" size="80" name="locationDetail" maxlength="100"/><br/><br/>
+  活动时间：<input type="text" name="activityDate" class="laydate-icon" onclick="laydate()" /><br/><br/>
    <input type="submit" name="submit" value="保存"/>
    <input type="reset" name="reset" value="取消" />
    </form>

@@ -41,9 +41,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
         <div class="field">
         	 <input type="text" class="input tips" style="width:25%; float:left;" name="imageFile" value=${savePath}></input>
-        
+         
+        <a href=addImage.jsp>上传图片</a>
           <div class="tipss">图片尺寸：500*200</div>
-          <div class="tipss"> <a href=addImage.jsp>上传图片</a></div>
         </div>
       </div>
       <div class="form-group">

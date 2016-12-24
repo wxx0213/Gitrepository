@@ -26,8 +26,8 @@
         <property name="createDate" type="java.lang.String">
             <column name="createDate" length="30" />
         </property>
-        <property name="attr1" type="java.lang.String">
-            <column name="attr1"  />
+        <property name="activityDate" type="java.lang.String">
+            <column name="activityDate"  length="30"/>
         </property>
         <property name="attr2" type="java.lang.String">
             <column name="attr2" />

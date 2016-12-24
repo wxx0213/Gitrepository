@@ -412,19 +412,22 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\tCopyright &copy; 2016.Company name All rights reserved.\r\n");
       out.write("  <a href=addArchitecture.jsp>添加特色建筑</a><br/>\r\n");
       out.write("  <a href=buildingInformation.jsp>查看特色建筑</a><br/>  \r\n");
-      out.write("  <a href=buildingDetail.jsp>查看指定建筑</a><br/>\r\n");
       out.write("  <a href=addSpecialty.jsp>添加特色</a><br/>\r\n");
-      out.write("  <a href=buildingDetail.jsp>查看指定建筑</a><br/>\r\n");
       out.write("  <a href=\"GetAllBulidingAction.action\">添加活动</a><br/>\r\n");
       out.write("  <a href=userManage.jsp></a><br/>\r\n");
       out.write("   ");
       if (_jspx_meth_s_005fform_005f2(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("      更新<br/>\r\n");
+      out.write("     \r\n");
       out.write("  <a href=Addadmin.jsp>添加管理员</a><br/>\r\n");
       out.write("  <a href=AdminLogin.jsp>管理员登录</a><br/> \r\n");
       out.write("  <a href=forgetPassword.jsp>忘记密码</a><br/>\r\n");
+      out.write("   更新<br/>\r\n");
+      out.write("  <a href=\"ShowActivityAction.action\">活动管理</a><br/>\r\n");
+      out.write("  <a href=\"selectForGuideAction.action\">活动导航</a><br/>\r\n");
+      out.write("  <a href=\"ShowBuildingAction.action\">建筑管理</a><br/>\r\n");
+      out.write("  \r\n");
       out.write("\t\t\t\t\t</p>\r\n");
       out.write("\t\t\t\t\t<div class=\"clearfix\">\r\n");
       out.write("\t\t\t\t\t</div>\r\n");
@@ -563,9 +566,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.struts2.views.jsp.ui.FormTag _jspx_th_s_005fform_005f2 = (org.apache.struts2.views.jsp.ui.FormTag) _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction.get(org.apache.struts2.views.jsp.ui.FormTag.class);
     _jspx_th_s_005fform_005f2.setPageContext(_jspx_page_context);
     _jspx_th_s_005fform_005f2.setParent(null);
-    // /index.jsp(380,3) name = action type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /index.jsp(378,3) name = action type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fform_005f2.setAction("ShowUserByPageAction.action");
-    // /index.jsp(380,3) name = method type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /index.jsp(378,3) name = method type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fform_005f2.setMethod("get");
     int _jspx_eval_s_005fform_005f2 = _jspx_th_s_005fform_005f2.doStartTag();
     if (_jspx_eval_s_005fform_005f2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {

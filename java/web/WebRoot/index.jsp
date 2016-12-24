@@ -84,13 +84,46 @@
 								</a>
 							</li>
 							<li>
-								<a href="GetBuildingInformationAction.action">特色建筑 </a>
+								<a href="building.jsp">特色建筑 </a>
 							</li>
 							<li>
 								<a href="service.jsp">周边服务 </a>
 							</li>
 
-							
+							<li>
+								<div class="header-login">
+									<div class="top-nav-right">
+										<div id="loginContainer">
+											<a href="#" id="loginButton"><span>登录 </span> </a>
+											<div id="loginBox">
+												
+												<s:form action="LoginAction.action" method="post" id="loginForm">
+													<fieldset id="body">
+														<fieldset>
+															<label for="email">
+																用户名
+															</label>
+															<input type="text" name="username" id="email">
+														</fieldset>
+														<fieldset>
+															<label for="password">
+																密码
+															</label>
+															<input type="password" name="password" id="password">
+														</fieldset>
+														<input type="submit" id="login" value="登录">
+														<label for="checkbox">
+															<input type="checkbox" id="checkbox">
+															<i>记住我</i>
+														</label>
+													</fieldset>
+													<span><a href="register.jsp">注册</a> </span>
+												</s:form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
 						</ul>
 					</div>
 					<!--script-->
@@ -149,7 +182,7 @@
 					</div>
 				</div>
 				<div class="bann-info-btn">
-					<a href="GetBuildingInformationAction.action" class="hvr-bounce-to-right">Find More</a>
+					<a href="building.html" class="hvr-bounce-to-right">Find More</a>
 				</div>
 			</div>
 		</div>
@@ -339,18 +372,21 @@
 						Copyright &copy; 2016.Company name All rights reserved.
   <a href=addArchitecture.jsp>添加特色建筑</a><br/>
   <a href=buildingInformation.jsp>查看特色建筑</a><br/>  
-  <a href=buildingDetail.jsp>查看指定建筑</a><br/>
   <a href=addSpecialty.jsp>添加特色</a><br/>
-  <a href=buildingDetail.jsp>查看指定建筑</a><br/>
-  <a href=addActivity.jsp>添加活动</a><br/>
+  <a href="GetAllBulidingAction.action">添加活动</a><br/>
   <a href=userManage.jsp></a><br/>
    <s:form action="ShowUserByPageAction.action"  method="get">
     <input type="submit" value="用户查询"/>
     </s:form>
-      更新<br/>
+     
   <a href=Addadmin.jsp>添加管理员</a><br/>
   <a href=AdminLogin.jsp>管理员登录</a><br/> 
   <a href=forgetPassword.jsp>忘记密码</a><br/>
+   更新<br/>
+  <a href="ShowActivityAction.action">活动管理</a><br/>
+  <a href="selectForGuideAction.action">活动导航</a><br/>
+  <a href="ShowBuildingAction.action">建筑管理</a><br/>
+  
 					</p>
 					<div class="clearfix">
 					</div>

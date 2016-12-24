@@ -20,6 +20,7 @@ public class AddActivityImageAction {
 	private List<String> uploadFileName;
 	
 	
+	
     public List<File> getUpload() {
 		return upload;
 	}
@@ -43,14 +44,15 @@ public class AddActivityImageAction {
 	public void setUploadFileName(List<String> uploadFileName) {
 		this.uploadFileName = uploadFileName;
 	}
+    
 
 	public String execute()throws Exception
 	{
 		//将路径保存至session
 		HttpServletRequest request=ServletActionContext.getRequest();
 		HttpServletResponse response=ServletActionContext.getResponse();
-		
-	    String savePath=new String();
+		String savePath=new String();
+	    
 	    String path;
     	for(int i=0;i<getUpload().size();i++)
     	{
@@ -71,7 +73,7 @@ public class AddActivityImageAction {
     		path="E:\\Images\\"+newName+";";
     		savePath+=path;
     	}
-		request.getSession().setAttribute("savePath",savePath);
+    	request.getSession().setAttribute("savePath",savePath);
     	return "success";
 	}
 }

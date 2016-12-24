@@ -62,8 +62,8 @@ public class GetBuildingInformationAction
 			//产生随机Id
 			for(int i=0;i<4;)
 			{
-				//产生1-4的随机数
-				int num=new Random().nextInt(10)+1;
+				//产生1-6的随机数
+				int num=new Random().nextInt(6)+1;
 				if(i==0)
 				{
 					a[i]=num;
@@ -98,8 +98,6 @@ public class GetBuildingInformationAction
 			    ImageData imageData=new ImageData();
 				imageData.setFirstImagePath(firstImagePath[i]);
 				imageData.setImageId(element);
-				imageData.setBuildName(tbBuilding.getBuildName());
-				imageData.setBuildDesc(tbBuilding.getDescription());
 			    imageList.add(imageData);
 			    i++;
 

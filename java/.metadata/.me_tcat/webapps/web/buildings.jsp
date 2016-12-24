@@ -29,7 +29,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     图片id<input type="text" name="imageId"/><input type="submit" value="查询"/>
   </form>
   
-  --><form method="post" action="getBuidingDetailAction.action" id="listform">
+  -->
+  <form method="post" action="getBuidingDetailAction.action" id="listform">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong> <a href="" style="float:right; display:none;">添加字段</a></div>
     <div class="padding border-bottom">

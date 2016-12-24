@@ -1,0 +1,45 @@
+package Data;
+
+public class ActivityShowData
+{
+	private int actId;
+	private String actPlace;
+	private String actName;
+	private String createDate;
+	
+	public int getActId() {
+		return actId;
+	}
+	public void setActId(int actId) {
+		this.actId = actId;
+	}
+	public String getActName() {
+		return actName;
+	}
+	public void setActName(String actName) {
+		this.actName = actName;
+	}
+	public String getActPlace() {
+		return actPlace;
+	}
+	public void setActPlace(String actPlace) {
+		this.actPlace = actPlace;
+	}
+	public String getCreateDate() {
+		return createDate;
+	}
+	public void setCreateDate(String createDate) {
+		this.createDate = createDate;
+	}
+	public ActivityShowData()
+	{
+		
+	}
+	public ActivityShowData(int actId,String actName,String createDate,String buildName,String buildDetail)
+	{
+		this.actId=actId;
+		this.actName=actName;
+		this.createDate=createDate.substring(0,createDate.indexOf(" "));
+		this.actPlace=buildName+buildDetail;
+	}
+}

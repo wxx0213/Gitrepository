@@ -1,3 +1,6 @@
-#Mon Nov 28 10:48:54 CST 2016
+#Thu Dec 22 23:23:51 CST 2016
+com.genuitec.eclipse.hibernate.JAVA_PACKAGE=Model
+com.genuitec.eclipse.hibernate.GEN_POJO=false
 me.pref.version=4.1
 eclipse.preferences.version=1
+com.genuitec.eclipse.hibernate.JAVA_FOLDER=/web/src

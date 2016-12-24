@@ -116,4 +116,59 @@ public class TbBuildingDao
 		}
 		return list;
 	}
+	
+	//修改信息
+	public Boolean updateTbBuilding(TbBuilding building)
+	{
+		try
+		{
+			TbBuildingDao buildingDao=new TbBuildingDao();
+			TbBuilding TbBuilding=new TbBuilding();
+			
+			TbBuilding=buildingDao.SelectById(building.getBuildId());
+			TbBuilding.setBuildId(building.getBuildId());
+			TbBuilding.setBuildName(building.getBuildName());
+			TbBuilding.setDescription(building.getDescription());
+			TbBuilding.setLocation(building.getLocation());
+			TbBuilding.setImagePath(building.getImagePath());
+			Session s=HibernateSessionFactory.getSession();
+			
+			Transaction t=s.beginTransaction();
+			s.update(TbBuilding);
+			t.commit();
+			return true;
+		}
+		catch(Exception e)
+		{
+			return false;
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		 
+	}
+	//根据id删除信息
+	public void deleteById(int id)
+	{
+		try
+		{
+			
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t = s.beginTransaction();
+			String sql="delete from TbBuilding where buildId=?";
+			Query query = s.createQuery(sql);
+			query.setInteger(0, id);
+			query.executeUpdate();
+			t.commit();
+		}
+		catch(Exception e)
+		{
+			
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+	}
 }

@@ -25,6 +25,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+    <!-- 更新 -->
+    <a>更多建筑信息</a><br/>
+    <!-- 更新 -->
     <s:form action="GetBuildingInformationAction.action"  method="post">
     <input type="submit" value="查看特色建筑"/>
     </s:form>

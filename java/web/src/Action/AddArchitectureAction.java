@@ -7,10 +7,16 @@ import org.apache.struts2.ServletActionContext;
 
 import Dao.*;
 import Model.*;
+import Tool.Dateformat;
 import Tool.Encode;
 
 public class AddArchitectureAction 
 {
+	//修改时会用到
+	private TbBuilding building=new TbBuilding();
+	private int id;
+	private String[] ImagePath=new String[20];
+	
 	private String buildingName;
 	private String buildingLocation;
 	private String buildingDescription;
@@ -38,6 +44,26 @@ public class AddArchitectureAction
 	}
 	public void setImageFile(String imageFile) {
 		this.imageFile = imageFile;
+	}
+	
+	public TbBuilding getBuilding() {
+		return building;
+	}
+	public void setBuilding(TbBuilding building) {
+		this.building = building;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String[] getImagePath() {
+		return ImagePath;
+	}
+	public void setImagePath(String[] imagePath) {
+		ImagePath = imagePath;
 	}
 	public void AddBuilding()
 	{
@@ -76,4 +102,47 @@ public class AddArchitectureAction
 		}
 	}
 	
+	public String selectForupdate()
+	  {
+		  TbBuildingDao buildingDao=new TbBuildingDao(); 
+	  	if(id!=0)
+	  	{
+	  		building=buildingDao.SelectById(id);
+	  		String[] path=building.getImagePath().split(";");
+			for(int i=0;i<path.length;i++)
+			{
+				int index=path[i].lastIndexOf("\\")+1;
+				String filename=path[i].substring(index);
+				ImagePath[i]="\\upload\\"+filename;;	
+			}
+	  	}
+		  
+	  	return "success";
+	  }
+	
+	public String updateBuildingById()
+	  {
+	  	Boolean flag;
+	  	TbBuildingDao buildingDao=new TbBuildingDao();
+	  	building.setBuildId(id);
+	  	building.setBuildName(buildingName);
+	  	building.setDescription(buildingDescription);
+	  	building.setLocation(buildingLocation);
+	  	building.setImagePath(imageFile);
+	      if(id!=0)
+	       {
+	  	     flag=buildingDao.updateTbBuilding(building);
+	       }
+	  	 return "success";
+	  }
+	
+	  public String deleteBuildingById()
+	  {
+		  TbBuildingDao buildingDao=new TbBuildingDao();
+	  	if(id!=0)
+	  	{
+	  		buildingDao.deleteById(id);
+	  	}
+	  	return "success"; 
+	  }
 }

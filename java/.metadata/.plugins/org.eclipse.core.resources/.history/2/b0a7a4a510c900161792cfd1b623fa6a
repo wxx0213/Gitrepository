@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   <package name="default"  extends="struts-default" >
+     <action name="LoginAction" class="Action.LoginAction" method="login">
+     </action>
+     
+     <action name="RegisterAction" class="Action.RegisterAction" method="register">
+     </action>
+     
+     <action name="AdminLogin" class="Action.AdminLoginAction" method="adminLogin">
+     <result name="success">admin.jsp</result>
+     <result name="error">error.jsp</result>   
+     </action>
+     
+     <action name="AddActivityAction" class="Action.AddActivityAction" method="addActivity">
+     <result name="success" type="redirect-action">ShowActivityAction</result>
+     </action>
+     
+     <action name="selectActivityByIdAction" class="Action.AddActivityAction" method="selectById">
+     <result name="success">activityDetail.jsp</result>
+     </action>
+     
+     
+     <action name="selectForupdateActivityAction" class="Action.AddActivityAction" method="selectForupdate">
+     <result name="success">updateActivityInfo.jsp</result>
+     </action>
+     
+     <action name="updateActivityByIdAction" class="Action.AddActivityAction" method="updateActivityById">
+     <result name="success" type="redirect-action">ShowActivityAction</result>
+     </action>
+     
+     <action name="selectForGuideAction" class="Action.AddActivityAction" method="selectForGuide">
+     <result name="success">activityGuide.jsp</result>
+     </action>
+     <action name="deleteActivityByIdAction" class="Action.AddActivityAction" method="deleteActivityById">
+     <result name="success" type="redirect-action">ShowActivityAction</result>
+     </action>
+     <action name="AddActivityImageAction" class="Action.AddActivityImageAction" method="execute">
+     <result name="success" type="redirect-action">GetAllBulidingAction</result>
+     </action>
+     
+     <action name="GetAllBulidingAction" class="Action.AddActivityAction" method="getAllBuliding">
+     <result name="success">addActivity.jsp</result>
+     </action>
+     <action name="AddImageAction" class="Action.AddImageAction" method="execute">
+     <result name="success">addArchitecture.jsp</result>
+     </action>
+     
+     <action name="AddArchitectureAction" class="Action.AddArchitectureAction" method="AddBuilding">
+     </action>
+     
+     <action name="GetBuildingInformationAction" class="Action.GetBuildingInformationAction" method="getBuid_Info">
+     <result name="success">buildingInformation.jsp</result>
+     </action>
+     
+     
+     <action name="getBuidingDetailAction" class="Action.GetBuildingDetailAction" method="getBuidingDetail">
+     <result name="success">buildingDetail.jsp</result>
+     <result name="error">buildingDetail.jsp</result>
+     </action>
+     
+     
+     <action name="AddSpecialtyAction" class="Action.AddSpecialtyAction" method="addSpecialty">
+     </action>
+     
+     <action name="AddSpecialtyImageAction" class="Action.AddSpecialtyImageAction" method="execute">
+     <result name="success">addSpecialty.jsp</result>
+     </action>
+     
+     <action name="ShowUserByPageAction"  class="Action.ShowUserByPageAction" method="show">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">userManage.jsp</result>        
+     </action>   
+
+     <action name="DeleteUserByIdAction"  class="Action.UserManageAction" method="deleteUserById"> 
+     <result name="success" type="redirect-action">ShowUserByPageAction</result>       
+     </action> 
+     
+     <action name="SelectforUpdateAction"  class="Action.UserManageAction" method="selectforUpdate"> 
+     <result name="success">updateUserInformation.jsp</result>       
+     </action> 
+     
+     <action name="SelectByIdAction"  class="Action.UserManageAction" method="selectById"> 
+     <result name="success">userDetail.jsp</result>       
+     </action>
+     
+     
+     <action name="UpdateByIdAction"  class="Action.UserManageAction" method="updateById"> 
+     <result name="success" type="redirect-action">ShowUserByPageAction</result>       
+     </action>
+     
+     <action name="CheckForResetPassAction"  class="Action.UserManageAction" method="checkForResetPass"> 
+     <result name="success">resetPassword.jsp</result>  
+     <result name="error">error.jsp</result>   
+     </action>
+            
+     <action name="UpdatePasswordAction"  class="Action.UserManageAction" method="updatePassword"> 
+     <result name="success">resetPassword.jsp</result>  
+     <result name="error">error.jsp</result>   
+     </action> 
+     
+     
+     <action name="ShowByConditionAction"  class="Action.ShowUserByPageAction" method="showByCondition">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">userManage.jsp</result>        
+     </action> 
+     
+     
+     <action name="ShowActivityAction"  class="Action.ShowActivityByPageAction" method="show">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">activityManage.jsp</result>        
+     </action>
+     
+     <action name="ShowActivityByConditionAction"  class="Action.ShowActivityByPageAction" method="showByCondition">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">activityManage.jsp</result>        
+     </action> 
+    </package>
+</struts>

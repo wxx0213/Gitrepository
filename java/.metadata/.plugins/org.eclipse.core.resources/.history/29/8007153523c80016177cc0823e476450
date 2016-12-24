@@ -1,0 +1,65 @@
+package Dao;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import util.HibernateSessionFactory;
+import Model.*;
+
+
+public class TbActivityDao 
+{
+	public void addTbActivity(TbActivity activity)
+	{
+		try
+		{
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t=s.beginTransaction();
+			
+			TbActivity tbActivity=new TbActivity();
+			tbActivity.setActName(activity.getActName());
+			tbActivity.setContent(activity.getContent());
+			tbActivity.setCreateDate(activity.getCreateDate());
+			tbActivity.setImagePath(activity.getImagePath());
+			tbActivity.setBuildId(activity.getBuildId());
+			tbActivity.setAttr2(activity.getAttr2());
+			s.save(tbActivity);
+			t.commit();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		 
+	}
+	//根据id查找信息
+	public TbActivity SelectById(int id)
+	{
+		TbActivity tbActivity=new TbActivity();
+		try
+		{
+			
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t = s.beginTransaction();
+			String sql="from TbActivity where actId=?";
+			Query query = s.createQuery(sql);
+			query.setInteger(0, id);
+			//获得唯一的查询结果
+			tbActivity=(TbActivity)query.uniqueResult();
+		}
+		catch(Exception e)
+		{
+			
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		return tbActivity;
+	}
+}

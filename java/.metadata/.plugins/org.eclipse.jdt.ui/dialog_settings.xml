@@ -19,6 +19,11 @@
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
+	<section name="JavaSearchPage">
+		<item value="false" key="CASE_SENSITIVE"/>
+		<item value="11" key="INCLUDE_MASK"/>
+		<item value="0" key="HISTORY_SIZE"/>
+	</section>
 	<section name="RefactoringWizard.preview">
 		<item value="400" key="height"/>
 		<item value="600" key="width"/>
@@ -42,6 +47,6 @@
 	</section>
 	<section name="NewJspCreationWizardPage">
 		<item value="Default JSP template" key="templatezh_CN"/>
-		<item value="/web/WebRoot/WEB-INF" key="filePath"/>
+		<item value="/web/WebRoot" key="filePath"/>
 	</section>
 </section>

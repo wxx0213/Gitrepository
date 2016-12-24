@@ -372,18 +372,21 @@
 						Copyright &copy; 2016.Company name All rights reserved.
   <a href=addArchitecture.jsp>添加特色建筑</a><br/>
   <a href=buildingInformation.jsp>查看特色建筑</a><br/>  
-  <a href=buildingDetail.jsp>查看指定建筑</a><br/>
   <a href=addSpecialty.jsp>添加特色</a><br/>
-  <a href=buildingDetail.jsp>查看指定建筑</a><br/>
   <a href="GetAllBulidingAction.action">添加活动</a><br/>
   <a href=userManage.jsp></a><br/>
    <s:form action="ShowUserByPageAction.action"  method="get">
     <input type="submit" value="用户查询"/>
     </s:form>
-      更新<br/>
+     
   <a href=Addadmin.jsp>添加管理员</a><br/>
   <a href=AdminLogin.jsp>管理员登录</a><br/> 
   <a href=forgetPassword.jsp>忘记密码</a><br/>
+   更新<br/>
+  <a href="ShowActivityAction.action">活动管理</a><br/>
+  <a href="selectForGuideAction.action">活动导航</a><br/>
+  <a href="ShowBuildingAction.action">建筑管理</a><br/>
+  
 					</p>
 					<div class="clearfix">
 					</div>

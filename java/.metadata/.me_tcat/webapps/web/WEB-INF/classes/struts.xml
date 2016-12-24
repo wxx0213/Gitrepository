@@ -15,9 +15,34 @@
      </action>
      
      <action name="AddActivityAction" class="Action.AddActivityAction" method="addActivity">
-     <result name="success">index.jsp</result>
+     <result name="success" type="redirect-action">ShowActivityAction</result>
      </action>
      
+     <action name="selectActivityByIdAction" class="Action.AddActivityAction" method="selectById">
+     <result name="success">activityDetail.jsp</result>
+     </action>
+     
+     
+     <action name="selectForupdateActivityAction" class="Action.AddActivityAction" method="selectForupdate">
+     <result name="success">updateActivityInfo.jsp</result>
+     </action>
+     
+     <action name="updateActivityByIdAction" class="Action.AddActivityAction" method="updateActivityById">
+     <result name="success" type="redirect-action">ShowActivityAction</result>
+     </action>
+     
+     <action name="selectForGuideAction" class="Action.AddActivityAction" method="selectForGuide">
+     <result name="success">activityGuide.jsp</result>
+     </action>
+     
+     <action name="moreActivityAction"  class="Action.ShowActivityByPageAction" method="show">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">activityShow.jsp</result>        
+     </action>
+     
+     <action name="deleteActivityByIdAction" class="Action.AddActivityAction" method="deleteActivityById">
+     <result name="success" type="redirect-action">ShowActivityAction</result>
+     </action>
      <action name="AddActivityImageAction" class="Action.AddActivityImageAction" method="execute">
      <result name="success" type="redirect-action">GetAllBulidingAction</result>
      </action>
@@ -42,6 +67,18 @@
      <result name="error">buildingDetail.jsp</result>
      </action>
      
+     <action name="deleteBuildingByIdAction" class="Action.AddArchitectureAction" method="deleteBuildingById">
+     <result name="success" type="redirect-action">ShowBuildingAction</result>
+     </action>
+     
+     <action name="selectforUpdateBuildingAction"  class="Action.AddArchitectureAction" method="selectForupdate"> 
+     <result name="success">updateBuildingInfo.jsp</result>       
+     </action> 
+     
+     
+     <action name="updateBuildingByIdAction" class="Action.AddArchitectureAction" method="updateBuildingById">
+     <result name="success" type="redirect-action">ShowBuildingAction</result>
+     </action>
      
      <action name="AddSpecialtyAction" class="Action.AddSpecialtyAction" method="addSpecialty">
      </action>
@@ -58,6 +95,7 @@
      <action name="DeleteUserByIdAction"  class="Action.UserManageAction" method="deleteUserById"> 
      <result name="success" type="redirect-action">ShowUserByPageAction</result>       
      </action> 
+     
      <action name="SelectforUpdateAction"  class="Action.UserManageAction" method="selectforUpdate"> 
      <result name="success">updateUserInformation.jsp</result>       
      </action> 
@@ -85,6 +123,26 @@
      <action name="ShowByConditionAction"  class="Action.ShowUserByPageAction" method="showByCondition">  
      <!--type="dispatcher"保存了页面原来的数据-->
      <result name="success">userManage.jsp</result>        
-     </action>   
+     </action> 
+     
+     
+     <action name="ShowActivityAction"  class="Action.ShowActivityByPageAction" method="show">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">activityManage.jsp</result>        
+     </action>
+     
+     <action name="ShowActivityByConditionAction"  class="Action.ShowActivityByPageAction" method="showByCondition">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">activityManage.jsp</result>        
+     </action> 
+          <action name="ShowBuildingAction"  class="Action.ShowBuildingByPageAction" method="show">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">buildingManage.jsp</result>        
+     </action>
+     
+     <action name="ShowBuildingByConditionAction"  class="Action.ShowBuildingByPageAction" method="showByCondition">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">buildingManage.jsp</result>        
+     </action>
     </package>
 </struts>

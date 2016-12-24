@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>addActivity</title>
+    <title>My JSP 'newactivity.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -20,66 +20,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<link rel="stylesheet" href="css/pintuer.css">
-	<link rel="stylesheet" href="css/admin.css">
-	<script src="js/jquery.js"></script>
-	<script src="js/pintuer.js"></script>
+
+     <script type="text/javascript" src="<%=request.getContextPath()%>/js/laydate/laydate.js">
+	 </script>
   </head>
   
   <body>
-  	<div class="panel admin-panel">
-  <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 新增活动信息</strong></div>
-  <div class="body-content">
-   <form action="AddActivityAction.action" method="post" class="form-x">
-   	<div class="form-group">
-        <div class="label">
-          <label>图片：</label>
-        </div>
-        <div class="field">
-        	 <input type="text" class="input tips" style="width:25%; float:left;" name="imageFile" value=${savePath}></input>
-        
-          <div class="tipss">图片尺寸：500*200</div>
-          <div class="tipss"> <a href=addActivityImage.jsp>上传图片</a></div>
-        </div>
-      </div>
-    <div class="form-group">
-        <div class="label">
-          <label>活动标题：</label>
-        </div>
-        <div class="field">
-         <input type="text" class="input" id="titleID" size="80" name="title" maxlength="100"/>
-          <div class="tips"></div>
-        </div>
-      </div>
- 
-		 <div class="form-group">
-        <div class="label">
-          <label>活动内容：</label>
-        </div>
-        <div class="field">
-         <textarea class="input" id="contentID" style="width:515px;height:100px" name="content"/></textarea>
-          <div class="tips"></div>
-        </div>
-      </div>
-       <div class="form-group">
-       		<s:select list="buildingList" name="buildId" label="活动地点"  
-       		listKey="buildId" listValue="buildName" headerKey="0" headerValue="---请选择---"/>
-      
-        
-       </div>
-   	 
-   <div class="form-group">
-        <div class="label">
-          <label></label>
-        </div>
-        <div class="field">
-          <button class="button bg-main icon-check-square-o" type="submit" name="save" > 保存</button>
-          <button class="button bg-main icon-check-square-o" type="reset" name="cancel" > 取消</button>
-          
-        </div>
-      </div>
+   <form action="AddActivityAction.action" method="post">
+   <input type="text" name="imageFile" value=${savePath}></input><a href=addActivityImage.jsp>上传图片</a><br/><br>
+   标题：<input type="text" id="titleID" size="80" name="title" maxlength="100"/>
+  <br/><br/>
+   内容：<textarea id="contentID" name="content" style="width:515px;height:100px"></textarea><br/><br/>
+ <!-- 动态下拉列表 -->
+    <s:select list="buildingList" name="buildId" label="活动地点" 
+     listKey="buildId" listValue="buildName"
+      headerKey="0" headerValue="---请选择---"/><br/><br/>
+  详细地点：<input type="text" id="titleID" size="80" name="locationDetail" maxlength="100"/><br/><br/>
+  活动时间：<input type="text" name="activityDate" class="laydate-icon" onclick="laydate()" /><br/><br/>
+   <input type="submit" name="submit" value="保存"/>
+   <input type="reset" name="reset" value="取消" />
    </form>
-     </div>
-</div>
   </body>
 </html>

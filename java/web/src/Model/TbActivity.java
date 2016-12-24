@@ -25,7 +25,7 @@ public class TbActivity implements java.io.Serializable {
 		this.buildId = buildId;
 	}
 
-	private Timestamp attr1;
+	private String activityDate;
 	private String attr2;
 
 	// Constructors
@@ -36,13 +36,13 @@ public class TbActivity implements java.io.Serializable {
 
 	/** full constructor */
 	public TbActivity(TbBuilding tbBuilding, String actName, String content,
-			String imagePath, String createDate, Timestamp attr1, String attr2) {
+			String imagePath, String createDate, String activityDate, String attr2) {
 		this.tbBuilding = tbBuilding;
 		this.actName = actName;
 		this.content = content;
 		this.imagePath = imagePath;
 		this.createDate = createDate;
-		this.attr1 = attr1;
+		this.activityDate = activityDate;
 		this.attr2 = attr2;
 	}
 
@@ -96,12 +96,12 @@ public class TbActivity implements java.io.Serializable {
 		this.createDate = createDate;
 	}
 
-	public Timestamp getAttr1() {
-		return this.attr1;
+	public String getActivityDate() {
+		return this.activityDate;
 	}
 
-	public void setAttr1(Timestamp attr1) {
-		this.attr1 = attr1;
+	public void setActivityDate(String activityDate) {
+		this.activityDate = activityDate;
 	}
 
 	public String getAttr2() {

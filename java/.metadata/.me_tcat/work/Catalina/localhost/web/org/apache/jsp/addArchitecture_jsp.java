@@ -191,9 +191,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         out.write("        \t <input type=\"text\" class=\"input tips\" style=\"width:25%; float:left;\" name=\"imageFile\" value=");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${savePath}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
         out.write("></input>\r\n");
-        out.write("         \r\n");
-        out.write("        <a href=addImage.jsp>上传图片</a>\r\n");
+        out.write("        \r\n");
         out.write("          <div class=\"tipss\">图片尺寸：500*200</div>\r\n");
+        out.write("          <div class=\"tipss\"> <a href=addImage.jsp>上传图片</a></div>\r\n");
         out.write("        </div>\r\n");
         out.write("      </div>\r\n");
         out.write("      <div class=\"form-group\">\r\n");

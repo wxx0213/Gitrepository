@@ -81,6 +81,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       out.write("\t<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">\r\n");
       out.write("\t-->\r\n");
       out.write("\r\n");
+      out.write("     <script type=\"text/javascript\" src=\"");
+      out.print(request.getContextPath());
+      out.write("/js/laydate/laydate.js\">\r\n");
+      out.write("\t </script>\r\n");
       out.write("  </head>\r\n");
       out.write("  \r\n");
       out.write("  <body>\r\n");
@@ -97,6 +101,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         return;
       out.write("<br/><br/>\r\n");
       out.write("  详细地点：<input type=\"text\" id=\"titleID\" size=\"80\" name=\"locationDetail\" maxlength=\"100\"/><br/><br/>\r\n");
+      out.write("  活动时间：<input type=\"text\" name=\"activityDate\" class=\"laydate-icon\" onclick=\"laydate()\" /><br/><br/>\r\n");
       out.write("   <input type=\"submit\" name=\"submit\" value=\"保存\"/>\r\n");
       out.write("   <input type=\"reset\" name=\"reset\" value=\"取消\" />\r\n");
       out.write("   </form>\r\n");
@@ -122,19 +127,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.ui.SelectTag _jspx_th_s_005fselect_005f0 = (org.apache.struts2.views.jsp.ui.SelectTag) _005fjspx_005ftagPool_005fs_005fselect_005fname_005flistValue_005flistKey_005flist_005flabel_005fheaderValue_005fheaderKey_005fnobody.get(org.apache.struts2.views.jsp.ui.SelectTag.class);
     _jspx_th_s_005fselect_005f0.setPageContext(_jspx_page_context);
     _jspx_th_s_005fselect_005f0.setParent(null);
-    // /addActivity.jsp(33,4) name = list type = java.lang.String reqTime = false required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /addActivity.jsp(35,4) name = list type = java.lang.String reqTime = false required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fselect_005f0.setList("buildingList");
-    // /addActivity.jsp(33,4) name = name type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /addActivity.jsp(35,4) name = name type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fselect_005f0.setName("buildId");
-    // /addActivity.jsp(33,4) name = label type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /addActivity.jsp(35,4) name = label type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fselect_005f0.setLabel("活动地点");
-    // /addActivity.jsp(33,4) name = listKey type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /addActivity.jsp(35,4) name = listKey type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fselect_005f0.setListKey("buildId");
-    // /addActivity.jsp(33,4) name = listValue type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /addActivity.jsp(35,4) name = listValue type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fselect_005f0.setListValue("buildName");
-    // /addActivity.jsp(33,4) name = headerKey type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /addActivity.jsp(35,4) name = headerKey type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fselect_005f0.setHeaderKey("0");
-    // /addActivity.jsp(33,4) name = headerValue type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /addActivity.jsp(35,4) name = headerValue type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fselect_005f0.setHeaderValue("---请选择---");
     int _jspx_eval_s_005fselect_005f0 = _jspx_th_s_005fselect_005f0.doStartTag();
     if (_jspx_th_s_005fselect_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {

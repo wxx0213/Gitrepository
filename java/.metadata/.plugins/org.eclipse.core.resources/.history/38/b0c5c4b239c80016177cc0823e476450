@@ -1,0 +1,96 @@
+package Dao;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import util.HibernateSessionFactory;
+import Model.*;
+
+
+public class TbActivityDao 
+{
+	public void addTbActivity(TbActivity activity)
+	{
+		try
+		{
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t=s.beginTransaction();
+			
+			TbActivity tbActivity=new TbActivity();
+			tbActivity.setActName(activity.getActName());
+			tbActivity.setContent(activity.getContent());
+			tbActivity.setCreateDate(activity.getCreateDate());
+			tbActivity.setImagePath(activity.getImagePath());
+			tbActivity.setBuildId(activity.getBuildId());
+			tbActivity.setAttr2(activity.getAttr2());
+			s.save(tbActivity);
+			t.commit();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		 
+	}
+	//根据id查找信息
+	public TbActivity SelectById(int id)
+	{
+		TbActivity tbActivity=new TbActivity();
+		try
+		{
+			
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t = s.beginTransaction();
+			String sql="from TbActivity where actId=?";
+			Query query = s.createQuery(sql);
+			query.setInteger(0, id);
+			//获得唯一的查询结果
+			tbActivity=(TbActivity)query.uniqueResult();
+		}
+		catch(Exception e)
+		{
+			
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		return tbActivity;
+	}
+	//修改信息
+	public Boolean updateTbActivity(TbActivity activity)
+	{
+		try
+		{
+			TbActivityDao activityDao=new TbActivityDao();
+			TbActivity TbActivity=new TbActivity();
+			
+			TbActivity=activityDao.SelectById(activity.getActId());
+			TbActivity.setActName(activity.getActName());
+			TbActivity.setContent(activity.getContent());
+			TbActivity.setBuildId(activity.getActId());
+			TbActivity.setAttr2(activity.getAttr2());
+			TbActivity.setImagePath(activity.getImagePath());
+			Session s=HibernateSessionFactory.getSession();
+			
+			Transaction t=s.beginTransaction();
+			s.update(TbActivity);
+			t.commit();
+			return true;
+		}
+		catch(Exception e)
+		{
+			return false;
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		 
+	}
+}

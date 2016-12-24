@@ -1,0 +1,27 @@
+package Action;
+
+public class ActivityManageAction {
+private String actName;
+private String actplace;
+private String createDate;
+
+public String getActName() {
+	return actName;
+}
+public void setActName(String actName) {
+	this.actName = actName;
+}
+public String getActplace() {
+	return actplace;
+}
+public void setActplace(String actplace) {
+	this.actplace = actplace;
+}
+public String getCreateDate() {
+	return createDate;
+}
+public void setCreateDate(String createDate) {
+	this.createDate = createDate;
+}
+
+}

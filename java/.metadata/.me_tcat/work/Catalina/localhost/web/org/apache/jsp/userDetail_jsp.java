@@ -73,7 +73,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       out.print(basePath);
       out.write("\">\r\n");
       out.write("    \r\n");
-      out.write("    <title>My JSP 'updateUserInformation.jsp' starting page</title>\r\n");
+      out.write("    <title>用户信息查看</title>\r\n");
       out.write("    \r\n");
       out.write("\t<meta http-equiv=\"pragma\" content=\"no-cache\">\r\n");
       out.write("\t<meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n");
@@ -83,34 +83,54 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       out.write("\t<!--\r\n");
       out.write("\t<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">\r\n");
       out.write("\t-->\r\n");
-      out.write("\r\n");
+      out.write("\t<link rel=\"stylesheet\" href=\"css/pintuer.css\">\r\n");
+      out.write("\t<link rel=\"stylesheet\" href=\"css/admin.css\">\r\n");
       out.write("  </head>\r\n");
       out.write("  \r\n");
       out.write("  <body>\r\n");
-      out.write("    <div align=\"center\">\r\n");
-      out.write("         用户名：");
+      out.write("   <div class=\"body-content\">\r\n");
+      out.write("   <div class=\"form-group\">\r\n");
+      out.write("        <div class=\"label\">\r\n");
+      out.write("          <label> 用户名：</label>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${user.userName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\r\n");
-      out.write("         <br/>\r\n");
-      out.write("          姓名：");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    <div class=\"form-group\">\r\n");
+      out.write("        <div class=\"label\">\r\n");
+      out.write("          <label>姓名：</label>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${user.realName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("<br/>\r\n");
-      out.write("         性别：<!-- 注意test='%{user.sex==\"男\"}'中，只能用%而不能用$,字符串如\"男\"，必须用双引号，外层用单引号，否则会报错 -->\r\n");
-      out.write("         ");
+      out.write("\r\n");
+      out.write("        </div>\r\n");
+      out.write("      </div>\r\n");
+      out.write("         <div class=\"form-group\"><!-- 注意test='%{user.sex==\"男\"}'中，只能用%而不能用$,字符串如\"男\"，必须用双引号，外层用单引号，否则会报错 -->\r\n");
+      out.write("        <div class=\"label\">\r\n");
+      out.write("          <label>性别：</label>");
       if (_jspx_meth_s_005fif_005f0(_jspx_page_context))
         return;
-      out.write("<br/><br/>\r\n");
-      out.write("         ");
+      out.write("\r\n");
+      out.write("            ");
       if (_jspx_meth_s_005felse_005f0(_jspx_page_context))
         return;
-      out.write("<br/><br/>\r\n");
-      out.write("          邮箱：");
+      out.write("\r\n");
+      out.write("        </div>\r\n");
+      out.write("      </div>\r\n");
+      out.write("      <div class=\"form-group\">\r\n");
+      out.write("        <div class=\"label\">\r\n");
+      out.write("          <label>邮箱：</label>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${user.email}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("<br/>\r\n");
-      out.write("                手机：");
+      out.write("\r\n");
+      out.write("        </div>\r\n");
+      out.write("        \r\n");
+      out.write("      </div>\r\n");
+      out.write("       <div class=\"form-group\">\r\n");
+      out.write("        <div class=\"label\">\r\n");
+      out.write("          <label>手机：</label>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${user.mobile}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\r\n");
-      out.write("<br/><br/>\r\n");
+      out.write("        </div>\r\n");
+      out.write("       \r\n");
+      out.write("      </div>\r\n");
       out.write("    </div>\r\n");
       out.write("  </body>\r\n");
       out.write("</html>\r\n");
@@ -135,7 +155,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.IfTag _jspx_th_s_005fif_005f0 = (org.apache.struts2.views.jsp.IfTag) _005fjspx_005ftagPool_005fs_005fif_005ftest.get(org.apache.struts2.views.jsp.IfTag.class);
     _jspx_th_s_005fif_005f0.setPageContext(_jspx_page_context);
     _jspx_th_s_005fif_005f0.setParent(null);
-    // /userDetail.jsp(32,9) name = test type = java.lang.String reqTime = false required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userDetail.jsp(41,28) name = test type = java.lang.String reqTime = false required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fif_005f0.setTest("%{user.sex==\"男\"}");
     int _jspx_eval_s_005fif_005f0 = _jspx_th_s_005fif_005f0.doStartTag();
     if (_jspx_eval_s_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -146,9 +166,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       }
       do {
         out.write("\r\n");
-        out.write("         <input id=\"sexID\" type=\"radio\" name=\"sex\"  disabled=\"true\" checked=\"true\"/>男\r\n");
-        out.write("         <input id=\"sexID\" type=\"radio\" name=\"sex\"  disabled=\"true\"/>女\r\n");
-        out.write("         ");
+        out.write("          <input type=\"radio\" id=\"sexID\" name=\"sex\" value=\"男\"  disabled=\"true\" checked=\"checked\"/>男\r\n");
+        out.write("          <input id=\"sexID\" type=\"radio\" name=\"sex\" disabled=\"true\" value=\"女\"/>女\r\n");
+        out.write("            ");
         int evalDoAfterBody = _jspx_th_s_005fif_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;

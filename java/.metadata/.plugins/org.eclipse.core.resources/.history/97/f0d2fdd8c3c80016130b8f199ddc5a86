@@ -1,0 +1,16 @@
+使用方法
+
+引入<script src="js/calendarDateInput.js" ></script>
+在calendardateinput.js可以修改图片的路径
+调用：
+
+从	<input type="text" size="10" name="sdate">
+				<script type="text/javascript">
+				DateInput('sdate', 'YYYY-MM-DD', '2005-11-17');
+				</script>
+				&nbsp;到
+				<input type="text" size="10" name="edate">
+				<script type="text/javascript">
+				DateInput('edate', 'YYYY-MM-DD', '2006-11-18');
+				</script>
+

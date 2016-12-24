@@ -42,9 +42,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
                 imgObjPreview.style.display = 'block';
 
-                imgObjPreview.style.width = '350px';
+                imgObjPreview.style.width = '150px';
 
-                imgObjPreview.style.height = '220px';
+                imgObjPreview.style.height = '180px';
 
                 //imgObjPreview.src = docObj.files[0].getAsDataURL();
 

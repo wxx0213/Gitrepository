@@ -2,23 +2,9 @@ package Data;
 
 public class ImageData
 {
-	private String buildName;
-	private String buildDesc;
-	public String getBuildName() {
-		return buildName;
-	}
-	public void setBuildName(String buildName) {
-		this.buildName = buildName;
-	}
-	public String getBuildDesc() {
-		return buildDesc;
-	}
-	public void setBuildDesc(String buildDesc) {
-		this.buildDesc = buildDesc;
-	}
-	//ï¿½ï¿½Åµï¿½Ò»ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½
+	//´æ·ÅµÚÒ»ÕÅÍ¼ÏñµÄÂ·¾¶£»
 	private String firstImagePath;
-	//ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Id
+	//´æ·ÅÍ¼Ïñ¶ÔÓ¦µÄId
 	private int imageId;
 	public String getFirstImagePath() {
 		return firstImagePath;

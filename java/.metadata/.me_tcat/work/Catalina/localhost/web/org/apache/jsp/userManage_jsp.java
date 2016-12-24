@@ -12,7 +12,7 @@ public final class userManage_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List _jspx_dependants;
 
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fiterator_005fvalue;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fs_005fif_005ftest;
@@ -26,7 +26,7 @@ public final class userManage_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
-    _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fs_005fiterator_005fvalue = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fs_005fif_005ftest = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
@@ -36,7 +36,7 @@ public final class userManage_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspDestroy() {
-    _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction.release();
+    _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction.release();
     _005fjspx_005ftagPool_005fs_005fiterator_005fvalue.release();
     _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.release();
     _005fjspx_005ftagPool_005fs_005fif_005ftest.release();
@@ -87,7 +87,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       out.print(basePath);
       out.write("\">\r\n");
       out.write("    \r\n");
-      out.write("    <title>My JSP 'userManage.jsp' starting page</title>\r\n");
+      out.write("    <title>userManage</title>\r\n");
       out.write("    \r\n");
       out.write("\t<meta http-equiv=\"pragma\" content=\"no-cache\">\r\n");
       out.write("\t<meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n");
@@ -97,22 +97,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       out.write("\t<!--\r\n");
       out.write("\t<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">\r\n");
       out.write("\t-->\r\n");
+      out.write("\t<link rel=\"stylesheet\" href=\"css/pintuer.css\">\r\n");
+      out.write("\t<link rel=\"stylesheet\" href=\"css/admin.css\">\r\n");
       out.write("  </head>\r\n");
       out.write("  \r\n");
       out.write("<body>   \r\n");
       if (_jspx_meth_s_005fform_005f0(_jspx_page_context))
         return;
       out.write("   \r\n");
-      out.write("    <table  border=\"1\" cellspacing=\"0\" cellpadding=\"0\" bordercolor=\"#999999\" >  \r\n");
+      out.write("    <table  cellspacing=\"0\" cellpadding=\"0\"  class=\"table table-hover text-center\">    \r\n");
       out.write("      \r\n");
       out.write("          \r\n");
-      out.write("        <tr bgcolor=\"#DDDDDD\">  \r\n");
-      out.write("         <td width=\"40\" height=\"30\"><div align=\"center\"><strong>选择</strong></div></td>  \r\n");
-      out.write("         <td width=\"150\" ><div align=\"center\"><strong>用户名</strong></div></td>  \r\n");
-      out.write("         <td width=\"150\"><div align=\"center\"><strong>姓名</strong></div></td>  \r\n");
-      out.write("         <td width=\"200\"><div align=\"center\"><strong>性别</strong></div></td>  \r\n");
-      out.write("         <td width=\"200\"><div align=\"center\"><strong>用户类型</strong></div></td> \r\n");
-      out.write("         <td width=\"300\"><div align=\"center\"><strong>操作</strong></div></td> \r\n");
+      out.write("        <tr>  \r\n");
+      out.write("         <th width=\"100\" style=\"text-align:left; padding-left:20px;\">选择</th>  \r\n");
+      out.write("         <th width=\"10%\">用户名</th>\r\n");
+      out.write("        <th>姓名</th>\r\n");
+      out.write("        <th>性别</th>\r\n");
+      out.write("        <th>用户类型</th>\r\n");
+      out.write("        <th width=\"30%\">操作</th>\r\n");
       out.write("        </tr>  \r\n");
       out.write("    ");
       if (_jspx_meth_s_005fiterator_005f0(_jspx_page_context))
@@ -120,33 +122,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       out.write("\r\n");
       out.write("    </table> \r\n");
       out.write("    \r\n");
-      out.write("    <table width=\"1100\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">  \r\n");
-      out.write("    <tr>  \r\n");
-      out.write("        <td bgcolor=\"E3E3E3\" class=\"wang\" align=\"center\">　  \r\n");
-      out.write("      \r\n");
-      out.write("            <span class=\"x2\" align=\"center\">  \r\n");
-      out.write("            <font color=\"#0072BC\"><b>  \r\n");
-      out.write("            ");
-      if (_jspx_meth_s_005fproperty_005f7(_jspx_page_context))
-        return;
-      out.write(' ');
-      out.write('/');
-      if (_jspx_meth_s_005fproperty_005f8(_jspx_page_context))
-        return;
-      out.write(';');
-      out.write('共');
-      if (_jspx_meth_s_005fproperty_005f9(_jspx_page_context))
-        return;
-      out.write("条记录</b></font>  \r\n");
-      out.write("            </span>  \r\n");
-      out.write("        </td>  \r\n");
-      out.write("    </tr>  \r\n");
-      out.write("  \r\n");
-      out.write(" <input type=\"hidden\" name=\"maxNum\" value=\"\">  \r\n");
+      out.write("    <table width=\"850\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">  \r\n");
+      out.write("    \r\n");
+      out.write("  \t <!--<tr>\r\n");
+      out.write("        <td style=\"text-align:left; padding:19px 0;padding-left:20px;\"><input type=\"checkbox\" id=\"checkall\"/>\r\n");
+      out.write("          全选 </td>\r\n");
+      out.write("        <td colspan=\"7\" style=\"text-align:left;padding-left:20px;\">\r\n");
+      out.write("        <a href=\"javascript:void(0)\" class=\"button border-red icon-trash-o\" style=\"padding:5px 15px;\" onclick=\"DelSelect()\"> 删除</a> \r\n");
+      out.write("        <a href=\"javascript:void(0)\" style=\"padding:5px 15px; margin:0 10px;\" class=\"button border-blue icon-edit\" onclick=\"sorts()\"> 排序</a> \r\n");
+      out.write("        </td> \r\n");
+      out.write("      </tr>-->\r\n");
       out.write("        <tr align=\"center\" valign=\"top\" >  \r\n");
-      out.write("            <td height=\"20\">  \r\n");
-      out.write("                <p align=\"center\">    \r\n");
-      out.write("            <span class=\"x2\"><a href=\"ShowUserByPageAction.action?page=1\">首 页</a>  \r\n");
+      out.write("        \r\n");
+      out.write("            <td colspan=\"8\"> \r\n");
+      out.write("            \t<div class=\"pagelist\">            \r\n");
+      out.write("           \t\t\t <input type=\"hidden\" name=\"maxNum\" value=\"\" />  \r\n");
+      out.write("            <a href=\"ShowUserByPageAction.action?page=1\">首 页</a>  \r\n");
       out.write("            ");
       if (_jspx_meth_s_005fif_005f1(_jspx_page_context))
         return;
@@ -155,7 +146,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       if (_jspx_meth_s_005felse_005f1(_jspx_page_context))
         return;
       out.write("  \r\n");
-      out.write("                      \r\n");
+      out.write("                 ");
+      if (_jspx_meth_s_005fproperty_005f8(_jspx_page_context))
+        return;
+      out.write(' ');
+      out.write('/');
+      if (_jspx_meth_s_005fproperty_005f9(_jspx_page_context))
+        return;
+      out.write("    \r\n");
       out.write("            ");
       if (_jspx_meth_s_005fif_005f2(_jspx_page_context))
         return;
@@ -165,12 +163,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         return;
       out.write("  \r\n");
       out.write("            <a href=\"ShowUserByPageAction.action?page=");
+      if (_jspx_meth_s_005fproperty_005f11(_jspx_page_context))
+        return;
+      out.write("\">尾页</a>\r\n");
+      out.write("            <span>共");
       if (_jspx_meth_s_005fproperty_005f12(_jspx_page_context))
         return;
-      out.write("\">最后一页</a>  \r\n");
-      out.write("            </span>  \r\n");
-      out.write("            </p>  \r\n");
+      out.write("条记录</span>\r\n");
+      out.write("            </div> \r\n");
       out.write("            </td>  \r\n");
+      out.write("\r\n");
       out.write("        </tr>  \r\n");
       out.write("</table> \r\n");
       out.write("\r\n");
@@ -193,12 +195,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  s:form
-    org.apache.struts2.views.jsp.ui.FormTag _jspx_th_s_005fform_005f0 = (org.apache.struts2.views.jsp.ui.FormTag) _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction.get(org.apache.struts2.views.jsp.ui.FormTag.class);
+    org.apache.struts2.views.jsp.ui.FormTag _jspx_th_s_005fform_005f0 = (org.apache.struts2.views.jsp.ui.FormTag) _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction.get(org.apache.struts2.views.jsp.ui.FormTag.class);
     _jspx_th_s_005fform_005f0.setPageContext(_jspx_page_context);
     _jspx_th_s_005fform_005f0.setParent(null);
-    // /userManage.jsp(29,0) name = action type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(31,0) name = name type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_s_005fform_005f0.setName("form1");
+    // /userManage.jsp(31,0) name = id type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_s_005fform_005f0.setId("listform");
+    // /userManage.jsp(31,0) name = action type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fform_005f0.setAction("ShowByConditionAction.action");
-    // /userManage.jsp(29,0) name = method type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(31,0) name = method type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fform_005f0.setMethod("post");
     int _jspx_eval_s_005fform_005f0 = _jspx_th_s_005fform_005f0.doStartTag();
     if (_jspx_eval_s_005fform_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -209,14 +215,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       }
       do {
         out.write("  \r\n");
-        out.write("          \r\n");
-        out.write("          用户类型：<input type=\"text\" name=\"userType\" list=\"type\"/>\r\n");
+        out.write("    <div class=\"panel-head\"><strong class=\"icon-reorder\"> 用户列表</strong> </div>\r\n");
+        out.write("     <div class=\"padding border-bottom\">\r\n");
+        out.write("      <ul class=\"search\" style=\"padding-left:10px;\">\r\n");
+        out.write("        <li> <a class=\"button border-main icon-plus-square-o\" href=\"register.jsp\"> 添加用户</a> </li>\r\n");
+        out.write("       \r\n");
+        out.write("        <li>\r\n");
+        out.write("        \t 用户类型：<input type=\"text\" name=\"userType\" style=\"width:250px; line-height:17px;display:inline-block\" list=\"type\"/>\r\n");
         out.write("          <datalist id=\"type\">\r\n");
         out.write("          <option value=\"1\">管理员</option>\r\n");
         out.write("          <option value=\"0\">用户</option>\r\n");
         out.write("          </datalist>\r\n");
-        out.write("          用户名：<input type=\"text\" name=\"userName\"/>\r\n");
-        out.write("    <button class=\"button bg-main icon-check-square-o\" type=\"submit\" name=\"save\" > 注册</button>\r\n");
+        out.write("          用户名：<input type=\"text\" style=\"width:250px; line-height:17px;display:inline-block\" name=\"userName\"/><!--\r\n");
+        out.write("          <input type=\"text\" placeholder=\"请输入搜索关键词\" name=\"imageId\" class=\"input\" style=\"width:250px; line-height:17px;display:inline-block\" />\r\n");
+        out.write("          -->\r\n");
+        out.write("          <button class=\"button bg-main icon-check-square-o\" type=\"submit\" name=\"save\" > 搜索</button>\r\n");
+        out.write("      </ul>\r\n");
+        out.write("    </div>\r\n");
         out.write(" ");
         int evalDoAfterBody = _jspx_th_s_005fform_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -227,10 +242,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       }
     }
     if (_jspx_th_s_005fform_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction.reuse(_jspx_th_s_005fform_005f0);
+      _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction.reuse(_jspx_th_s_005fform_005f0);
       return true;
     }
-    _005fjspx_005ftagPool_005fs_005fform_005fmethod_005faction.reuse(_jspx_th_s_005fform_005f0);
+    _005fjspx_005ftagPool_005fs_005fform_005fname_005fmethod_005fid_005faction.reuse(_jspx_th_s_005fform_005f0);
     return false;
   }
 
@@ -242,7 +257,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.IteratorTag _jspx_th_s_005fiterator_005f0 = (org.apache.struts2.views.jsp.IteratorTag) _005fjspx_005ftagPool_005fs_005fiterator_005fvalue.get(org.apache.struts2.views.jsp.IteratorTag.class);
     _jspx_th_s_005fiterator_005f0.setPageContext(_jspx_page_context);
     _jspx_th_s_005fiterator_005f0.setParent(null);
-    // /userManage.jsp(50,4) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(61,4) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fiterator_005f0.setValue("#request.userList");
     int _jspx_eval_s_005fiterator_005f0 = _jspx_th_s_005fiterator_005f0.doStartTag();
     if (_jspx_eval_s_005fiterator_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -254,45 +269,48 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       do {
         out.write("\r\n");
         out.write("    <tr>\r\n");
-        out.write("         <td width=\"37\" height=\"30\"><div align=\"center\"><input type=\"radio\" name=\"selectUser\" value=\"");
+        out.write("         <td style=\"text-align:left; padding-left:20px;\"><input type=\"checkbox\" name=\"selectUser\" value=\"");
         if (_jspx_meth_s_005fproperty_005f0(_jspx_th_s_005fiterator_005f0, _jspx_page_context))
           return true;
-        out.write("\" /></div></td> \r\n");
-        out.write("         <td width=\"148\"><div align=\"center\">");
+        out.write("\" /></td> \r\n");
+        out.write("         <td >");
         if (_jspx_meth_s_005fproperty_005f1(_jspx_th_s_005fiterator_005f0, _jspx_page_context))
           return true;
-        out.write("</div></td>  \r\n");
-        out.write("         <td width=\"198\"><div align=\"center\">");
+        out.write("</td>  \r\n");
+        out.write("         <td >");
         if (_jspx_meth_s_005fproperty_005f2(_jspx_th_s_005fiterator_005f0, _jspx_page_context))
           return true;
-        out.write("</div></td>  \r\n");
-        out.write("         <td width=\"100\"><div align=\"center\">");
+        out.write("</td>  \r\n");
+        out.write("         <td >");
         if (_jspx_meth_s_005fproperty_005f3(_jspx_th_s_005fiterator_005f0, _jspx_page_context))
           return true;
-        out.write("</div></td>  \r\n");
+        out.write("</td>  \r\n");
         out.write("         <td width=\"100\">\r\n");
         out.write("         ");
         if (_jspx_meth_s_005fif_005f0(_jspx_th_s_005fiterator_005f0, _jspx_page_context))
           return true;
-        out.write("<br/><br/>\r\n");
+        out.write("\r\n");
         out.write("         ");
         if (_jspx_meth_s_005felse_005f0(_jspx_th_s_005fiterator_005f0, _jspx_page_context))
           return true;
         out.write("\r\n");
         out.write("         </td>  \r\n");
-        out.write("         <td width=\"300\"><div align=\"center\">\r\n");
-        out.write("         <a href=\"SelectByIdAction.action?userId=");
+        out.write("         <td width=\"300\">\r\n");
+        out.write("         <div class=\"\"> \r\n");
+        out.write("         \t<a class=\"button\" href=\"SelectByIdAction.action?userId=");
         if (_jspx_meth_s_005fproperty_005f4(_jspx_th_s_005fiterator_005f0, _jspx_page_context))
           return true;
-        out.write("\">查看</a>|\r\n");
-        out.write("         <a href=\"SelectforUpdateAction.action?userId=");
+        out.write("\"><span class=\"icon-edit\"></span>查看</a>\r\n");
+        out.write("           <a class=\"button border-red\" href=\"DeleteUserByIdAction.action?userId=");
         if (_jspx_meth_s_005fproperty_005f5(_jspx_th_s_005fiterator_005f0, _jspx_page_context))
           return true;
-        out.write("\">修改</a>|\r\n");
-        out.write("         <a href=\"DeleteUserByIdAction.action?userId=");
+        out.write("\" ><span class=\"icon-trash-o\"></span>删除</a> \r\n");
+        out.write("           <a class=\"button border-main\" href=\"SelectforUpdateAction.action?userId=");
         if (_jspx_meth_s_005fproperty_005f6(_jspx_th_s_005fiterator_005f0, _jspx_page_context))
           return true;
-        out.write("\">删除</a></div></td>  \r\n");
+        out.write("\"><span class=\"icon-edit\"></span>修改</a>          \r\n");
+        out.write("           </div>\r\n");
+        out.write("          </td>  \r\n");
         out.write("    </tr>      \r\n");
         out.write("    ");
         int evalDoAfterBody = _jspx_th_s_005fiterator_005f0.doAfterBody();
@@ -319,7 +337,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f0 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
     _jspx_th_s_005fproperty_005f0.setPageContext(_jspx_page_context);
     _jspx_th_s_005fproperty_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005fiterator_005f0);
-    // /userManage.jsp(52,101) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(63,105) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fproperty_005f0.setValue("id");
     int _jspx_eval_s_005fproperty_005f0 = _jspx_th_s_005fproperty_005f0.doStartTag();
     if (_jspx_th_s_005fproperty_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -338,7 +356,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f1 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
     _jspx_th_s_005fproperty_005f1.setPageContext(_jspx_page_context);
     _jspx_th_s_005fproperty_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005fiterator_005f0);
-    // /userManage.jsp(53,45) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(64,14) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fproperty_005f1.setValue("userName");
     int _jspx_eval_s_005fproperty_005f1 = _jspx_th_s_005fproperty_005f1.doStartTag();
     if (_jspx_th_s_005fproperty_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -357,7 +375,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f2 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
     _jspx_th_s_005fproperty_005f2.setPageContext(_jspx_page_context);
     _jspx_th_s_005fproperty_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005fiterator_005f0);
-    // /userManage.jsp(54,45) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(65,14) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fproperty_005f2.setValue("realName");
     int _jspx_eval_s_005fproperty_005f2 = _jspx_th_s_005fproperty_005f2.doStartTag();
     if (_jspx_th_s_005fproperty_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -376,7 +394,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f3 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
     _jspx_th_s_005fproperty_005f3.setPageContext(_jspx_page_context);
     _jspx_th_s_005fproperty_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005fiterator_005f0);
-    // /userManage.jsp(55,45) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(66,14) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fproperty_005f3.setValue("sex");
     int _jspx_eval_s_005fproperty_005f3 = _jspx_th_s_005fproperty_005f3.doStartTag();
     if (_jspx_th_s_005fproperty_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -395,7 +413,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.IfTag _jspx_th_s_005fif_005f0 = (org.apache.struts2.views.jsp.IfTag) _005fjspx_005ftagPool_005fs_005fif_005ftest.get(org.apache.struts2.views.jsp.IfTag.class);
     _jspx_th_s_005fif_005f0.setPageContext(_jspx_page_context);
     _jspx_th_s_005fif_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005fiterator_005f0);
-    // /userManage.jsp(57,9) name = test type = java.lang.String reqTime = false required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(68,9) name = test type = java.lang.String reqTime = false required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fif_005f0.setTest("%{type==\"1\"}");
     int _jspx_eval_s_005fif_005f0 = _jspx_th_s_005fif_005f0.doStartTag();
     if (_jspx_eval_s_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -406,7 +424,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       }
       do {
         out.write("\r\n");
-        out.write("         <div align=\"center\">管理员\r\n");
+        out.write("         <div align=\"center\">管理员</div>\r\n");
         out.write("         ");
         int evalDoAfterBody = _jspx_th_s_005fif_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -441,7 +459,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       }
       do {
         out.write("\r\n");
-        out.write("         <div align=\"center\">用户\r\n");
+        out.write("         <div align=\"center\">用户</div>\r\n");
         out.write("         ");
         int evalDoAfterBody = _jspx_th_s_005felse_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -467,7 +485,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f4 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
     _jspx_th_s_005fproperty_005f4.setPageContext(_jspx_page_context);
     _jspx_th_s_005fproperty_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005fiterator_005f0);
-    // /userManage.jsp(65,49) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(77,65) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fproperty_005f4.setValue("id");
     int _jspx_eval_s_005fproperty_005f4 = _jspx_th_s_005fproperty_005f4.doStartTag();
     if (_jspx_th_s_005fproperty_005f4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -486,7 +504,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f5 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
     _jspx_th_s_005fproperty_005f5.setPageContext(_jspx_page_context);
     _jspx_th_s_005fproperty_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005fiterator_005f0);
-    // /userManage.jsp(66,54) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(78,81) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fproperty_005f5.setValue("id");
     int _jspx_eval_s_005fproperty_005f5 = _jspx_th_s_005fproperty_005f5.doStartTag();
     if (_jspx_th_s_005fproperty_005f5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -505,7 +523,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f6 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
     _jspx_th_s_005fproperty_005f6.setPageContext(_jspx_page_context);
     _jspx_th_s_005fproperty_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005fiterator_005f0);
-    // /userManage.jsp(67,53) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(79,83) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fproperty_005f6.setValue("id");
     int _jspx_eval_s_005fproperty_005f6 = _jspx_th_s_005fproperty_005f6.doStartTag();
     if (_jspx_th_s_005fproperty_005f6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -513,63 +531,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       return true;
     }
     _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f6);
-    return false;
-  }
-
-  private boolean _jspx_meth_s_005fproperty_005f7(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  s:property
-    org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f7 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
-    _jspx_th_s_005fproperty_005f7.setPageContext(_jspx_page_context);
-    _jspx_th_s_005fproperty_005f7.setParent(null);
-    // /userManage.jsp(78,12) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_s_005fproperty_005f7.setValue("page");
-    int _jspx_eval_s_005fproperty_005f7 = _jspx_th_s_005fproperty_005f7.doStartTag();
-    if (_jspx_th_s_005fproperty_005f7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f7);
-      return true;
-    }
-    _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f7);
-    return false;
-  }
-
-  private boolean _jspx_meth_s_005fproperty_005f8(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  s:property
-    org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f8 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
-    _jspx_th_s_005fproperty_005f8.setPageContext(_jspx_page_context);
-    _jspx_th_s_005fproperty_005f8.setParent(null);
-    // /userManage.jsp(78,40) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_s_005fproperty_005f8.setValue("totalPage");
-    int _jspx_eval_s_005fproperty_005f8 = _jspx_th_s_005fproperty_005f8.doStartTag();
-    if (_jspx_th_s_005fproperty_005f8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f8);
-      return true;
-    }
-    _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f8);
-    return false;
-  }
-
-  private boolean _jspx_meth_s_005fproperty_005f9(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  s:property
-    org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f9 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
-    _jspx_th_s_005fproperty_005f9.setPageContext(_jspx_page_context);
-    _jspx_th_s_005fproperty_005f9.setParent(null);
-    // /userManage.jsp(78,73) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_s_005fproperty_005f9.setValue("userNum");
-    int _jspx_eval_s_005fproperty_005f9 = _jspx_th_s_005fproperty_005f9.doStartTag();
-    if (_jspx_th_s_005fproperty_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f9);
-      return true;
-    }
-    _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f9);
     return false;
   }
 
@@ -581,7 +542,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.IfTag _jspx_th_s_005fif_005f1 = (org.apache.struts2.views.jsp.IfTag) _005fjspx_005ftagPool_005fs_005fif_005ftest.get(org.apache.struts2.views.jsp.IfTag.class);
     _jspx_th_s_005fif_005f1.setPageContext(_jspx_page_context);
     _jspx_th_s_005fif_005f1.setParent(null);
-    // /userManage.jsp(88,12) name = test type = java.lang.String reqTime = false required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(102,12) name = test type = java.lang.String reqTime = false required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fif_005f1.setTest("page<=1");
     int _jspx_eval_s_005fif_005f1 = _jspx_th_s_005fif_005f1.doStartTag();
     if (_jspx_eval_s_005fif_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -628,10 +589,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       do {
         out.write("  \r\n");
         out.write("            <a href=\"ShowUserByPageAction.action?page=");
-        if (_jspx_meth_s_005fproperty_005f10(_jspx_th_s_005felse_005f1, _jspx_page_context))
+        if (_jspx_meth_s_005fproperty_005f7(_jspx_th_s_005felse_005f1, _jspx_page_context))
           return true;
-        out.write("\">上一页  \r\n");
-        out.write("            </a>            \r\n");
+        out.write("\">上一页  </a>           \r\n");
         out.write("            ");
         int evalDoAfterBody = _jspx_th_s_005felse_005f1.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -649,22 +609,60 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     return false;
   }
 
-  private boolean _jspx_meth_s_005fproperty_005f10(javax.servlet.jsp.tagext.JspTag _jspx_th_s_005felse_005f1, PageContext _jspx_page_context)
+  private boolean _jspx_meth_s_005fproperty_005f7(javax.servlet.jsp.tagext.JspTag _jspx_th_s_005felse_005f1, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  s:property
-    org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f10 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
-    _jspx_th_s_005fproperty_005f10.setPageContext(_jspx_page_context);
-    _jspx_th_s_005fproperty_005f10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005felse_005f1);
-    // /userManage.jsp(92,54) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_s_005fproperty_005f10.setValue("page-1");
-    int _jspx_eval_s_005fproperty_005f10 = _jspx_th_s_005fproperty_005f10.doStartTag();
-    if (_jspx_th_s_005fproperty_005f10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f10);
+    org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f7 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
+    _jspx_th_s_005fproperty_005f7.setPageContext(_jspx_page_context);
+    _jspx_th_s_005fproperty_005f7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005felse_005f1);
+    // /userManage.jsp(106,54) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_s_005fproperty_005f7.setValue("page-1");
+    int _jspx_eval_s_005fproperty_005f7 = _jspx_th_s_005fproperty_005f7.doStartTag();
+    if (_jspx_th_s_005fproperty_005f7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f7);
       return true;
     }
-    _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f10);
+    _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f7);
+    return false;
+  }
+
+  private boolean _jspx_meth_s_005fproperty_005f8(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:property
+    org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f8 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
+    _jspx_th_s_005fproperty_005f8.setPageContext(_jspx_page_context);
+    _jspx_th_s_005fproperty_005f8.setParent(null);
+    // /userManage.jsp(108,17) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_s_005fproperty_005f8.setValue("page");
+    int _jspx_eval_s_005fproperty_005f8 = _jspx_th_s_005fproperty_005f8.doStartTag();
+    if (_jspx_th_s_005fproperty_005f8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f8);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f8);
+    return false;
+  }
+
+  private boolean _jspx_meth_s_005fproperty_005f9(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:property
+    org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f9 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
+    _jspx_th_s_005fproperty_005f9.setPageContext(_jspx_page_context);
+    _jspx_th_s_005fproperty_005f9.setParent(null);
+    // /userManage.jsp(108,45) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_s_005fproperty_005f9.setValue("totalPage");
+    int _jspx_eval_s_005fproperty_005f9 = _jspx_th_s_005fproperty_005f9.doStartTag();
+    if (_jspx_th_s_005fproperty_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f9);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f9);
     return false;
   }
 
@@ -676,7 +674,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.IfTag _jspx_th_s_005fif_005f2 = (org.apache.struts2.views.jsp.IfTag) _005fjspx_005ftagPool_005fs_005fif_005ftest.get(org.apache.struts2.views.jsp.IfTag.class);
     _jspx_th_s_005fif_005f2.setPageContext(_jspx_page_context);
     _jspx_th_s_005fif_005f2.setParent(null);
-    // /userManage.jsp(96,12) name = test type = java.lang.String reqTime = false required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /userManage.jsp(109,12) name = test type = java.lang.String reqTime = false required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_s_005fif_005f2.setTest("page>=totalPage");
     int _jspx_eval_s_005fif_005f2 = _jspx_th_s_005fif_005f2.doStartTag();
     if (_jspx_eval_s_005fif_005f2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -723,7 +721,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       do {
         out.write("  \r\n");
         out.write("            <a href=\"ShowUserByPageAction.action?page=");
-        if (_jspx_meth_s_005fproperty_005f11(_jspx_th_s_005felse_005f2, _jspx_page_context))
+        if (_jspx_meth_s_005fproperty_005f10(_jspx_th_s_005felse_005f2, _jspx_page_context))
           return true;
         out.write("\"> 下一页</a>  \r\n");
         out.write("            ");
@@ -743,16 +741,35 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     return false;
   }
 
-  private boolean _jspx_meth_s_005fproperty_005f11(javax.servlet.jsp.tagext.JspTag _jspx_th_s_005felse_005f2, PageContext _jspx_page_context)
+  private boolean _jspx_meth_s_005fproperty_005f10(javax.servlet.jsp.tagext.JspTag _jspx_th_s_005felse_005f2, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:property
+    org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f10 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
+    _jspx_th_s_005fproperty_005f10.setPageContext(_jspx_page_context);
+    _jspx_th_s_005fproperty_005f10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005felse_005f2);
+    // /userManage.jsp(113,54) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_s_005fproperty_005f10.setValue("page+1");
+    int _jspx_eval_s_005fproperty_005f10 = _jspx_th_s_005fproperty_005f10.doStartTag();
+    if (_jspx_th_s_005fproperty_005f10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f10);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f10);
+    return false;
+  }
+
+  private boolean _jspx_meth_s_005fproperty_005f11(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  s:property
     org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f11 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
     _jspx_th_s_005fproperty_005f11.setPageContext(_jspx_page_context);
-    _jspx_th_s_005fproperty_005f11.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_s_005felse_005f2);
-    // /userManage.jsp(100,54) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_s_005fproperty_005f11.setValue("page+1");
+    _jspx_th_s_005fproperty_005f11.setParent(null);
+    // /userManage.jsp(115,54) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_s_005fproperty_005f11.setValue("totalPage");
     int _jspx_eval_s_005fproperty_005f11 = _jspx_th_s_005fproperty_005f11.doStartTag();
     if (_jspx_th_s_005fproperty_005f11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f11);
@@ -770,8 +787,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     org.apache.struts2.views.jsp.PropertyTag _jspx_th_s_005fproperty_005f12 = (org.apache.struts2.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.get(org.apache.struts2.views.jsp.PropertyTag.class);
     _jspx_th_s_005fproperty_005f12.setPageContext(_jspx_page_context);
     _jspx_th_s_005fproperty_005f12.setParent(null);
-    // /userManage.jsp(102,54) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_s_005fproperty_005f12.setValue("totalPage");
+    // /userManage.jsp(116,19) name = value type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_s_005fproperty_005f12.setValue("userNum");
     int _jspx_eval_s_005fproperty_005f12 = _jspx_th_s_005fproperty_005f12.doStartTag();
     if (_jspx_th_s_005fproperty_005f12.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005fs_005fproperty_005fvalue_005fnobody.reuse(_jspx_th_s_005fproperty_005f12);

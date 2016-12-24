@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>登录</title>
+    <title>My JSP 'AdminLogin.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -20,43 +20,40 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="js/jquery-1.11.0.min.js"></script>
-	<!-- Custom Theme files -->
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-	<!-- Custom Theme files -->
+
   </head>
   
   <body>
-    <div align="left">
-		<div>
-			<div>
-				<div align="center">  <!-- id="loginBox" -->
+    <div class="header-login">
+									<div class="top-nav-right">
+										<div id="loginContainer">
+											<div id="loginBox">
 												
-					<s:form action="AdminLogin.action" method="post" id="loginForm">
-						<fieldset id="body">
-							<fieldset>
-								<label for="email">用户名</label>
-								<input type="text" name="username" id="email">
-							</fieldset>
-							<fieldset>
-								<label for="password">密码</label>
-								<input type="password" name="password" id="password">
-							</fieldset>
-							<fieldset>
-							<div>
-							<input type="radio" id="sexID" name="sex" value="1" checked="checked" disabled="true"/><span>管理员</span>
-       						<input id="sexID" type="radio" name="sex" value="0" disabled="true"/>用户
-       						</div>
-        					
-							</fieldset>
-					</fieldset>
-														
+												<s:form action="AdminLogin.action" method="post" id="loginForm">
+													<fieldset id="body">
+														<fieldset>
+															<label for="email">
+																用户名
+															</label>
+															<input type="text" name="username" id="email">
+														</fieldset>
+														<fieldset>
+															<label for="password">
+																密码
+															</label>
+															<input type="password" name="password" id="password">
+														</fieldset>
+																												</fieldset>
+														<fieldset>
+        <div class="field">
+          <input type="radio" id="sexID" name="sex" value="1" checked="checked" disabled="true"/>管理员
+          <input id="sexID" type="radio" name="sex" value="0" disabled="true"/>普通用户
+        </div>
+														</fieldset>
 														<input type="submit" id="login" value="登录">
 														<label for="checkbox">
-															<a href=forgetPassword.jsp>忘记密码</a>
-															
+															<input type="checkbox" id="checkbox">
+															<i>记住我</i>
 														</label>
 													</fieldset>
 													
