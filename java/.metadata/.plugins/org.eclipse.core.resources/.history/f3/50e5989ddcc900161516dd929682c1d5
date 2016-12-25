@@ -1,0 +1,98 @@
+package Action;
+
+import Dao.TbConstantDao;
+import Dao.TbBuildingDao;
+import Dao.TbConstantDao;
+import Model.TbActivity;
+import Model.TbConstant;
+import Tool.Dateformat;
+
+public class ConstantAction {
+	private TbConstant tbconstant=new TbConstant();
+	private Integer id;
+	private String constant;
+	private String meaning;
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getConstant() {
+		return constant;
+	}
+	public void setConstant(String constant) {
+		this.constant = constant;
+	}
+	public String getMeaning() {
+		return meaning;
+	}
+	public void setMeaning(String meaning) {
+		this.meaning = meaning;
+	}
+	
+	public TbConstant getTbconstant() {
+		return tbconstant;
+	}
+	public void setTbconstant(TbConstant tbconstant) {
+		this.tbconstant = tbconstant;
+	}
+	
+	public String addConstant()
+	 {
+				try
+				{
+					TbConstantDao constantDao=new TbConstantDao();
+					TbConstant tbConstant=new TbConstant();
+					
+					tbConstant.setConstant(constant);
+					tbConstant.setMeaning(meaning);
+					
+					constantDao.addTbConstant(tbConstant);
+				}
+				catch(Exception e)
+				{}
+				finally
+				{}
+				return "success";
+	 }	
+	
+	public String selectById()
+	  {
+		  TbConstantDao constantDao=new TbConstantDao();
+		  tbconstant=constantDao.SelectById(id);
+	  	  return "success";
+	  }	  
+		  
+	  public String updateActivityById()
+	  {
+	  	Boolean flag;
+	  	TbConstantDao constantDao=new TbConstantDao();
+	  	activity.setActId(id);
+	  	activity.setActName(title);
+	  	activity.setContent(content);
+	  	activity.setActivityDate(activityDate);
+	  	activity.setAttr2(locationDetail);
+	  	activity.setBuildId(buildId);
+	  	activity.setImagePath(imageFile);
+	      if(id!=0)
+	       {
+	    	  //if(imageFile!=null&&!imageFile.equals(""))
+	    	  //{
+	    		  //activity.setImagePath(activity.getImagePath()+imageFile);
+	    	  //}
+	  	     flag=constantDao.updateTbActivity(activity);
+	       }
+	  	 return "success";
+	  }
+	public String deleteById()
+	  {
+		  boolean flag;
+		  TbConstantDao constantDao=new TbConstantDao();
+		  flag=constantDao.deleteById(id);
+		  if(flag)
+			  return "success"; 
+		  else 
+			  return "error";
+	  }
+}

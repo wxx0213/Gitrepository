@@ -13,6 +13,7 @@ public class TbSpeciality implements java.io.Serializable {
 	private String type;
 	private String description;
 	private String imagePath;
+	private Integer folkId;
 
 	// Constructors
 
@@ -22,11 +23,12 @@ public class TbSpeciality implements java.io.Serializable {
 
 	/** full constructor */
 	public TbSpeciality(String name, String type, String description,
-			String imagePath) {
+			String imagePath, Integer folkId) {
 		this.name = name;
 		this.type = type;
 		this.description = description;
 		this.imagePath = imagePath;
+		this.folkId = folkId;
 	}
 
 	// Property accessors
@@ -69,6 +71,14 @@ public class TbSpeciality implements java.io.Serializable {
 
 	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
+	}
+
+	public Integer getFolkId() {
+		return this.folkId;
+	}
+
+	public void setFolkId(Integer folkId) {
+		this.folkId = folkId;
 	}
 
 }

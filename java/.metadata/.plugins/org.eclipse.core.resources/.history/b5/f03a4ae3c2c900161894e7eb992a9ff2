@@ -1,0 +1,147 @@
+package Dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import util.HibernateSessionFactory;
+import Model.TbActivity;
+import Model.TbConstant;
+
+public class TbConstantDao {
+	public void addTbConstant(TbConstant constant)
+	{
+		try
+		{
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t=s.beginTransaction();
+			
+			TbConstant tbConstant=new TbConstant();
+			tbConstant.setConstant(constant.getConstant());
+			tbConstant.setMeaning(constant.getMeaning());
+			s.save(tbConstant);
+			t.commit();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		 
+	}
+	//查询全部信息
+	public List<TbConstant> SelectAll()
+	{
+		List<TbConstant> list=new ArrayList();
+		try
+		{
+			
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t = s.beginTransaction();
+			String sql="from TbConstant order by id asc";
+			Query query = s.createQuery(sql);
+			list=query.list();
+		}
+		catch(Exception e)
+		{
+			
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		return list;
+	}
+	//根据id查找信息
+	public TbConstant SelectById(int id)
+	{
+		TbConstant tbConstant=new TbConstant();
+		try
+		{
+			
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t = s.beginTransaction();
+			String sql="from TbConstant where id=?";
+			Query query = s.createQuery(sql);
+			query.setInteger(0, id);
+			//获得唯一的查询结果
+			tbConstant=(TbConstant)query.uniqueResult();
+		}
+		catch(Exception e)
+		{
+			
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		return tbConstant;
+	}
+	//修改信息
+	public Boolean updateTbConstant(TbConstant constant)
+	{
+		try
+		{
+			TbConstantDao constantDao=new TbConstantDao();
+			TbConstant tbConstant=new TbConstant();
+			
+			tbConstant=constantDao.SelectById(constant.getId());
+			tbConstant.setConstant(constant.getConstant());
+			tbConstant.setMeaning(constant.getMeaning());
+
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t=s.beginTransaction();
+			s.update(tbConstant);
+			t.commit();
+			return true;
+		}
+		catch(Exception e)
+		{
+			return false;
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		 
+	}
+	
+	//根据id删除信息
+	public boolean deleteById(int id)
+	{
+		TbConstantDao constantDao=new TbConstantDao();
+		TbSpecialityDao specialityDao=new TbSpecialityDao();
+		int count=0;
+		try
+		{
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t = s.beginTransaction();
+			count=specialityDao.SelectByFolkId(id);
+			if(count==0)
+			{
+				String sql="delete from TbConstant where id=?";
+				Session s=HibernateSessionFactory.getSession();
+			    Query query = s.createQuery(sql);
+			    query.setInteger(0, id);
+			    query.executeUpdate();
+			    t.commit();
+			    return true;
+			}
+			return false;
+		}
+		catch(Exception e)
+		{
+			return false;
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+	}
+}

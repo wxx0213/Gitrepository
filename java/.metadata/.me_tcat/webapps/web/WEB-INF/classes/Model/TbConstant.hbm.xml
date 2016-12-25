@@ -10,11 +10,11 @@
             <column name="id" />
             <generator class="increment"></generator>
         </id>
-        <property name="constant" type="java.lang.Integer">
-            <column name="constant" />
+        <property name="constant" type="java.lang.String">
+            <column name="constant" length="30"/>
         </property>
         <property name="meaning" type="java.lang.String">
-            <column name="meaning" length="20" />
+            <column name="meaning" length="5000" />
         </property>
     </class>
 </hibernate-mapping>

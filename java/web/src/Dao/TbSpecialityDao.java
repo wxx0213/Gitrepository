@@ -8,10 +8,11 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import util.HibernateSessionFactory;
+import Data.SpecialtyShowData;
 import Model.*;
 
 public class TbSpecialityDao {
-	//Ìí¼ÓÌØÉ«ĞÅÏ¢
+	//ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½Ï¢
 	public void addTbSpecialty(TbSpeciality specialty)
 	{
 		try
@@ -23,6 +24,7 @@ public class TbSpecialityDao {
 			tbSpeciality.setName(specialty.getName());
 			tbSpeciality.setDescription(specialty.getDescription());
 			tbSpeciality.setType(specialty.getType());
+			tbSpeciality.setFolkId(specialty.getFolkId());
 			tbSpeciality.setImagePath(specialty.getImagePath());
 					
 			s.save(specialty);
@@ -38,7 +40,7 @@ public class TbSpecialityDao {
 		}
 		 
 	}
-	//¸ù¾İÃû³Æ²éÑ¯Ïà¹ØĞÅÏ¢
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Æ²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	public TbSpeciality SelectByName(String name)
 	{
 		TbSpeciality tbSpeciality=new TbSpeciality();
@@ -64,5 +66,128 @@ public class TbSpecialityDao {
 			HibernateSessionFactory.closeSession();
 		}
 		return tbSpeciality;
+	}
+	//æ ¹æ®æ°‘æ—idæŸ¥è¯¢æ•°é‡
+	public int SelectByFolkId(int id)
+	{
+		int count=0;
+		try
+		{
+			List<TbSpeciality> list=new ArrayList();
+			Session s=HibernateSessionFactory.getSession();
+			String sql="from TbSpeciality where folkId=?";
+			Query query = s.createQuery(sql);
+			query.setInteger(0,id);
+			list=(List<TbSpeciality>)query.list();
+			count=list.size();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		return count;
+	}
+	
+	
+	//æ ¹æ®æ°‘æ—idæŸ¥è¯¢ä¿¡æ¯
+	public SpecialtyShowData unionSelectByid(int id)
+	{
+		SpecialtyShowData specialty=new SpecialtyShowData();
+		try
+		{
+			
+			Session s=HibernateSessionFactory.getSession();
+			String sql="select new Data.SpecialtyShowData(ts.id,ts.name,ts.type,ts.description,ts.imagePath,tc.constant) from TbSpeciality  ts, TbConstant tc where ts.id=tc.id and ts.id=?";
+			Query query = s.createQuery(sql);
+			query.setInteger(0,id);
+			specialty=(SpecialtyShowData)query.uniqueResult();
+		}
+		catch(Exception e)
+		{
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		return specialty;
+	}
+	//æ ¹æ®idåˆ é™¤ä¿¡æ¯
+	public void deleteById(int id)
+	{
+		try
+		{
+			
+			Session s=HibernateSessionFactory.getSession();
+			Transaction t = s.beginTransaction();
+			String sql="delete from TbSpeciality where id=?";
+			Query query = s.createQuery(sql);
+			query.setInteger(0, id);
+			query.executeUpdate();
+			t.commit();
+		}
+		catch(Exception e)
+		{
+			
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+	}
+	
+	public TbSpeciality SelectById(int id)
+	{
+		TbSpeciality tbSpecialty=new TbSpeciality();
+		try
+		{
+			List<TbSpeciality> list=new ArrayList();
+			Session s=HibernateSessionFactory.getSession();
+			String sql="from TbSpeciality where id=?";
+			Query query = s.createQuery(sql);
+			query.setInteger(0,id);
+			tbSpecialty=(TbSpeciality)query.uniqueResult();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		return tbSpecialty;
+	}
+	
+	//ä¿®æ”¹ä¿¡æ¯
+	public Boolean updateTbSpeciality(TbSpeciality specialty)
+	{
+		try
+		{
+			TbSpecialityDao specialtyDao=new TbSpecialityDao();
+			TbSpeciality tbSpeciality=new TbSpeciality();
+			
+			tbSpeciality=specialtyDao.SelectById(specialty.getId());
+			tbSpeciality.setName(specialty.getName());
+			tbSpeciality.setDescription(specialty.getDescription());
+			Session s=HibernateSessionFactory.getSession();
+			
+			Transaction t=s.beginTransaction();
+			s.update(tbSpeciality);
+			t.commit();
+			return true;
+		}
+		catch(Exception e)
+		{
+			return false;
+		}
+		finally
+		{
+			HibernateSessionFactory.closeSession();
+		}
+		 
 	}
 }

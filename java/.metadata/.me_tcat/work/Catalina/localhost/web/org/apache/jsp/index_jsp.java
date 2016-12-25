@@ -412,7 +412,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\tCopyright &copy; 2016.Company name All rights reserved.\r\n");
       out.write("  <a href=addArchitecture.jsp>添加特色建筑</a><br/>\r\n");
       out.write("  <a href=buildingInformation.jsp>查看特色建筑</a><br/>  \r\n");
-      out.write("  <a href=addSpecialty.jsp>添加特色</a><br/>\r\n");
+      out.write("\r\n");
       out.write("  <a href=\"GetAllBulidingAction.action\">添加活动</a><br/>\r\n");
       out.write("  <a href=userManage.jsp></a><br/>\r\n");
       out.write("   ");
@@ -427,7 +427,15 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  <a href=\"ShowActivityAction.action\">活动管理</a><br/>\r\n");
       out.write("  <a href=\"selectForGuideAction.action\">活动导航</a><br/>\r\n");
       out.write("  <a href=\"ShowBuildingAction.action\">建筑管理</a><br/>\r\n");
+      out.write("  gengxin2\r\n");
       out.write("  \r\n");
+      out.write("  <a href=\"moreBuildingAction.action\">更多建筑信息</a><br/>\r\n");
+      out.write("  <a href=\"addFolk.jsp\">添加民族</a><br/>\r\n");
+      out.write("  <a href=\"showFolkByConditionAction.action\">民族信息管理</a><br/>\r\n");
+      out.write("  <!-- 更改了href，指向一个action -->\r\n");
+      out.write("  <a href=getAllFolkAction.action>添加特色</a><br/>\r\n");
+      out.write("  <a href=showSpecialtyByConditionAction.action>民族特色信息管理</a><br/>\r\n");
+      out.write("  <a href=getSpecialtyShowAction.action>民族特色信息展示</a><br/>\r\n");
       out.write("\t\t\t\t\t</p>\r\n");
       out.write("\t\t\t\t\t<div class=\"clearfix\">\r\n");
       out.write("\t\t\t\t\t</div>\r\n");

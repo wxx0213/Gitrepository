@@ -87,7 +87,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       out.write("  </head>\r\n");
       out.write("  \r\n");
       out.write("  <body> \r\n");
-      out.write("  <a href=\"moreActivityAction.action\">更多活动</a>\r\n");
+      out.write("  <a href=\"moreActivityAction.action\">更多活动</a><br/><br/>\r\n");
       out.write("  ");
       if (_jspx_meth_s_005fiterator_005f0(_jspx_page_context))
         return;

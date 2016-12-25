@@ -9,9 +9,7 @@
      <action name="RegisterAction" class="Action.RegisterAction" method="register">
      </action>
      
-     <action name="AdminLogin" class="Action.AdminLoginAction" method="adminLogin">
-     <result name="success">admin.jsp</result>
-     <result name="error">error.jsp</result>   
+     <action name="AdminLogin" class="Action.AdminLoginAction" method="adminLogin">  
      </action>
      
      <action name="AddActivityAction" class="Action.AddActivityAction" method="addActivity">
@@ -81,11 +79,13 @@
      </action>
      
      <action name="AddSpecialtyAction" class="Action.AddSpecialtyAction" method="addSpecialty">
+     <result name="success" type="redirect-action">showSpecialtyByConditionAction</result>
      </action>
      
      <action name="AddSpecialtyImageAction" class="Action.AddSpecialtyImageAction" method="execute">
-     <result name="success">addSpecialty.jsp</result>
+     <result name="success" type="redirect-action">getAllFolkAction</result>
      </action>
+    
      
      <action name="ShowUserByPageAction"  class="Action.ShowUserByPageAction" method="show">  
      <!--type="dispatcher"保存了页面原来的数据-->
@@ -135,7 +135,8 @@
      <!--type="dispatcher"保存了页面原来的数据-->
      <result name="success">activityManage.jsp</result>        
      </action> 
-          <action name="ShowBuildingAction"  class="Action.ShowBuildingByPageAction" method="show">  
+     
+     <action name="ShowBuildingAction"  class="Action.ShowBuildingByPageAction" method="show">  
      <!--type="dispatcher"保存了页面原来的数据-->
      <result name="success">buildingManage.jsp</result>        
      </action>
@@ -143,6 +144,91 @@
      <action name="ShowBuildingByConditionAction"  class="Action.ShowBuildingByPageAction" method="showByCondition">  
      <!--type="dispatcher"保存了页面原来的数据-->
      <result name="success">buildingManage.jsp</result>        
+     </action>
+     
+     <action name="moreBuildingAction"  class="Action.ShowBuildingByPageAction" method="show">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">buildingShow.jsp</result>        
+     </action>
+     
+     
+     <action name="addConstantAction" class="Action.ConstantAction" method="addConstant">
+     <result name="success">showFolkByConditionAction</result>
+     </action>
+     
+     <action name="selectFolkByIdAction" class="Action.ConstantAction" method="selectById">
+     <result name="success">folkDetail.jsp</result>
+     </action>
+     
+     <action name="selectFolkForUpdateAction" class="Action.ConstantAction" method="selectById">
+     <result name="success">updateFolkInfo.jsp</result>
+     </action>
+          
+     <action name="getAllFolkAction" class="Action.AddSpecialtyAction" method="getAllFolk">
+     <result name="success">addSpecialty.jsp</result>
+     </action>
+      
+     <action name="getAllFolkForSearchAction" class="Action.AddSpecialtyAction" method="getAllFolk">
+     <result name="success" type="redirect-action">showFolkByConditionAction</result>
+     </action>
+        
+     <action name="updateFolkByIdAction" class="Action.ConstantAction" method="updateFolkById">
+     <result name="success" type="redirect-action">showFolkByConditionAction</result>
+     
+     </action> 
+     <action name="deleteFolkByIdAction" class="Action.ConstantAction" method="deleteById">
+     <result name="success">showFolkByConditionAction</result>
+     <result name="error">deleteError.jsp</result>
+     </action>
+     <action name="showFolkAction"  class="Action.ShowFolkByPageAction" method="show">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">folkManage.jsp</result>        
+     </action>
+     
+     <action name="showFolkByConditionAction"  class="Action.ShowFolkByPageAction" method="showByCondition">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">folkManage.jsp</result>        
+     </action>
+     
+     <action name="showSpecialtyByConditionAction"  class="Action.ShowSpecialtyByPageAction" method="showByCondition">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">specialtyManage.jsp</result>        
+     </action>
+     
+     
+     <action name="deleteSpecialtyByIdAction"  class="Action.AddSpecialtyAction" method="deleteSpecialtyById">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success"  type="redirect-action">showSpecialtyByConditionAction</result>        
+     </action>
+     
+     
+     <action name="selectSpecialtyByIdAction"  class="Action.AddSpecialtyAction" method="selectById">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">specialtyDetail.jsp</result>        
+     </action>
+     
+     
+     <action name="selectSpecialtyForupdateAction"  class="Action.AddSpecialtyAction" method="selectForupdate">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">updateSpecialtyInfo.jsp</result>        
+     </action>
+         
+     <action name="updateSpecialtyByIdAction" class="Action.AddSpecialtyAction" method="updateSpecialtyById">
+     <result name="success" type="redirect-action">showSpecialtyByConditionAction</result>
+     </action>
+     
+     <action name="moreSpecialtyAction"  class="Action.ShowSpecialtyByPageAction" method="showByCondition">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">moreSpecialty.jsp</result>        
+     </action>
+     <action name="getSpecialtyShowAction"  class="Action.ShowSpecialtyAction" method="getSpecialty">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">specialtyShow.jsp</result>        
+     </action>
+     
+     <action name="detailSpecialtyAction"  class="Action.AddSpecialtyAction" method="selectById">  
+     <!--type="dispatcher"保存了页面原来的数据-->
+     <result name="success">specialtyDetail.jsp</result>        
      </action>
     </package>
 </struts>

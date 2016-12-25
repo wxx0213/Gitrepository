@@ -9,7 +9,7 @@ public class TbConstant implements java.io.Serializable {
 	// Fields
 
 	private Integer id;
-	private Integer constant;
+	private String constant;
 	private String meaning;
 
 	// Constructors
@@ -19,7 +19,7 @@ public class TbConstant implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public TbConstant(Integer constant, String meaning) {
+	public TbConstant(String constant, String meaning) {
 		this.constant = constant;
 		this.meaning = meaning;
 	}
@@ -34,11 +34,11 @@ public class TbConstant implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Integer getConstant() {
+	public String getConstant() {
 		return this.constant;
 	}
 
-	public void setConstant(Integer constant) {
+	public void setConstant(String constant) {
 		this.constant = constant;
 	}
 

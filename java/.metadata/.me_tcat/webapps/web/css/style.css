@@ -155,8 +155,7 @@ span.glyphicon.glyphicon-tree-deciduous:hover {
 /*----*/
 /********** Login *************/
 #loginContainer {
-   /* position:relative;*/
-   position:absolute;
+    position:relative;
 }
 #loginContainer a{
 	text-decoration:none;
@@ -165,7 +164,7 @@ span.glyphicon.glyphicon-tree-deciduous:hover {
   display: block;
   color: #fff;
   background: none;
-  border: 0px;
+  border: 1px solid #fff;
   border-radius: 10px;
   -webkit-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -193,7 +192,7 @@ span.glyphicon.glyphicon-tree-deciduous:hover {
     position:absolute;
 	top:45px;
 	right:27px;
-    /*display:none;*/ /*1219修改*/
+    display:none;
     z-index:29;
 }
 #loginForm:after {
@@ -207,10 +206,10 @@ span.glyphicon.glyphicon-tree-deciduous:hover {
 }
 /* Login Form */
 #loginForm {
-   width: 400px;
+   width: 300px;
 	background: #fff;
-	 border: 0px solid #2d598a;
-    /* border-radius: 35px 5px 35px 5px;*/
+	 border: 2px solid #2d598a;
+     border-radius: 35px 5px 35px 5px;
      text-align: left;
 }
 #loginForm fieldset {
@@ -228,13 +227,6 @@ fieldset#body {
     margin:0;
 }
 #loginForm #checkbox {
-    width:auto;
-    margin:3px 6px 0 0;
-    float:left;
-    padding:0;
-    border:0;
-}
-#loginForm #sexID {
     width:auto;
     margin:3px 6px 0 0;
     float:left;
@@ -1316,7 +1308,6 @@ h1.grid2 {
 }
 .gallery-top p {
   width: 80%;
-  font-size: 2em;
 }
 .gallery-top {
   margin-bottom: 2em;

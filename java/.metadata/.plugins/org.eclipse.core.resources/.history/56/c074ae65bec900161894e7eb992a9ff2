@@ -1,0 +1,89 @@
+package Action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Dao.FolkByPageDao;
+import Model.TbConstant;
+
+public class ShowFolkByPageAction {
+	FolkByPageDao folkDao = new FolkByPageDao();  
+	  
+    List<TbConstant> folkList = new ArrayList();  
+  
+    private int rowsPerPage = 5;// 每页显示几条  
+  
+    private int page = 1; // 默认当前页  
+  
+    private int totalPage;// 总共多少页  
+  
+    private int userNum;// 总过多少条  
+    //搜索条件
+	private String constant=new String();
+
+
+    public int getPage() {  
+        return page;  
+    }  
+  
+    public void setPage(int page) {  
+        this.page = page;  
+    }  
+  
+    public int getRowsPerPage() {  
+        return rowsPerPage;  
+    }  
+  
+    public void setRowsPerPage(int rowsPerPage) {  
+        this.rowsPerPage = rowsPerPage;  
+    }  
+  
+    public int getTotalPage() {  
+        return totalPage;  
+    }  
+  
+    public void setTotalPage(int totalPage) {  
+        this.totalPage = totalPage;  
+    }
+  
+    public List<TbBuilding> getfolkList() {
+		return folkList;
+	}
+
+	public void setfolkList(List<TbBuilding> folkList) {
+		this.folkList = folkList;
+	}
+
+	public int getUserNum() {  
+        return userNum;  
+    }  
+  
+    public void setUserNum(int planNum) {  
+        this.userNum = planNum;  
+    } 
+    
+	public String getBuildingName() {
+		return buildingName;
+	}
+
+	public void setBuildingName(String buildingName) {
+		this.buildingName = buildingName;
+	}
+
+	public String show() {  
+		folkList = folkDao.findPlantByPage(page, rowsPerPage);  
+        totalPage = folkDao.getPlanTotalPage(rowsPerPage);   
+        userNum = folkDao.getPlanNum();  
+  
+        return "success";  
+    }  
+    
+    public String showByCondition()
+    {
+    	folkList = folkDao.findPlantByPageCondition(page, rowsPerPage,buildingName); 
+    	//将所获得列表中的数据格式进行转换
+        totalPage = folkDao.getPlanTotalPage(rowsPerPage,buildingName);  
+        userNum = folkDao.getPlanNum(buildingName);  
+    	return "success"; 
+    }
+}

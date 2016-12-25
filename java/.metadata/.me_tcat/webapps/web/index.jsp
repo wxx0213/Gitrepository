@@ -372,7 +372,7 @@
 						Copyright &copy; 2016.Company name All rights reserved.
   <a href=addArchitecture.jsp>添加特色建筑</a><br/>
   <a href=buildingInformation.jsp>查看特色建筑</a><br/>  
-  <a href=addSpecialty.jsp>添加特色</a><br/>
+
   <a href="GetAllBulidingAction.action">添加活动</a><br/>
   <a href=userManage.jsp></a><br/>
    <s:form action="ShowUserByPageAction.action"  method="get">
@@ -386,7 +386,15 @@
   <a href="ShowActivityAction.action">活动管理</a><br/>
   <a href="selectForGuideAction.action">活动导航</a><br/>
   <a href="ShowBuildingAction.action">建筑管理</a><br/>
+  gengxin2
   
+  <a href="moreBuildingAction.action">更多建筑信息</a><br/>
+  <a href="addFolk.jsp">添加民族</a><br/>
+  <a href="showFolkByConditionAction.action">民族信息管理</a><br/>
+  <!-- 更改了href，指向一个action -->
+  <a href=getAllFolkAction.action>添加特色</a><br/>
+  <a href=showSpecialtyByConditionAction.action>民族特色信息管理</a><br/>
+  <a href=getSpecialtyShowAction.action>民族特色信息展示</a><br/>
 					</p>
 					<div class="clearfix">
 					</div>

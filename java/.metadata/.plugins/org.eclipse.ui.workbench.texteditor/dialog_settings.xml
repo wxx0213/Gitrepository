@@ -13,26 +13,26 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="building" key="selection"/>
+		<item value="specialtyList" key="selection"/>
 		<list key="findhistory">
-			<item value="activity"/>
-			<item value="activityDao"/>
+			<item value="buildingList"/>
+			<item value="TbBuilding"/>
 			<item value="TbActivityDao"/>
+			<item value="tbBuilding"/>
+			<item value="updateFolkByIdAction"/>
 			<item value="TbUser"/>
-			<item value="TbActivity"/>
-			<item value="selectForupdate"/>
-			<item value="selectForupdateActivityAction"/>
-			<item value="actName"/>
+			<item value="activityList"/>
+			<item value="activityDao"/>
 		</list>
 		<list key="replacehistory">
-			<item value="building"/>
-			<item value="buildingDao"/>
-			<item value="TbBuildingDao"/>
-			<item value="TbBuilding"/>
-			<item value="buildingName"/>
-			<item value="buildingList"/>
-			<item value="BuildingByPageDao"/>
-			<item value="TbActivity"/>
+			<item value="specialtyList"/>
+			<item value="TbSpeciality"/>
+			<item value="TbSpecialityDao"/>
+			<item value="tbSpecialty"/>
+			<item value="specialtyDao"/>
+			<item value="SpecialtyShowData"/>
+			<item value="SpecialtyByPageDao"/>
+			<item value="folkId"/>
 		</list>
 	</section>
 </section>

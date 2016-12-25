@@ -1,0 +1,143 @@
+package Dao;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.Session;
+
+import util.HibernateSessionFactory;
+import Data.SpecialtyShowData;
+import Model.TbSpeciality;
+
+public class SpecialtyByPageDao {
+	 /** 
+     * 查找并返回所有用户信息 
+     */  
+    public List<SpecialtyShowData> findPlantByPage(int page, int rowsPerPage) {  
+    	Session session=HibernateSessionFactory.getSession();
+    	String hql="select new Data.SpecialtyShowData(ts.id,ts.name,ts.type,ts.description,ts.imagePath,tc.constant) from TbSpeciality  ts, TbConstant tc where ts.id=tc.id ";
+        Query query = session.createQuery(hql);  
+        query.setMaxResults(rowsPerPage); // 每页最多显示几条  
+        query.setFirstResult((page - 1) * rowsPerPage); // 每页从第几条记录开始  
+        List<SpecialtyShowData> list = query.list();    
+  
+        session.close();  
+  
+        return list;  
+    }  
+  
+    /** 
+     * 共多少页
+     */  
+    public int getPlanTotslPage(int rowsPerPage) {  
+    	int rows;
+    	Session session=HibernateSessionFactory.getSession();
+    	String hql="select new Data.SpecialtyShowData(ts.id,ts.name,ts.type,ts.description,ts.imagePath,tc.constant) from TbSpeciality  ts, TbConstant tc where ts.id=tc.id ";
+        Query query = session.createQuery(hql);  
+        List<SpecialtyShowData> list = query.list();     
+        rows =list.size(); 
+        // System.out.println("rows:" + rows);  
+        session.close();  
+        if (rows % rowsPerPage == 0) {  
+            return rows / rowsPerPage;  
+        } else {  
+            return rows / rowsPerPage + 1;  
+        }  
+    }  
+    /** 
+     * 返回总数
+     */  
+    public int getPlanNum() {  
+        int rows = 0;  
+        Session session=HibernateSessionFactory.getSession();
+        String hql="select new Data.SpecialtyShowData(ts.id,ts.name,ts.type,ts.description,ts.imagePath,tc.constant) from TbSpeciality  ts, TbConstant tc where ts.folkId=tc.id ";
+        Query query = session.createQuery(hql);  
+        List<SpecialtyShowData> list = query.list();     
+        rows =list.size(); 
+  
+        session.close();  
+        return rows;  
+    }  
+    
+    public List<SpecialtyShowData> findPlantByPageCondition(int page, int rowsPerPage,String name,String type,int folkId) {  
+    	Session session=HibernateSessionFactory.getSession();
+        //String hql = "select * from TbSpeciality u where u." + type  
+        //+ "=?";  
+    	String hql="select new Data.SpecialtyShowData(ts.id,ts.name,ts.type,ts.description,ts.imagePath,tc.constant) from TbSpeciality  ts, TbConstant tc where ts.folkId=tc.id";
+    	
+    	if(name!=null&&!name.equals(""))
+    		hql+=(" and ts.name like "+"'%"+name+"%'");
+    	if(type!=null&&!type.equals(""))
+    		hql+=(" and ts.type like "+"'%"+type+"%'");
+    	if(folkId!=0)
+    		hql+=(" and ts.id like "+"'%"+folkId+"%'");
+        Query query = session.createQuery(hql);  
+        query.setMaxResults(rowsPerPage); // 每页最多显示几条  
+        query.setFirstResult((page - 1) * rowsPerPage); // 每页从第几条记录开始  
+        List<SpecialtyShowData> list = query.list();  
+ 
+        session.close();  
+  
+        return list;  
+    }  
+  
+    /** 
+     * 条件查询后返回的计划总页数 
+     */  
+    public int getPlanTotslPage(int rowsPerPage, String name,String type, int folkId) {  
+        int rows = 0;  
+        Session session=HibernateSessionFactory.getSession();  
+        //String hql="select * from TbSpeciality u where u." + type  
+        //+ "=?";   
+        //Query query = session.createQuery(hql);  
+        //query.setString(0,search);   
+        //rows = query.list().size(); 
+        String hql="select new Data.SpecialtyShowData(ts.id,ts.name,ts.type,ts.description,ts.imagePath,tc.constant) from TbSpeciality  ts, TbConstant tc where ts.folkId=tc.id";
+    	
+    	if(name!=null&&!name.equals(""))
+    		hql+=(" and ts.name like "+"'%"+name+"%'");
+    	if(type!=null&&!type.equals(""))
+    		hql+=(" and ts.type like "+"'%"+type+"%'");
+    	if(folkId!=0)
+    		hql+=(" and ts.id like "+"'%"+folkId+"%'");
+        Query query = session.createQuery(hql);  
+    	rows=query.list().size(); 
+         
+        // System.out.println("rows:" + rows);  
+        session.close();  
+        if (rows % rowsPerPage == 0) {  
+            return rows / rowsPerPage;  
+        } else {  
+            return rows / rowsPerPage + 1;  
+        }  
+    }  
+  
+    /** 
+     * 条件查询后返回总数 
+     */  
+    public int getPlanNum(String name,String type, int folkId) {  
+        int rows = 0;  
+        Session session=HibernateSessionFactory.getSession();
+        //String hql =  "select * from TbSpeciality u where u." + type  
+        //+ "=?";  
+        //Query query = session.createQuery(hql);  
+        //query.setString(0,search);   
+  
+    	Criteria c=session.createCriteria(TbSpeciality.class);
+        String hql="select new Data.SpecialtyShowData(ts.id,ts.name,ts.type,ts.description,ts.imagePath,tc.constant) from TbSpeciality  ts, TbConstant tc where ts.id=tc.id";
+    	
+    	if(name!=null&&!name.equals(""))
+    		hql+=(" and ts.name like "+"'%"+name+"%'");
+    	if(type!=null&&!type.equals(""))
+    		hql+=(" and ts.type like "+"'%"+type+"%'");
+    	if(folkId!=0)
+    		hql+=(" and ts.id like "+"'%"+folkId+"%'");
+    	Query query = session.createQuery(hql); 
+    	rows=query.list().size(); 
+        // System.out.println("rows:" + rows);  
+        session.close();  
+        return rows;  
+    }  
+}
+

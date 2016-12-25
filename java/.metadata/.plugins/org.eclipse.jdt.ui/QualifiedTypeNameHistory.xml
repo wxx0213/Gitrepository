@@ -8,8 +8,6 @@
 <fullyQualifiedTypeName name="Dao.TbBuildingDao"/>
 <fullyQualifiedTypeName name="Model.TbActivity"/>
 <fullyQualifiedTypeName name="Data.ActivityShowData"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.jms.Session"/>
 <fullyQualifiedTypeName name="org.hibernate.Session"/>
 <fullyQualifiedTypeName name="org.hibernate.Query"/>
@@ -17,4 +15,12 @@
 <fullyQualifiedTypeName name="org.hibernate.Criteria"/>
 <fullyQualifiedTypeName name="org.hibernate.criterion.Restrictions"/>
 <fullyQualifiedTypeName name="Model.TbBuilding"/>
+<fullyQualifiedTypeName name="Dao.FolkByPageDao"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="Model.TbConstant"/>
+<fullyQualifiedTypeName name="Dao.TbConstantDao"/>
+<fullyQualifiedTypeName name="Data.SpecialtyShowData"/>
+<fullyQualifiedTypeName name="Model.TbSpeciality"/>
+<fullyQualifiedTypeName name="Dao.TbSpecialityDao"/>
 </qualifiedTypeNameHistroy>

@@ -46,8 +46,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 																												</fieldset>
 														<fieldset>
         <div class="field">
-          <input type="radio" id="sexID" name="sex" value="1" checked="checked" disabled="true"/>管理员
-          <input id="sexID" type="radio" name="sex" value="0" disabled="true"/>普通用户
+        <!-- 更新 -->
+          <input type="radio" id="sexID" name="type" value="1" checked="checked" />管理员
+          <input id="sexID" type="radio" name="type" value="0" />普通用户
+        <!-- 更新 -->
         </div>
 														</fieldset>
 														<input type="submit" id="login" value="登录">

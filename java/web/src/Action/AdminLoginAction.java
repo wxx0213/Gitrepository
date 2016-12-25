@@ -1,5 +1,10 @@
 package Action;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts2.ServletActionContext;
+
 import Dao.TbUserDao;
 import Model.TbUser;
 import Tool.Encode;
@@ -8,6 +13,7 @@ public class AdminLoginAction
 {
 	private String username;
 	private String password;
+	private String type;
 	
 	public String getUsername() {
 		return username;
@@ -24,9 +30,21 @@ public class AdminLoginAction
 	public void setPassword(String password) {
 		this.password = password;
 	}
+    
+	public String getType() {
+		return type;
+	}
 
-	public String adminLogin()
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public void adminLogin()
 	{
+		//将路径保存至session
+		HttpServletRequest request=ServletActionContext.getRequest();
+		HttpServletResponse response=ServletActionContext.getResponse();
+		
 		String s=new String();
 		try
 	    {
@@ -37,9 +55,12 @@ public class AdminLoginAction
 		
 		user=userDao.SelectByUserName(username);
 		//字符串比较必须用equals
-		if(username.equals(user.getUserName())&&newstr.equals(user.getPassword())&&user.getType().endsWith("1"))
+		if(username.equals(user.getUserName())&&newstr.equals(user.getPassword())&&user.getType().equals(type))
 		{
-			s="success";
+			if(user.getType().equals("1"))
+				response.sendRedirect("/web/admin.jsp");
+			else
+				response.sendRedirect("/web/index.jsp");
 		}
 		else 
 			{s="error";}
@@ -48,7 +69,7 @@ public class AdminLoginAction
 	    {
 		     
 	    }   
-		return s;
+		
 		
 	}
 }

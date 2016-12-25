@@ -150,8 +150,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</fieldset>\r\n");
         out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<fieldset>\r\n");
         out.write("        <div class=\"field\">\r\n");
-        out.write("          <input type=\"radio\" id=\"sexID\" name=\"sex\" value=\"1\" checked=\"checked\" disabled=\"true\"/>管理员\r\n");
-        out.write("          <input id=\"sexID\" type=\"radio\" name=\"sex\" value=\"0\" disabled=\"true\"/>普通用户\r\n");
+        out.write("        <!-- 更新 -->\r\n");
+        out.write("          <input type=\"radio\" id=\"sexID\" name=\"type\" value=\"1\" checked=\"checked\" />管理员\r\n");
+        out.write("          <input id=\"sexID\" type=\"radio\" name=\"type\" value=\"0\" />普通用户\r\n");
+        out.write("        <!-- 更新 -->\r\n");
         out.write("        </div>\r\n");
         out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t</fieldset>\r\n");
         out.write("\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"submit\" id=\"login\" value=\"登录\">\r\n");
